@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Kontakt – Wittmann Eventbox</title>
+<meta name="description" content="Kontaktieren Sie Wittmann Eventbox für Ihre Golden Magic Mirror Fotobox Buchung in Wien. Unverbindliche Anfrage in wenigen Sekunden."/>
+<style>
+@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url('https://fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLCz7Z1JlEA.woff2') format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url('https://fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLDD4Z1JlEA.woff2') format('woff2')}
+@font-face{font-family:'Mulish';font-style:normal;font-weight:400;font-display:swap;src:url('https://fonts.gstatic.com/s/mulish/v13/1Ptyg83HX_SGhgqO0yLcmjzUAuWexZNR.woff2') format('woff2')}
+@font-face{font-family:'Mulish';font-style:normal;font-weight:600;font-display:swap;src:url('https://fonts.gstatic.com/s/mulish/v13/1Ptyg83HX_SGhgqO0yLcmjzUAuWexZNR.woff2') format('woff2')}
+@font-face{font-family:'Mulish';font-style:normal;font-weight:700;font-display:swap;src:url('https://fonts.gstatic.com/s/mulish/v13/1Ptyg83HX_SGhgqO0yLcmjzUAuWexZNR.woff2') format('woff2')}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--gold:#DDA844;--gold-light:#E8D496;--dark:#07071A;--light:#F7F7F7;--white:#fff}
+html{scroll-behavior:smooth}
+body{font-family:'Mulish',sans-serif;background:var(--light);color:var(--dark);min-height:100vh;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Poppins',sans-serif}
+a{text-decoration:none;color:inherit}
+
+/* HEADER */
+#site-header{background:rgba(7,7,26,.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(221,170,68,.15);padding:14px 0}
+.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+.hd-in{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.hd-nav{display:flex;align-items:center;gap:28px}
+.hd-nav a{font-size:13px;font-weight:700;color:rgba(255,255,255,.7);transition:color .2s}
+.hd-nav a:hover{color:var(--gold)}
+.btn-gold{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(160deg,#ECCA6A 0%,#DDA844 45%,#C89020 100%);color:#fff;font-family:'Mulish',sans-serif;font-weight:700;font-size:14px;padding:10px 22px;border-radius:10px;border:none;cursor:pointer;transition:transform .2s,filter .2s}
+.btn-gold:hover{transform:translateY(-2px);filter:brightness(1.06)}
+
+/* HERO */
+.page-hero{background:linear-gradient(135deg,#1a1206,#2a1c06 60%,#1e1508);padding:clamp(60px,8vw,100px) 0 clamp(40px,5vw,60px);text-align:center}
+.page-hero .tag{display:inline-block;background:rgba(221,170,68,.2);color:var(--gold);border:1px solid rgba(221,170,68,.4);font-family:'Mulish',sans-serif;font-weight:700;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:20px}
+.page-hero h1{font-size:clamp(28px,5vw,52px);font-weight:800;color:#fff;margin-bottom:14px}
+.page-hero p{font-size:clamp(15px,2vw,17px);color:rgba(255,255,255,.65);max-width:480px;margin:0 auto;line-height:1.7}
+
+/* FORM SECTION */
+.form-section{padding:clamp(48px,7vw,96px) 0}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,80px);align-items:start}
+.form-card{background:#fff;border-radius:20px;padding:clamp(28px,4vw,48px);box-shadow:0 8px 40px rgba(0,0,0,.08);border:1.5px solid rgba(221,170,68,.12)}
+.form-card h2{font-size:clamp(20px,2.5vw,26px);font-weight:800;margin-bottom:8px}
+.form-card .sub{font-size:14px;color:#888;margin-bottom:28px;line-height:1.6}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:13px;font-weight:700;color:#555;margin-bottom:6px;letter-spacing:.3px}
+.field input,.field select,.field textarea{width:100%;padding:12px 16px;border:1.5px solid #e8e8e8;border-radius:10px;font-family:'Mulish',sans-serif;font-size:14px;color:var(--dark);background:#fff;transition:border-color .2s,box-shadow .2s;outline:none}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(221,170,68,.12)}
+.field textarea{resize:vertical;min-height:110px}
+.field select{cursor:pointer}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.submit-btn{width:100%;padding:15px;border-radius:12px;border:none;cursor:pointer;font-family:'Mulish',sans-serif;font-weight:700;font-size:16px;background:linear-gradient(160deg,#ECCA6A 0%,#DDA844 45%,#C89020 100%);color:#fff;box-shadow:0 4px 16px rgba(180,130,20,.35);transition:transform .2s,filter .2s;margin-top:8px}
+.submit-btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.privacy-note{font-size:12px;color:#aaa;text-align:center;margin-top:12px;line-height:1.5}
+
+/* CONTACT INFO */
+.contact-info h3{font-size:clamp(18px,2vw,22px);font-weight:700;margin-bottom:20px}
+.ci-item{display:flex;align-items:flex-start;gap:14px;margin-bottom:24px}
+.ci-ic{width:44px;height:44px;border-radius:12px;background:rgba(221,170,68,.12);border:1.5px solid rgba(221,170,68,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-ic svg{width:18px;height:18px}
+.ci-text strong{display:block;font-size:14px;font-weight:700;margin-bottom:3px}
+.ci-text span{font-size:14px;color:#666}
+.ci-text a{color:var(--gold);font-weight:600}
+.ci-text a:hover{text-decoration:underline}
+.promise-box{background:linear-gradient(135deg,#1a1206,#2a1c06);border-radius:16px;padding:24px;margin-top:32px;border:1px solid rgba(221,170,68,.25)}
+.promise-box h4{font-size:15px;font-weight:700;color:#fff;margin-bottom:14px}
+.promise-item{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:13px;color:rgba(255,255,255,.75)}
+.promise-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
+
+/* SUCCESS */
+.success-msg{display:none;background:linear-gradient(135deg,#f0faf5,#e6f7ee);border:1.5px solid #22C55E;border-radius:12px;padding:20px;text-align:center;margin-top:16px}
+.success-msg.show{display:block}
+.success-msg strong{color:#16a34a;font-size:15px}
+
+footer{background:rgba(7,7,26,.95);padding:32px 0;border-top:1px solid rgba(221,170,68,.15)}
+.ft-in{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.ft-logo{font-family:'Poppins',sans-serif;font-weight:700;font-size:16px;color:var(--gold)}
+.ft-links{display:flex;gap:24px}
+.ft-links a{font-size:13px;color:rgba(255,255,255,.45);font-weight:600}
+.ft-copy{font-size:12px;color:rgba(255,255,255,.28)}
+
+@media(max-width:768px){
+  .hd-nav{display:none}
+  .form-grid{grid-template-columns:1fr}
+  .field-row{grid-template-columns:1fr}
+  .ft-in{flex-direction:column;align-items:flex-start;gap:12px}
+  .ft-links{flex-wrap:wrap;gap:16px}
+}
+</style>
+</head>
+<body>
+
+<header id="site-header">
+  <div class="wrap hd-in">
+    <a href="index.html" style="font-family:'Poppins',sans-serif;font-weight:700;font-size:16px;color:var(--gold)">GOLDEN MAGIC MIRROR</a>
+    <nav class="hd-nav">
+      <a href="index.html#why">Vorteile</a>
+      <a href="index.html#magic">Ablauf</a>
+      <a href="index.html#events">Events</a>
+      <a href="index.html#pricing">Preise</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="kontakt.html" style="color:var(--gold)">Kontakt</a>
+    </nav>
+    <a href="tel:+436604313993" class="btn-gold">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M22 16.92V19.92C22 20.48 21.74 21 21.29 21.34C20.84 21.68 20.26 21.79 19.72 21.65C16.56 20.83 13.55 19.24 11.01 17.01C8.65 14.96 6.78 12.43 5.64 9.59C5.04 8.08 4.97 6.41 5.45 4.86C5.62 4.33 6.02 3.88 6.54 3.62L9.09 2.41C9.59 2.17 10.17 2.24 10.6 2.59L12.73 4.29C13.16 4.64 13.31 5.22 13.1 5.73L12.17 8.01C12 8.41 12.08 8.87 12.38 9.19L14.81 11.62C15.13 11.92 15.59 12 15.99 11.83L18.27 10.9C18.78 10.69 19.36 10.84 19.71 11.27L21.41 13.4C21.76 13.83 21.83 14.41 21.59 14.91L22 16.92Z" fill="white"/></svg>
+      Anrufen
+    </a>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="wrap">
+    <span class="tag">Unverbindliche Anfrage</span>
+    <h1>Ihr Event, unser Highlight</h1>
+    <p>Füllen Sie das Formular aus – wir melden uns innerhalb von 24 Stunden bei Ihnen.</p>
+  </div>
+</div>
+
+<section class="form-section">
+  <div class="wrap">
+    <div class="form-grid">
+
+      <!-- FORM -->
+      <div class="form-card">
+        <h2>Jetzt anfragen</h2>
+        <p class="sub">Alle Felder mit * sind Pflichtfelder. Die Anfrage ist völlig unverbindlich.</p>
+        <form id="contactForm" action="https://formspree.io/f/IHRE_FORM_ID" method="POST">
+          <input type="hidden" name="paket" id="paketField"/>
+          <div class="field-row">
+            <div class="field">
+              <label>Vorname *</label>
+              <input type="text" name="vorname" placeholder="Max" required/>
+            </div>
+            <div class="field">
+              <label>Nachname *</label>
+              <input type="text" name="nachname" placeholder="Mustermann" required/>
+            </div>
+          </div>
+          <div class="field">
+            <label>E-Mail-Adresse *</label>
+            <input type="email" name="email" placeholder="max@beispiel.at" required/>
+          </div>
+          <div class="field">
+            <label>Telefonnummer</label>
+            <input type="tel" name="telefon" placeholder="+43 660 ..."/>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label>Event-Datum *</label>
+              <input type="date" name="datum" required/>
+            </div>
+            <div class="field">
+              <label>Ungefähre Gästeanzahl</label>
+              <select name="gaeste">
+                <option value="">Bitte wählen</option>
+                <option>bis 30 Gäste</option>
+                <option>30–60 Gäste</option>
+                <option>60–100 Gäste</option>
+                <option>100–150 Gäste</option>
+                <option>über 150 Gäste</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label>Gewünschtes Paket</label>
+            <select name="paket_auswahl" id="paketSelect">
+              <option value="">Noch nicht sicher</option>
+              <option value="Basis">Basis – €550</option>
+              <option value="Premium">Premium – €670 (Empfohlen)</option>
+              <option value="Deluxe">Deluxe – €750</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Event-Art</label>
+            <select name="event_art">
+              <option value="">Bitte wählen</option>
+              <option>Hochzeit</option>
+              <option>Geburtstag</option>
+              <option>Firmenfeier</option>
+              <option>Gala / Ball</option>
+              <option>Messe / Ausstellung</option>
+              <option>Sonstiges</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Veranstaltungsort / Adresse</label>
+            <input type="text" name="ort" placeholder="z.B. Wien, 1010 oder Veranstaltungssaal XY"/>
+          </div>
+          <div class="field">
+            <label>Ihre Nachricht</label>
+            <textarea name="nachricht" placeholder="Weitere Wünsche, Fragen oder besondere Anforderungen ..."></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Unverbindlich anfragen →</button>
+          <p class="privacy-note">Mit dem Absenden stimmen Sie unserer <a href="datenschutz.html" style="color:var(--gold)">Datenschutzerklärung</a> zu.</p>
+        </form>
+        <div class="success-msg" id="successMsg">
+          <strong>✓ Vielen Dank für Ihre Anfrage!</strong><br/>
+          <span style="font-size:13px;color:#555">Wir melden uns innerhalb von 24 Stunden bei Ihnen.</span>
+        </div>
+      </div>
+
+      <!-- CONTACT INFO -->
+      <div class="contact-info">
+        <h3>Direkt Kontakt aufnehmen</h3>
+        <div class="ci-item">
+          <div class="ci-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92V19.92C22 20.48 21.74 21 21.29 21.34C20.84 21.68 20.26 21.79 19.72 21.65C16.56 20.83 13.55 19.24 11.01 17.01C8.65 14.96 6.78 12.43 5.64 9.59C5.04 8.08 4.97 6.41 5.45 4.86C5.62 4.33 6.02 3.88 6.54 3.62L9.09 2.41C9.59 2.17 10.17 2.24 10.6 2.59L12.73 4.29C13.16 4.64 13.31 5.22 13.1 5.73L12.17 8.01C12 8.41 12.08 8.87 12.38 9.19L14.81 11.62C15.13 11.92 15.59 12 15.99 11.83L18.27 10.9C18.78 10.69 19.36 10.84 19.71 11.27L21.41 13.4C21.76 13.83 21.83 14.41 21.59 14.91L22 16.92Z" stroke="var(--gold)" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <div class="ci-text"><strong>Telefon</strong><span><a href="tel:+436604313993">0660 431 39 93</a></span></div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="var(--gold)" stroke-width="2" stroke-linecap="round"/><path d="M22 6L12 13L2 6" stroke="var(--gold)" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <div class="ci-text"><strong>E-Mail</strong><span><a href="mailto:wb@wittmann-eventbox.at">wb@wittmann-eventbox.at</a></span></div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M21 10C21 17 12 23 12 23S3 17 3 10c0-5 4-9 9-9s9 4 9 9z" stroke="var(--gold)" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="var(--gold)" stroke-width="2"/></svg></div>
+          <div class="ci-text"><strong>Einsatzgebiet</strong><span>Wien & Umgebung (Anfahrt inkl.)</span></div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="var(--gold)" stroke-width="2"/><path d="M3 9H21M9 21V9" stroke="var(--gold)" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <div class="ci-text"><strong>Buchungszeitraum</strong><span>Mindestens 1 Woche im Voraus</span></div>
+        </div>
+
+        <div class="promise-box">
+          <h4>Unsere Versprechen</h4>
+          <div class="promise-item"><div class="promise-dot"></div>Antwort innerhalb von 24 Stunden</div>
+          <div class="promise-item"><div class="promise-dot"></div>Völlig unverbindliche Anfrage</div>
+          <div class="promise-item"><div class="promise-dot"></div>Persönliche Betreuung bei Ihrem Event</div>
+          <div class="promise-item"><div class="promise-dot"></div>Auf- & Abbau inklusive</div>
+          <div class="promise-item"><div class="promise-dot"></div>Keine versteckten Kosten</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap ft-in">
+    <div class="ft-logo">GOLDEN MAGIC MIRROR</div>
+    <div class="ft-links"><a href="datenschutz.html">Datenschutz</a><a href="impressum.html">Impressum</a><a href="kontakt.html">Kontakt</a></div>
+    <div class="ft-copy">© 2025 Wittmann Eventbox</div>
+  </div>
+</footer>
+
+<script>
+// Paket aus sessionStorage vorauswählen
+const p = sessionStorage.getItem('selectedPaket');
+if(p){
+  const sel = document.getElementById('paketSelect');
+  if(sel) for(let o of sel.options){ if(o.value === p){ o.selected = true; break; } }
+  sessionStorage.removeItem('selectedPaket');
+}
+
+// Formular absenden
+document.getElementById('contactForm').addEventListener('submit', async function(e){
+  e.preventDefault();
+  const btn = this.querySelector('.submit-btn');
+  btn.textContent = 'Wird gesendet...';
+  btn.disabled = true;
+  try {
+    const res = await fetch(this.action, {
+      method: 'POST',
+      body: new FormData(this),
+      headers: { 'Accept': 'application/json' }
+    });
+    if(res.ok){
+      this.style.display = 'none';
+      document.getElementById('successMsg').classList.add('show');
+    } else {
+      btn.textContent = 'Fehler – bitte erneut versuchen';
+      btn.disabled = false;
+    }
+  } catch {
+    btn.textContent = 'Fehler – bitte erneut versuchen';
+    btn.disabled = false;
+  }
+});
+</script>
+</body>
+</html>
