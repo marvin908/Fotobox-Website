@@ -598,7 +598,7 @@ footer{background:rgba(7,7,26,.75);backdrop-filter:blur(20px) saturate(1.8);-web
 
 <script>
 const numEl=document.getElementById('cdNum'),lblEl=document.getElementById('cdLbl'),flashEl=document.getElementById('flashEl');
-const seq=[{t:'3',l:'Lächeln!',s:'clamp(60px,10vw,120px)'},{t:'2',l:'Lächeln!',s:'clamp(60px,10vw,120px)'},{t:'1',l:'Lächeln!',s:'clamp(60px,10vw,120px)'},{t:'📸',l:'',s:'clamp(50px,8vw,90px)'}];
+const seq=[{t:'3',l:'Lächeln!',s:'clamp(60px,10vw,120px)'},{t:'2',l:'Lächeln!',s:'clamp(60px,10vw,120px)'},{t:'1',l:'Lächeln!',s:'clamp(60px,10vw,120px)'},{t:'😎',l:'',s:'clamp(50px,8vw,90px)'}];
 const tim=[2000,1800,1600,2200];let si=0;
 function flash(){flashEl.style.transition='opacity .05s';flashEl.style.opacity='1';setTimeout(()=>{flashEl.style.transition='opacity .4s';flashEl.style.opacity='0';},80);}
 function nextF(){si=(si+1)%seq.length;const s=seq[si];numEl.style.cssText='transition:transform .25s,opacity .25s;transform:scale(.5);opacity:0';if(lblEl)lblEl.style.opacity='0';setTimeout(()=>{numEl.textContent=s.t;numEl.style.fontSize=s.s;numEl.style.cssText='transition:transform .25s,opacity .25s;transform:scale(1);opacity:1';if(lblEl){lblEl.textContent=s.l;lblEl.style.opacity='1';}if(si===3)flash();},220);}
