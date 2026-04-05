@@ -1,0 +1,294 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout
+  title="Golden Magic Mirror Fotobox Wien – Wittmann Eventbox"
+  description="Die Golden Magic Mirror Fotobox für Hochzeiten, Geburtstage & Firmenfeiern in Wien. Sofortdrucke, persönliche Betreuung & Aufbau inklusive. Jetzt unverbindlich anfragen!"
+  isHome={true}
+>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-text reveal">
+      <span class="tag hfi hfi-1">Das Highlight für Ihr Event</span>
+      <h1 class="hfi hfi-2">Weil Ihr Event mehr verdient als <span><em>nur Schnappschüsse</em></span></h1>
+      <p class="hero-sub hfi hfi-3">Die Golden Magic Mirror Fotobox – interaktiv, elegant und unvergesslich. Sofortdrucke für Ihre Gäste inklusive.</p>
+      <div class="hero-cta-row hfi hfi-4">
+        <a href="#pricing" class="btn-hero-glass hfi hfi-4">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="white"/></svg>
+          Jetzt unverbindlich anfragen
+        </a>
+        <a href="#why" class="btn-hero-secondary hfi hfi-4">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7 7 7-7" stroke="rgba(255,255,255,.85)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  Mehr erfahren
+</a>
+      </div>
+    </div>
+    <div class="hero-visual hfi hfi-6">
+      <div class="mirror-frame">
+        <div class="mirror-screen">
+          <div class="mirror-bg">
+            <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(120deg,rgba(255,255,255,.07) 0%,transparent 45%)"></div>
+            <div style="position:absolute;top:12px;left:50%;transform:translateX(-50%);display:flex;gap:7px">
+              <div style="width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.2)"></div>
+              <div style="width:5px;height:5px;border-radius:50%;background:rgba(221,170,68,.5)"></div>
+              <div style="width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.2)"></div>
+            </div>
+          </div>
+        </div>
+        <div style="position:absolute;top:6%;left:12%;width:18%;height:40%;background:linear-gradient(170deg,rgba(255,255,255,.45),rgba(255,255,255,.0));border-radius:50%;pointer-events:none;transform:rotate(-15deg);filter:blur(6px)"></div>
+        <div style="position:absolute;top:4%;right:18%;width:6%;height:18%;background:linear-gradient(170deg,rgba(255,255,255,.3),transparent);border-radius:50%;pointer-events:none;filter:blur(4px)"></div>
+        <div class="flash-overlay" id="flashEl"></div>
+        <div class="mirror-cd">
+          <div class="cd-num" id="cdNum">3</div>
+          <div class="cd-lbl" id="cdLbl">Lächeln!</div>
+        </div>
+        <div class="mirror-dots"><div class="mirror-dot on"></div><div class="mirror-dot"></div><div class="mirror-dot"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="marquee">
+    <div class="ti"><div class="ti-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L13.9 8.26H20.5L15.3 11.97L17.2 18.23L12 14.52L6.8 18.23L8.7 11.97L3.5 8.26H10.1L12 2Z" fill="#07071A"/></svg></div>Hochwertige Sofortdrucke</div><div class="ti-dot"></div>
+    <div class="ti"><div class="ti-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M17 21V19c0-2.21-1.79-4-4-4H5c-2.21 0-4 1.79-4 4v2M9 11c2.21 0 4-1.79 4-4S11.21 3 9 3 5 4.79 5 7s1.79 4 4 4z" stroke="#07071A" stroke-width="2" stroke-linecap="round"/></svg></div>Persönliche Betreuung</div><div class="ti-dot"></div>
+    <div class="ti"><div class="ti-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21 10C21 17 12 23 12 23S3 17 3 10c0-5 4-9 9-9s9 4 9 9z" stroke="#07071A" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="#07071A" stroke-width="2"/></svg></div>Wien & Umgebung</div><div class="ti-dot"></div>
+    <div class="ti"><div class="ti-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#07071A" stroke-width="2"/><path d="M7 3v2M17 3v2M3 9h18" stroke="#07071A" stroke-width="2" stroke-linecap="round"/></svg></div>Flexible Buchung</div><div class="ti-dot"></div>
+    <div class="ti"><div class="ti-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L13.9 8.26H20.5L15.3 11.97L17.2 18.23L12 14.52L6.8 18.23L8.7 11.97L3.5 8.26H10.1L12 2Z" fill="#07071A"/></svg></div>Touch-Interaktion am Spiegel</div><div class="ti-dot"></div>
+    <div class="ti"><div class="ti-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="2" stroke="#07071A" stroke-width="2"/><path d="M9 7h6M9 11h6M9 15h4" stroke="#07071A" stroke-width="2" stroke-linecap="round"/></svg></div>QR-Code für digitale Fotos</div><div class="ti-dot"></div>
+    <div class="ti"><div class="ti-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L13.9 8.26H20.5L15.3 11.97L17.2 18.23L12 14.52L6.8 18.23L8.7 11.97L3.5 8.26H10.1L12 2Z" fill="#07071A"/></svg></div>Hochwertige Sofortdrucke</div><div class="ti-dot"></div>
+    <div class="ti"><div class="ti-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M17 21V19c0-2.21-1.79-4-4-4H5c-2.21 0-4 1.79-4 4v2M9 11c2.21 0 4-1.79 4-4S11.21 3 9 3 5 4.79 5 7s1.79 4 4 4z" stroke="#07071A" stroke-width="2" stroke-linecap="round"/></svg></div>Persönliche Betreuung</div><div class="ti-dot"></div>
+    <div class="ti"><div class="ti-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21 10C21 17 12 23 12 23S3 17 3 10c0-5 4-9 9-9s9 4 9 9z" stroke="#07071A" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="#07071A" stroke-width="2"/></svg></div>Wien & Umgebung</div><div class="ti-dot"></div>
+    <div class="ti"><div class="ti-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#07071A" stroke-width="2"/><path d="M7 3v2M17 3v2M3 9h18" stroke="#07071A" stroke-width="2" stroke-linecap="round"/></svg></div>Flexible Buchung</div><div class="ti-dot"></div>
+    <div class="ti"><div class="ti-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L13.9 8.26H20.5L15.3 11.97L17.2 18.23L12 14.52L6.8 18.23L8.7 11.97L3.5 8.26H10.1L12 2Z" fill="#07071A"/></svg></div>Touch-Interaktion am Spiegel</div><div class="ti-dot"></div>
+    <div class="ti"><div class="ti-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="2" stroke="#07071A" stroke-width="2"/><path d="M9 7h6M9 11h6M9 15h4" stroke="#07071A" stroke-width="2" stroke-linecap="round"/></svg></div>QR-Code für digitale Fotos</div><div class="ti-dot"></div>
+  </div>
+</div>
+
+
+<!-- BENEFITS -->
+<section id="why" style="padding:var(--section-y) 0;background:var(--light)">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center;margin-bottom:clamp(40px,5vw,64px)">
+      <span class="tag">Mehr als eine Fotobox</span>
+      <h2 class="sec-title" style="margin:14px 0 12px">Deswegen braucht Ihr Event<br/>die Golden Magic Mirror Fotobox</h2>
+      <p class="sec-sub" style="margin:0 auto">Ein Erlebnis, das Ihre Gäste noch lange in Erinnerung behalten.</p>
+    </div>
+    <div class="benefits-grid" style="margin-top:clamp(32px,4vw,56px)">
+      <div class="bc reveal d1"><div class="bc-num">01</div><div class="bc-tag">Erinnerung</div><div class="bc-ic">⭐</div><h3>Unvergessliche Momente</h3><p>Verwandeln Sie emotionale Momente in bleibende Erinnerungen – sofort ausgedruckt und für immer greifbar.</p></div>
+      <div class="bc reveal d2"><div class="bc-num">02</div><div class="bc-tag">Unterhaltung</div><div class="bc-ic">🎉</div><h3>Interaktiver Spaßfaktor</h3><p>Der Spiegel animiert Ihre Gäste mit Countdowns, Emojis und Touch – ein Highlight, das wirklich begeistert.</p></div>
+      <div class="bc reveal d3"><div class="bc-num">03</div><div class="bc-tag">Gastgeschenk</div><div class="bc-ic">🎁</div><h3>Hochwertiges Gastgeschenk</h3><p>Ein professioneller Sofortdruck als Mitbringsel – das direkt an die schöne Zeit erinnert und wertgeschätzt wird.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- MAGIC -->
+<section id="magic" style="padding:var(--section-y) 0;background:linear-gradient(160deg,#1a1206 0%,#2a1c06 50%,#1e1508 100%);position:relative;overflow:hidden">
+  <div class="mg-glow"></div>
+  <div class="mg-stars-bg" id="mgStars"></div>
+  <div class="wrap">
+    <div class="mg-hd reveal">
+      <span class="tag">Der Ablauf</span>
+      <h2 class="sec-title" style="color:var(--white)">So funktioniert<br/><em style="font-family:'Great Vibes',cursive;font-style:normal;font-weight:400;color:var(--gold);font-size:1.7em;letter-spacing:.5px">Die Magie des Spiegels</em></h2>
+      <div class="mg-deco"><div class="mg-line"></div><div class="mg-stars-txt">✦ ✦ ✦</div><div class="mg-line r"></div></div>
+      <p class="mg-sub">Von der ersten Animation bis zum fertigen Sofortdruck –<br/>ein Erlebnis, das Ihre Gäste mitreißt.</p>
+    </div>
+    <div style="position:relative">
+      <div class="tl-grid reveal">
+        <div class="tl-conn"><div class="tl-conn-inner"></div></div>
+        <div class="tl-item"><div class="tl-circ">1</div><div class="tl-item-text"><h4>Magische Anziehung</h4><p>Animationen laden ein, sich vor dem Spiegel zu positionieren</p></div></div>
+        <div class="tl-item"><div class="tl-circ">2</div><div class="tl-item-text"><h4>Ihr Regisseur</h4><p>Countdown & Komplimente führen spielerisch durch das Shooting</p></div></div>
+        <div class="tl-item"><div class="tl-circ">3</div><div class="tl-item-text"><h4>Persönlicher Touch</h4><p>Signieren auf dem Glas & Emojis per Touch hinzufügen</p></div></div>
+        <div class="tl-item"><div class="tl-circ">4</div><div class="tl-item-text"><h4>QR-Code & Druck</h4><p>Sofortdruck und digitale Kopie per QR – in Sekunden geteilt</p></div></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:clamp(40px,5vw,64px)" class="reveal">
+      <button class="btn-gold" onclick="goContact('')">Spiegel unverbindlich reservieren</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- EVENTS -->
+<section id="events" style="padding:var(--section-y) 0;background:var(--light);position:relative;overflow:hidden">
+  <div class="conf-side l" id="confL"></div>
+  <div class="conf-side r" id="confR"></div>
+  <div class="wrap">
+    <div class="reveal" style="text-align:center;margin-bottom:clamp(32px,4vw,56px)">
+      <span class="tag">Für jeden Anlass</span>
+      <h2 class="sec-title" style="margin:14px 0 12px">Perfekt für Ihr besonderes Event</h2>
+      <p class="sec-sub" style="margin:0 auto">Ob intimes Fest oder große Feier – der Magic Mirror ist das Gesprächsthema des Abends.</p>
+    </div>
+    <div class="ev-grid" style="margin-top:clamp(28px,4vw,48px)">
+      <div class="ev-card reveal d1"><span class="ev-em">💍</span><h4>Hochzeit</h4><p>Ein Highlight, das Ihre Feier unvergesslich macht – für Brautpaar und Gäste gleichermaßen</p></div>
+      <div class="ev-card reveal d2"><span class="ev-em">🎂</span><h4>Geburtstag</h4><p>Von Jubiläum bis Kinderparty – der Mirror sorgt für Staunen bei Jung und Alt</p></div>
+      <div class="ev-card reveal d2"><span class="ev-em">🏢</span><h4>Firmenfeier</h4><p>Modernes Entertainment und Networking-Tool in einem – professionell & einprägsam</p></div>
+      <div class="ev-card reveal d3"><span class="ev-em">🎊</span><h4>Jedes Event</h4><p>Messe, Gala, Jubiläum – der Mirror passt sich jedem Anlass perfekt an</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" style="padding:var(--section-y) 0;background:var(--light)">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center;margin:0 auto clamp(40px,5vw,64px)">
+      <span class="tag">Wählen Sie Ihr Paket</span>
+      <h2 class="sec-title" style="margin:14px 0 12px">Ein Paket,<br/>das zu Ihrem Event passt.</h2>
+      <p style="font-size:clamp(14px,1.6vw,16px);color:#666;line-height:1.7">Inkl. Lieferung, Auf- & Abbau – Sie genießen, wir kümmern uns um alles.</p>
+    </div>
+    <div class="pr2-grid">
+
+      <!-- BASIS -->
+      <div class="pr2-card reveal d1">
+        <div class="pr2-top">
+          <div>
+            <div class="pr2-tier">Basis</div>
+            <div class="pr2-desc">Perfekter Einstieg für kleinere Events</div>
+          </div>
+          <div class="pr2-price-wrap">
+            <div class="pr2-price"><sup>€</sup>550</div>
+            <div class="pr2-vat">inkl. MwSt.</div>
+          </div>
+        </div>
+        <div class="pr2-divider"></div>
+        <div class="pr2-feat-label">Inklusive</div>
+        <ul class="pr2-feats">
+          <li><span class="pr2-ck">✓</span>4–5 Std. Betreuung & Aufbau</li>
+          <li><span class="pr2-ck">✓</span>Anfahrt inklusive</li>
+          <li><span class="pr2-ck">✓</span>300 Sofortdrucke</li>
+          <li><span class="pr2-ck">✓</span>Roter Teppich & goldene Stangen</li>
+          <li><span class="pr2-ck">✓</span>Party-Equipment (Brillen, Hüte, Masken)</li>
+          <li><span class="pr2-ck">✓</span>Profi LED-Ringlicht</li>
+          <li><span class="pr2-x">✗</span><span style="color:#bbb">LED-Seifenblasenmaschinen</span></li>
+          <li><span class="pr2-x">✗</span><span style="color:#bbb">LED-Rauchmaschinen</span></li>
+        </ul>
+        <button class="pr2-btn" onclick="goContact('Basis')">Unverbindlich anfragen</button>
+      </div>
+
+      <!-- PREMIUM -->
+      <div class="pr2-card pr2-featured reveal d2">
+        <div class="pr2-badge">✦ Beliebteste Wahl</div>
+        <div class="pr2-top">
+          <div>
+            <div class="pr2-tier" style="color:var(--gold)">Premium</div>
+            <div class="pr2-desc" style="color:rgba(255,255,255,.6)">+ Seifenblasenmaschinen</div>
+          </div>
+          <div class="pr2-price-wrap">
+            <div class="pr2-price" style="color:var(--white)"><sup style="color:var(--gold-light)">€</sup>670</div>
+            <div class="pr2-vat" style="color:rgba(255,255,255,.45)">inkl. MwSt.</div>
+          </div>
+        </div>
+        <div class="pr2-divider" style="background:rgba(221,170,68,.2)"></div>
+        <div class="pr2-feat-label" style="color:rgba(255,255,255,.5)">Inklusive</div>
+        <ul class="pr2-feats">
+          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">4–5 Std. Betreuung & Aufbau</span></li>
+          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Anfahrt inklusive</span></li>
+          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">300 Sofortdrucke</span></li>
+          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Roter Teppich & goldene Stangen</span></li>
+          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Party-Equipment (Brillen, Hüte, Masken)</span></li>
+          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Profi LED-Ringlicht</span></li>
+          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">2× LED-Seifenblasenmaschinen <span style="font-size:12px;opacity:.6">(4L Flüssigkeit)</span></span></li>
+          <li><span class="pr2-x" style="color:rgba(255,255,255,.2)">✗</span><span style="color:rgba(255,255,255,.3)">LED-Rauchmaschinen</span></li>
+        </ul>
+        <button class="pr2-btn pr2-btn-featured" onclick="goContact('Premium')">Unverbindlich anfragen</button>
+      </div>
+
+      <!-- DELUXE -->
+      <div class="pr2-card pr2-deluxe reveal d3">
+        <div class="pr2-deluxe-badge">✦ Exklusiv</div>
+        <div class="pr2-top">
+          <div>
+            <div class="pr2-tier" style="color:var(--gold-light)">Deluxe</div>
+            <div class="pr2-desc" style="color:rgba(255,255,255,.6)">+ Seifenblasenmaschinen<br/>+ Rauchmaschinen</div>
+          </div>
+          <div class="pr2-price-wrap">
+            <div class="pr2-price" style="color:var(--white)"><sup style="color:var(--gold-light)">€</sup>750</div>
+            <div class="pr2-vat" style="color:rgba(255,255,255,.45)">inkl. MwSt.</div>
+          </div>
+        </div>
+        <div class="pr2-divider" style="background:rgba(232,212,150,.25)"></div>
+        <div class="pr2-feat-label" style="color:rgba(255,255,255,.5)">Inklusive</div>
+        <ul class="pr2-feats">
+          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">4–5 Std. Betreuung & Aufbau</span></li>
+          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Anfahrt inklusive</span></li>
+          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">300 Sofortdrucke</span></li>
+          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Roter Teppich & goldene Stangen</span></li>
+          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Party-Equipment (Brillen, Hüte, Masken)</span></li>
+          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Profi LED-Ringlicht</span></li>
+          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">2× LED-Seifenblasenmaschinen <span style="font-size:12px;opacity:.6">(4L Flüssigkeit)</span></span></li>
+          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">4× LED-Rauchmaschinen <span style="font-size:12px;opacity:.6">(8L Flüssigkeit)</span></span></li>
+        </ul>
+        <button class="pr2-btn pr2-btn-deluxe" onclick="goContact('Deluxe')">Unverbindlich anfragen</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section style="padding:var(--section-y) 0;background:linear-gradient(135deg,#1a1206,#3a2604 40%,#2a1c04);position:relative;overflow:hidden">
+  <div style="position:absolute;top:-40%;left:50%;transform:translateX(-50%);width:min(700px,120%);height:min(700px,120vw);border-radius:50%;background:radial-gradient(circle,rgba(221,170,68,.13),transparent 70%);pointer-events:none"></div>
+  <div class="wrap">
+    <div class="cta-in reveal" style="text-align:center;position:relative;z-index:1">
+      <span class="tag">Limitierte Termine</span>
+      <h2 style="font-size:clamp(26px,5vw,52px);font-weight:800;color:var(--white);margin:18px 0;line-height:1.15">Bereit für Ihr<br/><span style="color:var(--gold)">unvergessliches Event?</span></h2>
+      <p style="font-size:clamp(15px,2vw,18px);color:rgba(255,255,255,.7);margin-bottom:36px;line-height:1.7">Sichern Sie sich noch heute Ihren Wunschtermin.<br/>Wir melden uns innerhalb von 24 Stunden bei Ihnen.</p>
+      <div class="cta-row" style="display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap">
+        <button class="btn-gold" style="font-size:clamp(15px,2vw,18px);padding:clamp(14px,2vw,18px) clamp(28px,4vw,48px)" onclick="goContact('')">Meinen Termin anfragen</button>
+        <a href="tel:+436604313993" class="btn-white"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 16.92V19.92C22 20.48 21.74 21 21.29 21.34C20.84 21.68 20.26 21.79 19.72 21.65C16.56 20.83 13.55 19.24 11.01 17.01C8.65 14.96 6.78 12.43 5.64 9.59C5.04 8.08 4.97 6.41 5.45 4.86C5.62 4.33 6.02 3.88 6.54 3.62L9.09 2.41C9.59 2.17 10.17 2.24 10.6 2.59L12.73 4.29C13.16 4.64 13.31 5.22 13.1 5.73L12.17 8.01C12 8.41 12.08 8.87 12.38 9.19L14.81 11.62C15.13 11.92 15.59 12 15.99 11.83L18.27 10.9C18.78 10.69 19.36 10.84 19.71 11.27L21.41 13.4C21.76 13.83 21.83 14.41 21.59 14.91L22 16.92Z" fill="var(--dark)"/></svg>0660 431 39 93</a>
+      </div>
+      <p style="font-size:12px;color:rgba(255,255,255,.4);margin-top:16px">wb@wittmann-eventbox.at · Persönliche Betreuung garantiert</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ -->
+<section id="faq" style="padding:var(--section-y) 0;background:var(--white)">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center;margin-bottom:clamp(32px,4vw,52px)">
+      <span class="tag">Häufige Fragen</span>
+      <h2 class="sec-title" style="margin:14px 0 12px">Alles, was Sie wissen möchten</h2>
+      <p class="sec-sub" style="margin:0 auto">Noch Fragen? Hier finden Sie die häufigsten Antworten – oder melden Sie sich direkt bei uns.</p>
+    </div>
+    <div class="faq-wrap reveal">
+      <div class="faq-item"><button class="faq-toggle" onclick="toggleFaq(this)">Wie lange dauert der Aufbau des Magic Mirrors?<span class="faq-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 2L10 10M10 2L2 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></button><div class="faq-body"><p>Der Aufbau dauert in der Regel 30–45 Minuten. Wir kommen rechtzeitig vor Ihrem Event, damit alles bereit ist wenn Ihre Gäste eintreffen. Abbau und Abholung übernehmen wir ebenfalls – Sie müssen sich um nichts kümmern.</p></div></div>
+      <div class="faq-item"><button class="faq-toggle" onclick="toggleFaq(this)">Ist die Buchung wirklich unverbindlich?<span class="faq-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 2L10 10M10 2L2 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></button><div class="faq-body"><p>Ja, absolut. Wenn Sie das Formular absenden, bekommen Sie zunächst nur eine Rückmeldung von uns. Erst nach einem gemeinsamen Gespräch und Ihrer ausdrücklichen Bestätigung wird der Termin verbindlich reserviert.</p></div></div>
+      <div class="faq-item"><button class="faq-toggle" onclick="toggleFaq(this)">Wie viele Gäste können den Spiegel gleichzeitig nutzen?<span class="faq-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 2L10 10M10 2L2 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></button><div class="faq-body"><p>Vor dem Spiegel passen bequem 2–4 Personen gleichzeitig. Der Spiegel selbst ist großformatig, sodass auch Gruppenfotos wunderbar gelingen. Bei Gruppen über 4 Personen empfehlen wir zwei separate Aufnahmen für optimale Ergebnisse.</p></div></div>
+      <div class="faq-item"><button class="faq-toggle" onclick="toggleFaq(this)">Was passiert mit den digitalen Fotos?<span class="faq-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 2L10 10M10 2L2 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></button><div class="faq-body"><p>Jede Aufnahme wird sofort ausgedruckt und kann per QR-Code auch digital abgerufen werden. Nach der Veranstaltung erhalten Sie auf Wunsch alle Fotos in einer digitalen Galerie – als schöne Erinnerung für Sie und Ihre Gäste.</p></div></div>
+      <div class="faq-item"><button class="faq-toggle" onclick="toggleFaq(this)">Kann das Layout der Sofortdrucke personalisiert werden?<span class="faq-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 2L10 10M10 2L2 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></button><div class="faq-body"><p>Ja! Das Drucklayout kann mit Ihrem Namen, Datum, Logo oder einem individuellen Design versehen werden. So wird jeder Sofortdruck zu einem persönlichen Andenken an Ihr besonderes Event.</p></div></div>
+      <div class="faq-item"><button class="faq-toggle" onclick="toggleFaq(this)">Wie weit fahren Sie für Events?<span class="faq-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 2L10 10M10 2L2 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></button><div class="faq-body"><p>Wir sind in Wien und der gesamten Umgebung für Sie da. Die Anfahrt ist in allen Paketen inklusive. Für Events außerhalb unseres regulären Einzugsgebiets sprechen Sie uns einfach an – wir finden eine Lösung.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<script>
+const numEl=document.getElementById('cdNum'),lblEl=document.getElementById('cdLbl'),flashEl=document.getElementById('flashEl');
+const seq=[{t:'3',l:'Lächeln!',s:'clamp(60px,10vw,120px)'},{t:'2',l:'Lächeln!',s:'clamp(60px,10vw,120px)'},{t:'1',l:'Lächeln!',s:'clamp(60px,10vw,120px)'},{t:'🥳',l:'',s:'clamp(50px,8vw,90px)'}];
+const tim=[1100,900,750,2600];let si=0;
+function flash(){flashEl.style.transition='opacity .05s';flashEl.style.opacity='1';setTimeout(()=>{flashEl.style.transition='opacity .4s';flashEl.style.opacity='0';},80);}
+function nextF(){si=(si+1)%seq.length;const s=seq[si];numEl.style.cssText='transition:transform .25s,opacity .25s;transform:scale(.5);opacity:0';if(lblEl)lblEl.style.opacity='0';setTimeout(()=>{numEl.textContent=s.t;numEl.style.fontSize=s.s;numEl.style.cssText='transition:transform .25s,opacity .25s;transform:scale(1);opacity:1';if(lblEl){lblEl.textContent=s.l;lblEl.style.opacity='1';}if(si===3)flash();},220);}
+let schedId;function sched(){schedId=setTimeout(()=>{nextF();sched();},tim[si]||2000);}
+sched();
+window.addEventListener('beforeunload',()=>clearTimeout(schedId));
+const months=['Jänner','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
+const d=new Date();d.setMonth(d.getMonth()+1);
+document.getElementById('nextMonth').textContent=months[d.getMonth()];
+const mp=document.getElementById('mgStars');
+if(mp){for(let i=0;i<20;i++){const s=document.createElement('div');s.className='mg-star';const sz=1+Math.random()*2;s.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;width:${sz}px;height:${sz}px;--d:${4+Math.random()*6}s;--dl:${Math.random()*7}s`;mp.appendChild(s);}}
+const cc=['#DDA844','#E8D496','#ffffff','#f5d76e','#c89820'];
+function mkConf(el,n){if(!el)return;for(let i=0;i<n;i++){const p=document.createElement('div');p.className='conf-p';const sz=5+Math.random()*7;p.style.cssText=`left:${Math.random()*100}%;top:${-(10+Math.random()*80)}px;width:${sz}px;height:${sz*.6}px;background:${cc[i%cc.length]};border-radius:${Math.random()>.5?'50%':'2px'};--d:${3+Math.random()*4}s;--dl:${Math.random()*5}s`;el.appendChild(p);}}
+mkConf(document.getElementById('confL'),16);mkConf(document.getElementById('confR'),16);
+function toggleFaq(btn){const body=btn.nextElementSibling;const isOpen=body.classList.contains('open');document.querySelectorAll('.faq-body').forEach(b=>b.classList.remove('open'));document.querySelectorAll('.faq-toggle').forEach(b=>b.classList.remove('open'));if(!isOpen){body.classList.add('open');btn.classList.add('open');}}
+const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target);}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(a){const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}}});
+function goContact(paket){sessionStorage.setItem('selectedPaket',paket||'');window.location.href='/kontakt';}
+</script>
+
+</Layout>
