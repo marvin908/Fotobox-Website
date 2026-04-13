@@ -99,14 +99,23 @@ a{text-decoration:none;color:inherit}
 .hero-visual{position:relative;display:flex;justify-content:center;align-items:center}
 
 /* MIRROR */
-.mirror-frame{position:relative;width:clamp(300px,42vw,540px);height:clamp(420px,58vw,750px);background:linear-gradient(160deg,#f8f0d0 0%,#e8d080 25%,#c89820 50%,#e0c060 75%,#f0e0a0 100%);border-radius:50% 50% 46% 46% / 40% 40% 44% 44%;box-shadow:0 0 0 5px rgba(255,255,255,.6),0 0 0 9px rgba(221,170,68,.5),0 0 0 11px rgba(180,130,20,.3),0 32px 80px rgba(0,0,0,.35),inset 0 2px 4px rgba(255,255,255,.8);overflow:hidden}
-.mirror-screen{position:absolute;inset:clamp(12px,2.5vw,20px);inset-inline:clamp(14px,2.8vw,22px);background:transparent;border-radius:46% 46% 42% 42% / 36% 36% 40% 40%;overflow:hidden;box-shadow:inset 0 4px 20px rgba(0,0,0,.4)}
-.mirror-bg{width:100%;height:100%;background:linear-gradient(160deg,rgba(230,235,248,.62) 0%,rgba(185,192,215,.55) 25%,rgba(140,148,175,.58) 55%,rgba(195,202,222,.56) 80%,rgba(225,230,245,.6) 100%);backdrop-filter:blur(6px) saturate(1.4);-webkit-backdrop-filter:blur(6px) saturate(1.4);position:relative}
-.mirror-bg::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.4) 0%,transparent 32%,rgba(255,255,255,.06) 62%,rgba(215,225,245,.18) 100%);pointer-events:none}
+.mirror-wrap{position:relative;display:inline-flex;justify-content:center;align-items:center}
+.mirror-ornament{position:absolute;top:-30px;left:50%;transform:translateX(-50%);z-index:15;pointer-events:none;filter:drop-shadow(0 2px 6px rgba(221,170,68,.45))}
+.mirror-frame::after{content:'';position:absolute;top:0;left:-130%;width:70%;height:100%;background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,.18) 40%,rgba(255,255,255,.26) 52%,transparent 100%);transform:skewX(-16deg);animation:mirrorGlare 8s ease-in-out infinite 2s;pointer-events:none;z-index:9}
+@keyframes mirrorGlare{0%,100%{left:-130%;opacity:0}12%{opacity:1}55%{left:150%;opacity:0}}
+.mirror-bokeh{position:absolute;inset:0;pointer-events:none;z-index:1}
+.mbk{position:absolute;border-radius:50%;animation:mbkFloat var(--d) ease-in-out infinite var(--dl),mbkPulse var(--p) ease-in-out infinite var(--pl)}
+@keyframes mbkFloat{0%,100%{transform:translate(0,0)}50%{transform:translate(var(--tx),var(--ty))}}
+@keyframes mbkPulse{0%,100%{opacity:var(--oa)}50%{opacity:var(--ob)}}
+.mirror-frame{position:relative;width:clamp(240px,30vw,400px);height:clamp(340px,42vw,560px);background:linear-gradient(160deg,#fdf8ee 0%,#f0e2a8 18%,#d4a830 40%,#e8d068 60%,#f4eca4 80%,#fefcf4 100%);border-radius:50% 50% 47% 47% / 42% 42% 45% 45%;box-shadow:0 0 0 3px rgba(255,255,255,.9),0 0 0 6px rgba(240,220,140,.65),0 0 0 10px rgba(200,158,40,.3),0 0 0 13px rgba(170,120,10,.12),0 40px 100px rgba(0,0,0,.42),0 0 70px rgba(221,170,68,.12),inset 0 3px 8px rgba(255,255,255,.95),inset 0 -2px 4px rgba(180,130,20,.15);overflow:hidden}
+.mirror-screen{position:absolute;inset:clamp(12px,2.5vw,20px);inset-inline:clamp(14px,2.8vw,22px);background:transparent;border-radius:47% 47% 43% 43% / 38% 38% 42% 42%;overflow:hidden;box-shadow:inset 0 6px 28px rgba(0,0,0,.38),inset 0 1px 0 rgba(255,255,255,.25)}
+.mirror-bg{width:100%;height:100%;background:linear-gradient(155deg,rgba(248,248,255,.78) 0%,rgba(215,218,238,.70) 22%,rgba(175,180,210,.65) 50%,rgba(210,215,235,.68) 75%,rgba(242,244,252,.76) 100%);backdrop-filter:blur(8px) saturate(1.6);-webkit-backdrop-filter:blur(8px) saturate(1.6);position:relative}
+.mirror-bg::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.55) 0%,transparent 28%,rgba(255,255,255,.04) 58%,rgba(225,230,250,.14) 100%);pointer-events:none}
 .flash-overlay{position:absolute;inset:0;background:white;border-radius:18px;opacity:0;z-index:3;pointer-events:none}
-.mirror-cd{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;z-index:2}
-.cd-num{font-family:'Poppins',sans-serif;font-size:clamp(60px,10vw,120px);font-weight:800;color:#000;line-height:1;text-shadow:0 2px 8px rgba(255,255,255,.4)}
-.cd-lbl{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:#000;letter-spacing:3px;text-transform:uppercase;margin-top:18px}
+.mirror-cd{position:absolute;top:40%;left:50%;transform:translate(-50%,-50%);text-align:center;z-index:2;width:75%}
+.cd-num{font-family:'Poppins',sans-serif;font-size:clamp(90px,14vw,170px);font-weight:800;color:#000;line-height:1;text-shadow:0 2px 8px rgba(255,255,255,.4)}
+.cd-lbl{position:absolute;top:100%;left:50%;transform:translateX(-50%);white-space:nowrap;font-family:'Great Vibes',cursive;font-size:clamp(28px,4.2vw,48px);font-weight:400;color:#000;letter-spacing:.5px;text-transform:none;margin-top:10px}
+@keyframes signReveal{0%{opacity:0;transform:rotate(-15deg) scale(0.88) translateY(14px);filter:blur(6px);letter-spacing:0.08em}40%{opacity:.55;filter:blur(2px)}75%{opacity:.9;filter:blur(0);transform:rotate(-10.5deg) scale(1.01) translateY(-2px)}100%{opacity:1;transform:rotate(-10deg) scale(1) translateY(0);filter:blur(0);letter-spacing:normal}}
 .mirror-dots{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:2}
 .mirror-choice{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:82%;text-align:center;z-index:2;opacity:0;pointer-events:none;transition:opacity .35s ease}
 .mirror-choice.show{opacity:1}
@@ -433,5 +442,5 @@ footer{background:rgba(8,6,2,.88);backdrop-filter:blur(28px) saturate(1.6);-webk
   .tl-grid{grid-template-columns:1fr 1fr;gap:40px 24px}
   .tl-conn{display:none}
   .ev-grid{grid-template-columns:1fr 1fr}
-  .mirror-frame{width:clamp(300px,38vw,440px);height:clamp(420px,53vw,610px)}
+  .mirror-frame{width:clamp(240px,28vw,360px);height:clamp(340px,39vw,500px)}
 }

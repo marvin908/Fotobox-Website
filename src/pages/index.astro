@@ -21,15 +21,38 @@ import GalleryStack from '../components/GalleryStack.tsx';
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="white"/></svg>
           Wunschtermin sichern
         </a>
-        <a href="#magic" class="btn-hero-secondary hfi hfi-4">
+        <a href="#galerie" class="btn-hero-secondary hfi hfi-4">
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7 7 7-7" stroke="rgba(255,255,255,.85)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  So funktioniert's
+  Zur Galerie
 </a>
       </div>
     </div>
     <div class="hero-visual hfi hfi-6">
+      <div class="mirror-wrap">
+      <div class="mirror-ornament">
+        <svg width="48" height="36" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="24" y1="36" x2="24" y2="22" stroke="url(#og)" stroke-width="1"/>
+          <circle cx="24" cy="19" r="2.5" fill="#DDA844" opacity=".9"/>
+          <path d="M24 14 L28 8 L24 2 L20 8 Z" fill="url(#od)" opacity=".95"/>
+          <path d="M12 12 L18 9 L20 3 L14 6 Z" fill="url(#od)" opacity=".7"/>
+          <path d="M36 12 L30 9 L28 3 L34 6 Z" fill="url(#od)" opacity=".7"/>
+          <circle cx="11" cy="13" r="1.8" fill="#E8D496" opacity=".8"/>
+          <circle cx="37" cy="13" r="1.8" fill="#E8D496" opacity=".8"/>
+          <defs>
+            <linearGradient id="og" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#DDA844" stop-opacity="0"/>
+              <stop offset="100%" stop-color="#DDA844" stop-opacity=".7"/>
+            </linearGradient>
+            <linearGradient id="od" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#f8e8a0"/>
+              <stop offset="100%" stop-color="#b07828"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
       <div class="mirror-frame">
         <div class="mirror-screen">
+          <div class="mirror-bokeh" id="mirrorBokeh"></div>
           <div class="mirror-bg">
             <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(120deg,rgba(255,255,255,.07) 0%,transparent 45%)"></div>
             <div style="position:absolute;top:12px;left:50%;transform:translateX(-50%);display:flex;gap:7px">
@@ -67,6 +90,7 @@ import GalleryStack from '../components/GalleryStack.tsx';
         </div>
         <div class="mirror-dots"><div class="mirror-dot on"></div><div class="mirror-dot"></div><div class="mirror-dot"></div></div>
       </div>
+      </div><!-- /mirror-wrap -->
     </div>
   </div>
 </section>
@@ -105,6 +129,12 @@ import GalleryStack from '../components/GalleryStack.tsx';
     </div>
   </div>
   <GalleryStack client:visible />
+  <div class="reveal" style="text-align:center;margin-top:clamp(28px,4vw,48px);position:relative;z-index:1">
+    <a href="#pricing" style="display:inline-flex;align-items:center;gap:10px;padding:14px 32px;border:1.5px solid rgba(221,170,68,.45);border-radius:50px;font-family:'Poppins',sans-serif;font-size:15px;font-weight:600;color:var(--gold);letter-spacing:.04em;text-decoration:none;transition:background .3s,border-color .3s,box-shadow .3s" onmouseover="this.style.background='rgba(221,170,68,.08)';this.style.borderColor='rgba(221,170,68,.75)';this.style.boxShadow='0 0 24px rgba(221,170,68,.15)'" onmouseout="this.style.background='';this.style.borderColor='rgba(221,170,68,.45)';this.style.boxShadow=''">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Unsere Preise
+    </a>
+  </div>
 </section>
 
 <div class="sec-div" style="background:linear-gradient(180deg,#1E1508,#1E1508)"><span class="sec-div-gem"><span class="sec-div-gem-inner"></span></span></div>
@@ -228,7 +258,7 @@ import GalleryStack from '../components/GalleryStack.tsx';
   <div class="wrap">
     <div class="reveal" style="text-align:center;margin:0 auto clamp(40px,5vw,64px)">
       <span class="tag">Wählen Sie Ihr Paket</span>
-      <h2 class="sec-title" style="margin:14px 0 12px;color:var(--white)">Alles drin. Aufbauen,<br/>betreuen, abbauen – das machen wir.</h2>
+      <h2 class="sec-title" style="margin:14px 0 12px;color:var(--white)">Alles drin. Liefern,<br/>aufbauen, abbauen – das machen wir.</h2>
       <p style="font-size:clamp(14px,1.6vw,16px);color:rgba(255,255,255,.6);line-height:1.7">Sie wählen Ihr Paket, wir liefern das Erlebnis. Preise inkl. MwSt., keine versteckten Kosten.</p>
     </div>
     <div class="pr2-grid">
@@ -412,24 +442,26 @@ import GalleryStack from '../components/GalleryStack.tsx';
 </section>
 
 <script>
-const numEl=document.getElementById('cdNum'),lblEl=document.getElementById('cdLbl'),flashEl=document.getElementById('flashEl'),choiceEl=document.getElementById('mirrorChoice');
+const numEl=document.getElementById('cdNum'),lblEl=document.getElementById('cdLbl'),flashEl=document.getElementById('flashEl'),choiceEl=document.getElementById('mirrorChoice'),cdEl=numEl&&numEl.parentElement;
 const GV="'Great Vibes',cursive";
 const seq=[
-  {t:'3',l:'Lächeln!',s:'clamp(100px,16vw,190px)',lf:GV,ls:'clamp(28px,4.5vw,50px)'},
-  {t:'2',l:'Lächeln!',s:'clamp(100px,16vw,190px)',lf:GV,ls:'clamp(28px,4.5vw,50px)'},
-  {t:'1',l:'Lächeln!',s:'clamp(100px,16vw,190px)',lf:GV,ls:'clamp(28px,4.5vw,50px)'},
-  {t:'🥳',l:'',s:'clamp(56px,9vw,100px)'},
-  {t:'WOW',l:'Zum Einrahmen!',s:'clamp(48px,7.5vw,88px)',tf:GV,lf:GV,ls:'clamp(18px,2.8vw,28px)'},
-  {t:'Signier mich!',l:'',s:'clamp(50px,8.5vw,96px)',tf:GV},
+  {t:'3',l:'Lächeln!',s:'clamp(90px,14vw,170px)',lf:GV,ls:'clamp(28px,4.2vw,48px)',top:'40%'},
+  {t:'2',l:'Lächeln!',s:'clamp(90px,14vw,170px)',lf:GV,ls:'clamp(28px,4.2vw,48px)',top:'40%'},
+  {t:'1',l:'Lächeln!',s:'clamp(90px,14vw,170px)',lf:GV,ls:'clamp(28px,4.2vw,48px)',top:'40%'},
+  {t:'🎉',l:'Bezaubernd!',s:'clamp(64px,9.5vw,116px)',lf:GV,ls:'clamp(34px,5.2vw,58px)',tw:true,top:'38%',fade:true},
+  {t:'Signier mich!',l:'',s:'clamp(38px,6vw,68px)',tf:GV,rot:'-10deg',top:'52%',twnum:true},
   {t:'',l:'',s:'0px',choice:true}
 ];
-const tim=[1100,900,750,1800,2600,2800,3200];let si=0;
-function flash(){flashEl.style.transition='opacity .05s';flashEl.style.opacity='1';setTimeout(()=>{flashEl.style.transition='opacity .4s';flashEl.style.opacity='0';},80);}
-function nextF(){if(choiceEl)choiceEl.classList.remove('show');si=(si+1)%seq.length;const s=seq[si];const cf=numEl.style.fontFamily||"'Poppins',sans-serif";numEl.style.cssText=`font-family:${cf};transition:transform .25s,opacity .25s;transform:scale(.5);opacity:0`;if(lblEl)lblEl.style.opacity='0';setTimeout(()=>{if(s.choice){numEl.textContent='';numEl.style.opacity='0';if(lblEl){lblEl.textContent='';lblEl.style.opacity='0';}if(choiceEl)choiceEl.classList.add('show');}else{numEl.textContent=s.t;numEl.style.cssText=`font-family:${s.tf||"'Poppins',sans-serif"};font-size:${s.s};transition:transform .25s,opacity .25s;transform:scale(1);opacity:1`;if(lblEl){lblEl.textContent=s.l;lblEl.style.fontFamily=s.lf||"'Poppins',sans-serif";lblEl.style.fontSize=s.ls||'13px';lblEl.style.letterSpacing=s.lf?'0.5px':'3px';lblEl.style.textTransform=s.lf?'none':'uppercase';lblEl.style.opacity='1';}if(si===3)flash();}},220);}
-let schedId;let heroPaused=false;
-function sched(){if(heroPaused)return;schedId=setTimeout(()=>{nextF();sched();},tim[si]||2000);}
+const tim=[1500,1500,1500,2800,2500,2500];let si=0;let twId=null;
+function typewrite(el,text,ms){if(twId)clearInterval(twId);el.textContent='';el.style.opacity='1';let i=0;twId=setInterval(()=>{el.textContent+=text[i];i++;if(i>=text.length){clearInterval(twId);twId=null;}},ms||55);}
+function flash(){if(!flashEl)return;flashEl.style.transition='opacity .03s';flashEl.style.opacity='1';setTimeout(()=>{if(!flashEl)return;flashEl.style.transition='opacity .55s ease-out';flashEl.style.opacity='0';},120);}
+function nextF(){if(twId){clearInterval(twId);twId=null;}if(choiceEl)choiceEl.classList.remove('show');si=(si+1)%seq.length;const s=seq[si];const cf=numEl.style.fontFamily||"'Poppins',sans-serif";const cfs=numEl.style.fontSize||seq[(si-1+seq.length)%seq.length].s||'inherit';const pr=seq[(si-1+seq.length)%seq.length].rot||'0deg';numEl.style.cssText=`font-family:${cf};font-size:${cfs};transition:transform .25s,opacity .25s;transform:scale(.5) rotate(${pr});opacity:0`;if(lblEl)lblEl.style.opacity='0';setTimeout(()=>{if(cdEl)cdEl.style.top=s.top||'50%';if(s.choice){numEl.textContent='';numEl.style.opacity='0';if(lblEl){lblEl.textContent='';lblEl.style.opacity='0';}if(choiceEl)choiceEl.classList.add('show');}else{if(lblEl){lblEl.style.fontFamily=s.lf||"'Poppins',sans-serif";lblEl.style.fontSize=s.ls||'13px';lblEl.style.letterSpacing=s.lf?'0.5px':'3px';lblEl.style.textTransform=s.lf?'none':'uppercase';if(s.tw&&s.l){lblEl.textContent='';lblEl.style.opacity='0';}else{lblEl.textContent=s.l;lblEl.style.opacity='1';}}if(s.twnum){numEl.textContent=s.t;numEl.style.cssText=`font-family:${s.tf||"'Great Vibes',cursive"};font-size:${s.s};white-space:nowrap;opacity:1;text-shadow:0 0 28px rgba(221,170,68,.55),0 2px 12px rgba(0,0,0,.3);animation:signReveal 2.4s cubic-bezier(0.22,0.61,0.36,1) forwards;`;}else if(s.fade){numEl.textContent=s.t;numEl.style.cssText=`font-family:${s.tf||"'Poppins',sans-serif"};font-size:${s.s};transition:opacity .9s ease,transform .9s ease;transform:scale(.85);opacity:0`;setTimeout(()=>{numEl.style.opacity='1';numEl.style.transform='scale(1)';},550);}else{numEl.textContent=s.t;numEl.style.cssText=`font-family:${s.tf||"'Poppins',sans-serif"};font-size:${s.s};transition:transform .4s cubic-bezier(.22,1,.36,1),opacity .4s;transform:scale(1) rotate(${s.rot||'0deg'});opacity:1`;}if(si===3){flash();if(s.tw&&s.l&&lblEl)setTimeout(()=>typewrite(lblEl,s.l,42),700);}else if(s.tw&&s.l&&lblEl)setTimeout(()=>typewrite(lblEl,s.l,42),700);}},220);}
+let schedId=null;let heroPaused=false;
+function sched(){if(heroPaused||schedId!==null)return;schedId=setTimeout(()=>{schedId=null;nextF();sched();},tim[si]||2000);}
+// Apply initial label styles to match seq[0]
+if(lblEl){const s0=seq[0];lblEl.style.fontFamily=s0.lf||"'Poppins',sans-serif";lblEl.style.fontSize=s0.ls||'12px';lblEl.style.letterSpacing=s0.lf?'0.5px':'3px';lblEl.style.textTransform=s0.lf?'none':'uppercase';}
 sched();
-const heroObserver=new IntersectionObserver(([e])=>{if(e.isIntersecting){heroPaused=false;sched();}else{heroPaused=true;clearTimeout(schedId);}},{threshold:0.1});
+const heroObserver=new IntersectionObserver(([e])=>{if(e.isIntersecting){heroPaused=false;sched();}else{heroPaused=true;clearTimeout(schedId);schedId=null;}},{threshold:0.1});
 const heroEl=document.getElementById('hero');if(heroEl)heroObserver.observe(heroEl);
 window.addEventListener('beforeunload',()=>{clearTimeout(schedId);heroObserver.disconnect();});
 const months=['Jänner','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
@@ -437,6 +469,8 @@ const d=new Date();d.setMonth(d.getMonth()+1);
 document.getElementById('nextMonth').textContent=months[d.getMonth()];
 function makeStars(id,count){const el=document.getElementById(id);if(!el)return;for(let i=0;i<count;i++){const s=document.createElement('div');s.className='mg-star';const big=Math.random()>.72;const sz=big?5+Math.random()*10:1.5+Math.random()*3.5;const tx=(Math.random()-.5)*500;const ty=(Math.random()-.5)*400;const md=20+Math.random()*30;const mdl=-(Math.random()*22);s.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;width:${sz}px;height:${sz}px;--d:${big?6+Math.random()*8:3+Math.random()*5}s;--dl:${Math.random()*12}s;--tx:${tx}px;--ty:${ty}px;--md:${md}s;--mdl:${mdl}s${big?';filter:blur(2.5px)':''}`;el.appendChild(s);}}
 makeStars('heroStars',55);makeStars('mgStars',55);
+function makeMirrorBokeh(id,count){const el=document.getElementById(id);if(!el)return;for(let i=0;i<count;i++){const b=document.createElement('div');b.className='mbk';const big=Math.random()>.72;const sz=big?3.5+Math.random()*5:1+Math.random()*2.5;const tx=(Math.random()-.5)*30;const ty=(Math.random()-.5)*30;b.style.cssText=`left:${8+Math.random()*84}%;top:${8+Math.random()*84}%;width:${sz}px;height:${sz}px;background:rgba(221,170,68,${big?.85:.7});box-shadow:0 0 ${sz*2.5}px ${sz*1.2}px rgba(221,170,68,.2);--d:${5+Math.random()*8}s;--dl:-${Math.random()*8}s;--p:${3+Math.random()*4}s;--pl:-${Math.random()*4}s;--tx:${tx}px;--ty:${ty}px;--oa:${.08+Math.random()*.12};--ob:${.28+Math.random()*.28}`;el.appendChild(b);}}
+makeMirrorBokeh('mirrorBokeh',9);
 function makeFireflies(id,count){const el=document.getElementById(id);if(!el)return;for(let i=0;i<count;i++){const f=document.createElement('div');f.className='firefly';const sz=2+Math.random()*4;const glow=5+Math.random()*10;const tx=(Math.random()-.5)*320;const ty=(Math.random()-.5)*320;const md=14+Math.random()*20;const mdl=-(Math.random()*20);f.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;width:${sz}px;height:${sz}px;background:rgba(221,170,68,.95);box-shadow:0 0 ${glow}px ${glow*.5}px rgba(221,170,68,.35);--d:${4+Math.random()*7}s;--dl:${Math.random()*12}s;--tx:${tx}px;--ty:${ty}px;--md:${md}s;--mdl:${mdl}s`;el.appendChild(f);}}
 makeFireflies('evFireflyBg',30);makeFireflies('fireflyBg',30);
 window.toggleFaq=function(btn){const body=btn.nextElementSibling;const isOpen=body.classList.contains('open');document.querySelectorAll('.faq-body').forEach(b=>b.classList.remove('open'));document.querySelectorAll('.faq-toggle').forEach(b=>b.classList.remove('open'));if(!isOpen){body.classList.add('open');btn.classList.add('open');}}
