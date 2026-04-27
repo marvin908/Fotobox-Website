@@ -50,7 +50,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="form-card">
         <h2>Jetzt anfragen</h2>
         <p class="sub">Alle Felder mit * sind Pflichtfelder. Die Anfrage ist völlig unverbindlich.</p>
-        <form id="contactForm" action="https://formspree.io/f/IHRE_FORM_ID" method="POST">
+        <form id="contactForm" action="https://formspree.io/f/xbdqvrgy" method="POST">
           <input type="hidden" name="paket" id="paketField"/>
           <div class="field-row">
             <div class="field">
@@ -260,8 +260,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
       headers: { 'Accept': 'application/json' }
     });
     if(res.ok){
-      this.style.display = 'none';
-      document.getElementById('successMsg').classList.add('show');
+      window.location.href = '/danke';
     } else {
       btn.textContent = 'Fehler – bitte erneut versuchen';
       btn.disabled = false;
