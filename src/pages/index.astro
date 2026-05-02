@@ -444,7 +444,7 @@ const seq=[
   {t:'2',l:'Lächeln!',s:'clamp(90px,14vw,170px)',lf:GV,ls:'clamp(28px,4.2vw,48px)',top:'40%'},
   {t:'1',l:'Lächeln!',s:'clamp(90px,14vw,170px)',lf:GV,ls:'clamp(28px,4.2vw,48px)',top:'40%'},
   {t:'🎉',l:'Bezaubernd!',s:'clamp(64px,9.5vw,116px)',lf:GV,ls:'clamp(34px,5.2vw,58px)',tw:true,top:'38%',fade:true},
-  {t:'Signier mich!',l:'',s:'clamp(38px,6vw,68px)',tf:GV,rot:'-10deg',top:'52%',twnum:true},
+  {t:'Signier mich!',l:'',s:'clamp(22px,6vw,68px)',tf:GV,rot:'-10deg',top:'52%',twnum:true},
   {t:'',l:'',s:'0px',choice:true}
 ];
 const tim=[1500,1500,1500,2800,2500,2500];let si=0;let twId=null;
@@ -461,7 +461,7 @@ const heroEl=document.getElementById('hero');if(heroEl)heroObserver.observe(hero
 window.addEventListener('beforeunload',()=>{clearTimeout(schedId);heroObserver.disconnect();});
 const months=['Jänner','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
 const d=new Date();d.setMonth(d.getMonth()+1);
-document.getElementById('nextMonth').textContent=months[d.getMonth()];
+const nextMonthEl=document.getElementById('nextMonth');if(nextMonthEl)nextMonthEl.textContent=months[d.getMonth()];
 function makeStars(id,count){const el=document.getElementById(id);if(!el)return;for(let i=0;i<count;i++){const s=document.createElement('div');s.className='mg-star';const big=Math.random()>.72;const sz=big?5+Math.random()*10:1.5+Math.random()*3.5;const tx=(Math.random()-.5)*500;const ty=(Math.random()-.5)*400;const md=20+Math.random()*30;const mdl=-(Math.random()*22);s.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;width:${sz}px;height:${sz}px;--d:${big?6+Math.random()*8:3+Math.random()*5}s;--dl:${Math.random()*12}s;--tx:${tx}px;--ty:${ty}px;--md:${md}s;--mdl:${mdl}s${big?';filter:blur(2.5px)':''}`;el.appendChild(s);}}
 makeStars('heroStars',55);makeStars('mgStars',55);
 function makeMirrorBokeh(id,count){const el=document.getElementById(id);if(!el)return;for(let i=0;i<count;i++){const b=document.createElement('div');b.className='mbk';const big=Math.random()>.72;const sz=big?3.5+Math.random()*5:1+Math.random()*2.5;const tx=(Math.random()-.5)*30;const ty=(Math.random()-.5)*30;b.style.cssText=`left:${8+Math.random()*84}%;top:${8+Math.random()*84}%;width:${sz}px;height:${sz}px;background:rgba(221,170,68,${big?.85:.7});box-shadow:0 0 ${sz*2.5}px ${sz*1.2}px rgba(221,170,68,.2);--d:${5+Math.random()*8}s;--dl:-${Math.random()*8}s;--p:${3+Math.random()*4}s;--pl:-${Math.random()*4}s;--tx:${tx}px;--ty:${ty}px;--oa:${.08+Math.random()*.12};--ob:${.28+Math.random()*.28}`;el.appendChild(b);}}

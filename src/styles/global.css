@@ -261,7 +261,7 @@ a{text-decoration:none;color:inherit}
 .pr2-badge{position:absolute;top:-13px;left:28px;background:var(--gold);color:var(--white);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 16px;border-radius:20px;white-space:nowrap;box-shadow:0 4px 12px rgba(221,170,68,.4)}
 .pr2-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:20px}
 .pr2-tier{font-size:22px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;font-family:'Poppins',sans-serif}
-.pr2-desc{font-size:15px;font-weight:700;color:#888;line-height:1.6;white-space:nowrap}
+.pr2-desc{font-size:15px;font-weight:700;color:#888;line-height:1.6}
 .pr2-price-wrap{text-align:right;flex-shrink:0}
 .pr2-price{font-family:'Poppins',sans-serif;font-size:clamp(36px,4vw,48px);font-weight:800;color:var(--dark);line-height:1}
 .pr2-price sup{font-size:16px;vertical-align:top;margin-top:6px;font-weight:700}

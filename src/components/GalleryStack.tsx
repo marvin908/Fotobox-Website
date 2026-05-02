@@ -6,11 +6,12 @@ interface GalleryItem {
 }
 
 const items: GalleryItem[] = [
-  { src: "/gallery/foto-1.jpg", alt: "Galerie Foto 1" },
-  { src: "/gallery/foto-2.jpg", alt: "Galerie Foto 2" },
-  { src: "/gallery/foto-3.jpg", alt: "Galerie Foto 3" },
-  { src: "/gallery/foto-4.jpg", alt: "Galerie Foto 4" },
-  { src: "/gallery/foto-5.jpg", alt: "Galerie Foto 5" },
+  { src: "/gallery/foto-6.jpg", alt: "Golden Magic Mirror Fotobox vor Kirchturm – Elegantes Event Österreich" },
+  { src: "/gallery/foto-5.jpg", alt: "Brautpaar vor Golden Magic Mirror Fotobox – Hochzeit Niederösterreich" },
+  { src: "/gallery/foto-4.jpg", alt: "Zwei Damen im Abendkleid vor Magic Mirror Fotobox – Hochzeitsfeier Wien" },
+  { src: "/gallery/foto-3.jpg", alt: "Golden Magic Mirror Fotobox im Garten – Outdoor Event Niederösterreich" },
+  { src: "/gallery/foto-2.jpg", alt: "Hand tippt auf LED-Spiegel Touchscreen – Magic Mirror Fotobox Bedienung" },
+  { src: "/gallery/foto-1.jpg", alt: "Golden Magic Mirror Fotobox mit Banner vor Schloss – Wittmann Eventbox Wien" },
 ];
 
 const INTERVAL = 3200;
