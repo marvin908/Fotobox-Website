@@ -253,48 +253,21 @@ import GalleryStack from '../components/GalleryStack.tsx';
   <div style="position:absolute;inset:0;background:radial-gradient(ellipse 90% 55% at 50% 50%,rgba(221,170,68,.06),transparent 75%);pointer-events:none"></div>
   <div class="wrap">
     <div class="reveal" style="text-align:center;margin:0 auto clamp(40px,5vw,64px)">
-      <span class="tag">Wählen Sie Ihr Paket</span>
+      <span class="tag">Transparente Preise</span>
       <h2 class="sec-title" style="margin:14px 0 12px;color:var(--white)">Alles drin. Liefern,<br/>aufbauen, abbauen – das machen wir.</h2>
-      <p style="font-size:clamp(14px,1.6vw,16px);color:rgba(255,255,255,.6);line-height:1.7">Sie wählen Ihr Paket, wir liefern das Erlebnis. Preise inkl. MwSt., keine versteckten Kosten.</p>
+      <p style="font-size:clamp(14px,1.6vw,16px);color:rgba(255,255,255,.6);line-height:1.7">Ein klarer Preis, keine versteckten Kosten, inkl. MwSt.</p>
     </div>
-    <div class="pr2-grid">
+    <div class="pr2-grid" style="justify-content:center">
 
       <!-- KLASSISCH -->
-      <div class="pr2-card reveal-scale d1">
+      <div class="pr2-card pr2-featured reveal-scale" style="max-width:480px;width:100%">
         <div class="pr2-top">
           <div>
-            <div class="pr2-tier">Klassisch</div>
-            <div class="pr2-desc">Perfekter Einstieg für kleinere Events</div>
+            <div class="pr2-tier" style="color:var(--gold)">Golden Magic Mirror</div>
+            <div class="pr2-desc" style="color:rgba(255,255,255,.6)">Alles was Ihr Event unvergesslich macht</div>
           </div>
           <div class="pr2-price-wrap">
-            <div class="pr2-price"><sup>€</sup>500</div>
-            <div class="pr2-vat">inkl. MwSt.</div>
-          </div>
-        </div>
-        <div class="pr2-divider"></div>
-        <div class="pr2-feat-label">Inklusive</div>
-        <ul class="pr2-feats">
-          <li><span class="pr2-ck">✓</span>Anfahrt inklusive</li>
-          <li><span class="pr2-ck">✓</span>400 Sofortdrucke</li>
-          <li><span class="pr2-ck">✓</span>Roter Teppich & goldene Stangen</li>
-          <li><span class="pr2-ck">✓</span>Party-Equipment (Brillen, Hüte, Masken)</li>
-          <li><span class="pr2-ck">✓</span>Profi LED-Ringlicht</li>
-          <li><span class="pr2-x">✗</span><span style="color:#bbb">LED-Seifenblasenmaschinen</span></li>
-          <li><span class="pr2-x">✗</span><span style="color:#bbb">LED-Rauchmaschinen</span></li>
-        </ul>
-        <button class="pr2-btn" onclick="goContact('Basis')">Unverbindlich anfragen</button>
-      </div>
-
-      <!-- PREMIUM -->
-      <div class="pr2-card pr2-featured reveal-scale d2">
-        <div class="pr2-badge">✦ Beliebteste Wahl</div>
-        <div class="pr2-top">
-          <div>
-            <div class="pr2-tier" style="color:var(--gold)">Premium</div>
-            <div class="pr2-desc" style="color:rgba(255,255,255,.6)">+ Seifenblasenmaschinen</div>
-          </div>
-          <div class="pr2-price-wrap">
-            <div class="pr2-price" style="color:var(--white)"><sup style="color:var(--gold-light)">€</sup>650</div>
+            <div class="pr2-price" style="color:var(--white)"><sup style="color:var(--gold-light)">€</sup>500</div>
             <div class="pr2-vat" style="color:rgba(255,255,255,.45)">inkl. MwSt.</div>
           </div>
         </div>
@@ -306,37 +279,10 @@ import GalleryStack from '../components/GalleryStack.tsx';
           <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Roter Teppich & goldene Stangen</span></li>
           <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Party-Equipment (Brillen, Hüte, Masken)</span></li>
           <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Profi LED-Ringlicht</span></li>
-          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">2× LED-Seifenblasenmaschinen <span style="font-size:12px;opacity:.6">(4L Flüssigkeit)</span></span></li>
-          <li><span class="pr2-x" style="color:rgba(255,255,255,.2)">✗</span><span style="color:rgba(255,255,255,.3)">LED-Rauchmaschinen</span></li>
+          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Persönliche Betreuung vor Ort</span></li>
+          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Auf- & Abbau inklusive</span></li>
         </ul>
-        <button class="pr2-btn pr2-btn-featured" onclick="goContact('Premium')">Unverbindlich anfragen</button>
-      </div>
-
-      <!-- DELUXE -->
-      <div class="pr2-card pr2-deluxe reveal-scale d3">
-        <div class="pr2-deluxe-badge">✦ Exklusiv</div>
-        <div class="pr2-top">
-          <div>
-            <div class="pr2-tier" style="color:var(--gold-light)">Deluxe</div>
-            <div class="pr2-desc" style="color:rgba(255,255,255,.6)">+ Seifenblasenmaschinen<br/>+ Rauchmaschinen</div>
-          </div>
-          <div class="pr2-price-wrap">
-            <div class="pr2-price" style="color:var(--white)"><sup style="color:var(--gold-light)">€</sup>800</div>
-            <div class="pr2-vat" style="color:rgba(255,255,255,.45)">inkl. MwSt.</div>
-          </div>
-        </div>
-        <div class="pr2-divider" style="background:rgba(232,212,150,.25)"></div>
-        <div class="pr2-feat-label" style="color:rgba(255,255,255,.5)">Inklusive</div>
-        <ul class="pr2-feats">
-          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Anfahrt inklusive</span></li>
-          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">400 Sofortdrucke</span></li>
-          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Roter Teppich & goldene Stangen</span></li>
-          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Party-Equipment (Brillen, Hüte, Masken)</span></li>
-          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Profi LED-Ringlicht</span></li>
-          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">2× LED-Seifenblasenmaschinen <span style="font-size:12px;opacity:.6">(4L Flüssigkeit)</span></span></li>
-          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">4× LED-Rauchmaschinen <span style="font-size:12px;opacity:.6">(8L Flüssigkeit)</span></span></li>
-        </ul>
-        <button class="pr2-btn pr2-btn-deluxe" onclick="goContact('Deluxe')">Unverbindlich anfragen</button>
+        <button class="pr2-btn pr2-btn-featured" onclick="goContact('')">Unverbindlich anfragen</button>
       </div>
 
     </div>
