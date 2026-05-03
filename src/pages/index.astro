@@ -180,7 +180,7 @@ import GalleryStack from '../components/GalleryStack.tsx';
       <span class="tag">Mieten & Erleben</span>
       <h2 class="sec-title" style="color:var(--white)">So funktioniert<br/><em style="font-family:'Great Vibes',cursive;font-style:normal;font-weight:400;color:var(--gold);font-size:1.7em;letter-spacing:.5px;display:inline-block;margin-top:10px">Die Magie des Spiegels</em></h2>
       <div class="mg-deco"><div class="mg-line"></div><div class="mg-stars-txt">✦ ✦ ✦</div><div class="mg-line r"></div></div>
-      <p class="mg-sub">Klick dich durch den echten Ablauf – so erlebt es jeder Gast bei Ihrem Event.</p>
+      <p class="mg-sub">Klick dich durch den Ablauf – <span style="color:rgba(221,170,68,.75);font-style:italic">die Layouts gestalten wir individuell für dich.</span></p>
     </div>
 
     <style is:global>
@@ -251,18 +251,8 @@ import GalleryStack from '../components/GalleryStack.tsx';
         </div>
 
         <!-- Screen 1: Personalisierung -->
-        <div class="demo-screen ds-active" id="demoS0">
-          <div class="demo-ph-bg" style="background:linear-gradient(160deg,#1a1230 0%,#2d1a4a 45%,#1a1230 100%)">
-            <div class="demo-ph-label-sm">📷 Personalisiertes Layout<br/>z.B. Hochzeitsfoto als Hintergrund</div>
-          </div>
-          <div class="demo-event-overlay">
-            <div class="demo-event-name">Ivonne & Bernhard</div>
-            <div class="demo-event-date">17. Juli 2026 💍</div>
-            <div class="demo-event-hint">✦ Wir gestalten das gemeinsam nach Ihrer Anfrage</div>
-          </div>
-          <div class="demo-screen-footer">
-            <button class="demo-action-btn" onclick="demoGoto(1)">Foto machen →</button>
-          </div>
+        <div class="demo-screen ds-active" id="demoS0" onclick="demoGoto(1)" style="cursor:pointer">
+          <img src="/gallery/demo-hochzeit.jpg" alt="Personalisiertes Hochzeitslayout – Ivonne & Bernhard" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top"/>
         </div>
 
         <!-- Screen 2: Countdown -->
@@ -589,7 +579,7 @@ _w.demoNext=function(){_w.demoGoto(demoSi+1);};
 _w.demoPrev=function(){_w.demoGoto(demoSi-1);};
 function startDemoCd(){
   const el=document.getElementById('demoCdNum');
-  const flash=document.getElementById('demoFlash');
+  const flash=document.getElementById('demoFlash') as HTMLElement|null;
   if(!el)return;
   let n:number=3;el.textContent=String(n);el.style.opacity='1';el.style.transform='scale(1)';
   demoCdTimer=setInterval(()=>{
