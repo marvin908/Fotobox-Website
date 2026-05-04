@@ -30,6 +30,94 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js',new Date());
 gtag('config','AW-10978741779');
 </script>
+<script type="application/ld+json" is:inline>{JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Wittmann Eventbox",
+      "description": "Golden Magic Mirror Fotobox mieten in Wien & Umgebung für Hochzeiten, Geburtstage & Firmenfeiern",
+      "url": "https://www.wittmann-eventbox.at",
+      "telephone": "+436604313993",
+      "email": "wb@wittmann-eventbox.at",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gustav-Mahler-Promenade 4/2/1",
+        "addressLocality": "Stockerau",
+        "postalCode": "2000",
+        "addressCountry": "AT"
+      },
+      "priceRange": "ab €500",
+      "openingHours": "Mo-Su by appointment",
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 48.2082,
+          "longitude": 16.3738
+        },
+        "geoRadius": "50000"
+      },
+      "serviceArea": {
+        "@type": "AdministrativeArea",
+        "name": "Wien und Umgebung"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Wie lange dauert der Aufbau des Magic Mirrors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Der Aufbau dauert in der Regel 30–45 Minuten. Wir kommen rechtzeitig vor Ihrem Event, damit alles bereit ist wenn Ihre Gäste eintreffen. Abbau und Abholung übernehmen wir ebenfalls – Sie müssen sich um nichts kümmern."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist die Buchung wirklich unverbindlich?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, absolut. Wenn Sie das Formular absenden, bekommen Sie zunächst nur eine Rückmeldung von uns. Erst nach einem gemeinsamen Gespräch und Ihrer ausdrücklichen Bestätigung wird der Termin verbindlich reserviert."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie viele Gäste können den Spiegel gleichzeitig nutzen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vor dem Spiegel passen bequem 2–4 Personen gleichzeitig. Der Spiegel selbst ist großformatig, sodass auch Gruppenfotos wunderbar gelingen. Bei Gruppen über 4 Personen empfehlen wir zwei separate Aufnahmen für optimale Ergebnisse."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was passiert mit den digitalen Fotos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jede Aufnahme wird sofort ausgedruckt und kann per QR-Code auch digital abgerufen werden. Nach der Veranstaltung erhalten Sie auf Wunsch alle Fotos in einer digitalen Galerie – als schöne Erinnerung für Sie und Ihre Gäste."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann das Layout der Sofortdrucke personalisiert werden?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja! Das Drucklayout kann mit Ihrem Namen, Datum, Logo oder einem individuellen Design versehen werden. So wird jeder Sofortdruck zu einem persönlichen Andenken an Ihr besonderes Event."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie weit fahren Sie für Events?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wir sind in Wien und der gesamten Umgebung für Sie da. Die Anfahrt ist in allen Paketen inklusive. Für Events außerhalb unseres regulären Einzugsgebiets sprechen Sie uns einfach an – wir finden eine Lösung."
+          }
+        }
+      ]
+    }
+  ]
+})}</script>
 </head>
 <body>
 
@@ -61,14 +149,16 @@ gtag('config','AW-10978741779');
         </div>
         <nav class="hd-nav">
           <a href="#galerie">Galerie</a>
-          <a href="#events">Events</a>
           <a href="#magic">Ablauf</a>
-          <a href="#why">Vorteile</a>
           <a href="#pricing">Preise</a>
+          <a href="#why">Vorteile</a>
           <a href="#faq">FAQ</a>
           <a href="/kontakt">Kontakt</a>
         </nav>
-        <button class="btn-gold" style="font-size:14px;padding:10px 22px" onclick="goContact('')">Unverbindlich anfragen</button>
+        <button class="btn-gold hd-cta-btn" style="font-size:14px;padding:10px 22px" onclick="goContact('')">Unverbindlich anfragen</button>
+        <button class="hd-hamburger" id="hdHamburger" aria-label="Menü öffnen">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </header>
     </div>
@@ -79,20 +169,59 @@ gtag('config','AW-10978741779');
     <div class="wrap hd-in">
       <a href="/" style="font-family:'Poppins',sans-serif;font-weight:700;font-size:16px;color:var(--gold)">GOLDEN MAGIC MIRROR</a>
       <nav class="hd-nav">
-        <a href="/#why">Vorteile</a>
+        <a href="/#galerie">Galerie</a>
         <a href="/#magic">Ablauf</a>
-        <a href="/#events">Events</a>
         <a href="/#pricing">Preise</a>
+        <a href="/#why">Vorteile</a>
         <a href="/#faq">FAQ</a>
         <a href="/kontakt" style="color:var(--gold)">Kontakt</a>
       </nav>
-      <a href="tel:+436604313993" class="btn-gold" style="font-size:14px;padding:10px 22px">
+      <a href="tel:+436604313993" class="btn-gold hd-cta-btn" style="font-size:14px;padding:10px 22px">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M22 16.92V19.92C22 20.48 21.74 21 21.29 21.34C20.84 21.68 20.26 21.79 19.72 21.65C16.56 20.83 13.55 19.24 11.01 17.01C8.65 14.96 6.78 12.43 5.64 9.59C5.04 8.08 4.97 6.41 5.45 4.86C5.62 4.33 6.02 3.88 6.54 3.62L9.09 2.41C9.59 2.17 10.17 2.24 10.6 2.59L12.73 4.29C13.16 4.64 13.31 5.22 13.1 5.73L12.17 8.01C12 8.41 12.08 8.87 12.38 9.19L14.81 11.62C15.13 11.92 15.59 12 15.99 11.83L18.27 10.9C18.78 10.69 19.36 10.84 19.71 11.27L21.41 13.4C21.76 13.83 21.83 14.41 21.59 14.91L22 16.92Z" fill="white"/></svg>
         Anrufen
       </a>
+      <button class="hd-hamburger" id="hdHamburger" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 )}
+
+<!-- MOBILE OVERLAY -->
+<div class="mob-overlay" id="mobOverlay">
+  <button class="mob-close" id="mobClose" aria-label="Menü schließen">×</button>
+  <nav class="mob-nav">
+    <a href="#galerie" class="mob-link">Galerie</a>
+    <div class="mob-divider"></div>
+    <a href="#magic" class="mob-link">Ablauf</a>
+    <div class="mob-divider"></div>
+    <a href="#pricing" class="mob-link">Preise</a>
+    <div class="mob-divider"></div>
+    <a href="#why" class="mob-link">Vorteile</a>
+    <div class="mob-divider"></div>
+    <a href="#faq" class="mob-link">FAQ</a>
+    <div class="mob-divider"></div>
+    <a href="/kontakt" class="mob-link">Kontakt</a>
+  </nav>
+</div>
+
+<style is:global>
+.hd-hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:40px;height:40px;background:none;border:none;cursor:pointer;padding:0;flex-shrink:0}
+.hd-hamburger span{display:block;width:24px;height:2px;background:#DDA844;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
+.mob-overlay{position:fixed;inset:0;z-index:9999;background:rgba(10,8,2,.97);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s ease}
+.mob-overlay.open{opacity:1;pointer-events:all}
+.mob-nav{display:flex;flex-direction:column;align-items:center;width:100%;max-width:340px;animation:mobNavIn .3s ease forwards}
+@keyframes mobNavIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+.mob-link{font-family:'Poppins',sans-serif;font-size:22px;font-weight:700;color:rgba(255,255,255,.85);text-decoration:none;padding:18px 0;width:100%;text-align:center;transition:color .2s ease}
+.mob-link:hover{color:#DDA844}
+.mob-divider{width:100%;height:1px;background:rgba(221,170,68,.15)}
+.mob-close{position:absolute;top:24px;right:24px;background:none;border:none;font-size:32px;line-height:1;color:#DDA844;cursor:pointer;padding:8px;font-family:'Poppins',sans-serif}
+@media(max-width:768px){
+  .hd-hamburger{display:flex}
+  .hd-nav{display:none}
+  .hd-cta-btn{display:none}
+}
+</style>
 
 <slot />
 
@@ -104,6 +233,27 @@ gtag('config','AW-10978741779');
   upd();
   window.addEventListener('scroll',upd,{passive:true});
 })();
+(function(){
+  var btn=document.getElementById('hdHamburger');
+  var overlay=document.getElementById('mobOverlay');
+  var closeBtn=document.getElementById('mobClose');
+  if(!btn||!overlay)return;
+  function open(){overlay.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){overlay.classList.remove('open');document.body.style.overflow='';}
+  btn.addEventListener('click',open);
+  if(closeBtn)closeBtn.addEventListener('click',close);
+  overlay.querySelectorAll('.mob-link').forEach(function(a){
+    a.addEventListener('click',function(){
+      close();
+      var href=a.getAttribute('href');
+      if(href&&href.startsWith('#')){
+        var target=document.querySelector(href);
+        if(target){setTimeout(function(){target.scrollIntoView({behavior:'smooth'});},10);}
+      }
+    });
+  });
+  overlay.addEventListener('click',function(e){if(e.target===overlay)close();});
+})();
 </script>
 
 <footer>
@@ -114,7 +264,7 @@ gtag('config','AW-10978741779');
       <a href="/impressum">Impressum</a>
       <a href="/kontakt">Kontakt</a>
     </div>
-    <div class="ft-copy">© 2025 Wittmann Eventbox</div>
+    <div class="ft-copy">© 2026 Wittmann Eventbox</div>
   </div>
 </footer>
 

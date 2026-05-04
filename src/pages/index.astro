@@ -15,6 +15,7 @@ import GalleryStack from '../components/GalleryStack.tsx';
     <div class="hero-text">
       <span class="tag hfi hfi-1">Hochzeiten · Geburtstage · Firmenfeiern</span>
       <h1 class="hfi hfi-2">Ihre Gäste reden noch<br/><span><em>Wochen danach über Ihr Event.</em></span></h1>
+      <p class="hfi hfi-3" style="font-size:clamp(15px,1.8vw,17px);color:rgba(255,255,255,.65);line-height:1.7;max-width:520px;margin:0">Magic Mirror Fotobox mieten in Wien & Umgebung – Aufbau, Betreuung & Sofortdruck inklusive.</p>
 <div class="hero-cta-row hfi hfi-4" style="margin-top:clamp(24px,3.5vw,40px)">
         <a href="#pricing" class="btn-hero-glass hfi hfi-4">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="white"/></svg>
@@ -122,9 +123,9 @@ import GalleryStack from '../components/GalleryStack.tsx';
   <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 55%,rgba(221,170,68,.09),transparent 70%);pointer-events:none"></div>
   <div class="wrap" style="position:relative;z-index:1;text-align:center;margin-bottom:clamp(16px,3vw,32px)">
     <div class="reveal">
-      <span class="tag">Social Proof</span>
-      <h2 class="sec-title" style="margin:14px 0 12px;color:var(--white)">So sieht es aus, wenn<br/>Ihre Gäste loslassen.</h2>
-      <p class="sec-sub" style="margin:0 auto;color:rgba(255,255,255,.6)">Echte Momente von echten Events – kein Posing, nur gute Laune.</p>
+      <span class="tag">Galerie</span>
+      <h2 class="sec-title" style="margin:14px 0 12px;color:var(--white)">So sieht der Magic Mirror aus,<br/>wenn er Ihr Event verwandelt.</h2>
+      <p class="sec-sub" style="margin:0 auto;color:rgba(255,255,255,.6)">Das Gerät spricht für sich – Ihre Gäste schreiben die Geschichte.</p>
     </div>
   </div>
   <GalleryStack client:visible />
@@ -188,12 +189,12 @@ import GalleryStack from '../components/GalleryStack.tsx';
     .demo-dot.active{width:18px;background:rgba(221,170,68,.8)}
     .demo-nav-btn{width:44px;height:44px;border-radius:50%;background:rgba(221,170,68,.1);border:1px solid rgba(221,170,68,.28);color:rgba(221,170,68,.8);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;flex-shrink:0;align-self:center}
     .demo-nav-btn:hover{background:rgba(221,170,68,.2);transform:scale(1.08)}
-    .demo-steps-row{display:flex;align-items:flex-start;justify-content:center;gap:clamp(4px,1.8vw,20px);margin-top:clamp(20px,3vw,32px);flex-wrap:wrap;padding:0 12px}
-    .demo-step-item{display:flex;flex-direction:column;align-items:center;gap:5px;cursor:pointer;opacity:.38;transition:opacity .3s;min-width:52px;max-width:80px}
+    .demo-steps-row{display:flex;align-items:flex-start;justify-content:center;gap:clamp(6px,2vw,24px);margin-top:clamp(24px,3vw,36px);flex-wrap:wrap;padding:0 12px}
+    .demo-step-item{display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;opacity:.38;transition:opacity .3s;min-width:60px;max-width:90px}
     .demo-step-item.active{opacity:1}
-    .demo-step-num{width:28px;height:28px;border-radius:50%;background:rgba(221,170,68,.12);border:1px solid rgba(221,170,68,.28);display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:rgba(221,170,68,.65);transition:background .3s,border-color .3s}
+    .demo-step-num{width:36px;height:36px;border-radius:50%;background:rgba(221,170,68,.12);border:1px solid rgba(221,170,68,.28);display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:rgba(221,170,68,.65);transition:background .3s,border-color .3s}
     .demo-step-item.active .demo-step-num{background:rgba(221,170,68,.28);border-color:rgba(221,170,68,.7);color:#DDA844}
-    .demo-step-name{font-family:'Poppins',sans-serif;font-size:10px;color:rgba(255,255,255,.5);text-align:center;letter-spacing:.02em;line-height:1.3}
+    .demo-step-name{font-family:'Poppins',sans-serif;font-size:12px;color:rgba(255,255,255,.5);text-align:center;letter-spacing:.02em;line-height:1.3}
     .demo-step-item.active .demo-step-name{color:rgba(255,255,255,.88)}
     .demo-on-light .demo-step-name{color:rgba(17,17,17,.45)}
     .demo-on-light .demo-step-item.active .demo-step-name{color:rgba(17,17,17,.82)}
@@ -305,93 +306,6 @@ import GalleryStack from '../components/GalleryStack.tsx';
 </section>
 
 <div class="sec-div" style="background:linear-gradient(180deg,#FAF6EE,#1E1508)"><span class="sec-div-gem"><span class="sec-div-gem-inner"></span></span></div>
-<!-- EVENTS (dark bg) -->
-<section id="events" style="padding:var(--section-y) 0;background:linear-gradient(to bottom,#2C1E08 0%,#1C1306 50%,#2C1E08 100%);position:relative;overflow:hidden">
-  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 55%,rgba(221,170,68,.07),transparent 70%);pointer-events:none"></div>
-  <div class="mg-stars-bg" id="evStars"></div>
-  <div class="wrap" style="position:relative;z-index:1">
-    <div class="reveal" style="text-align:center;margin-bottom:clamp(32px,4vw,56px)">
-      <span class="tag">Für jeden Anlass</span>
-      <h2 class="sec-title" style="margin:14px 0 12px;color:var(--white)">Perfekt für Ihr besonderes Event</h2>
-      <p class="sec-sub" style="margin:0 auto;color:rgba(255,255,255,.6)">Ob intimes Fest oder große Feier – der Magic Mirror ist das Gesprächsthema des Abends.</p>
-    </div>
-    <div class="ev-rows" style="margin-top:clamp(40px,6vw,72px)">
-      <div class="ev-row reveal-left" style="border-color:rgba(255,255,255,.08)">
-        <div class="ev-row-num" style="color:rgba(221,170,68,.4)">01</div>
-        <div class="ev-row-title" style="color:var(--white)">Hochzeit</div>
-        <div class="ev-row-text" style="color:rgba(255,255,255,.6)">Die Stunden zwischen Dinner und Tanz? Da sorgt der Mirror dafür, dass niemand auf die Uhr schaut.</div>
-      </div>
-      <div class="ev-row reveal-right" style="border-color:rgba(255,255,255,.08)">
-        <div class="ev-row-num" style="color:rgba(221,170,68,.4)">02</div>
-        <div class="ev-row-title" style="color:var(--white)">Geburtstag</div>
-        <div class="ev-row-text" style="color:rgba(255,255,255,.6)">Egal ob 30 oder 70 – der Mirror bringt jede Generation an einen Tisch.</div>
-      </div>
-      <div class="ev-row reveal-left" style="border-color:rgba(255,255,255,.08)">
-        <div class="ev-row-num" style="color:rgba(221,170,68,.4)">03</div>
-        <div class="ev-row-title" style="color:var(--white)">Firmenfeier</div>
-        <div class="ev-row-text" style="color:rgba(255,255,255,.6)">Das Eis brechen, ohne Teambuilding-Spiele die niemand will.</div>
-      </div>
-      <div class="ev-row reveal-right" style="border-color:rgba(255,255,255,.08)">
-        <div class="ev-row-num" style="color:rgba(221,170,68,.4)">04</div>
-        <div class="ev-row-title" style="color:var(--white)">Jedes Event</div>
-        <div class="ev-row-text" style="color:rgba(255,255,255,.6)">Messe, Gala, Jubiläum – ein Magnet, der Ihre Gäste zusammenbringt.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="sec-div" style="background:linear-gradient(180deg,#1E1508,#FAF6EE)"><span class="sec-div-gem"><span class="sec-div-gem-inner"></span></span></div>
-<!-- BENEFITS -->
-<section id="why" style="padding:var(--section-y) 0;background:#FAF6EE;position:relative;overflow:hidden">
-  <div class="wrap" style="position:relative;z-index:1">
-
-    <div class="reveal-right" style="margin-bottom:clamp(48px,6vw,72px)">
-      <span class="tag">Mehr als eine Fotobox</span>
-      <h2 class="sec-title" style="margin:14px 0 0;color:var(--dark)">Deswegen wählen unsere<br/>Kunden den Magic Mirror</h2>
-    </div>
-
-    <div class="ben-feat-rows">
-
-      <div class="ben-feat-row reveal-left d1">
-        <div class="ben-feat-icon">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z" stroke="var(--gold-dark)" stroke-width="1.7" stroke-linejoin="round"/></svg>
-        </div>
-        <div class="ben-feat-content">
-          <div class="ben-feat-label">01 — Erinnerung</div>
-          <h3 class="ben-feat-title">Echte Fotos statt gestellter Gruppenbilder.</h3>
-          <p class="ben-feat-text">Ihre Gäste lachen, albern rum, sind sie selbst – der Sofortdruck ist ein Andenken, das sie tatsächlich behalten.</p>
-        </div>
-        <div class="ben-feat-num">01</div>
-      </div>
-
-      <div class="ben-feat-row reveal-right d2">
-        <div class="ben-feat-icon">
-          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="var(--gold-dark)" stroke-width="1.7"/><path d="M8 14s1.5 2 4 2 4-2 4-2" stroke="var(--gold-dark)" stroke-width="1.7" stroke-linecap="round"/><circle cx="9" cy="10" r="1.2" fill="var(--gold-dark)"/><circle cx="15" cy="10" r="1.2" fill="var(--gold-dark)"/></svg>
-        </div>
-        <div class="ben-feat-content">
-          <div class="ben-feat-label">02 — Unterhaltung</div>
-          <h3 class="ben-feat-title">Der Programmpunkt, den Sie nicht planen müssen.</h3>
-          <p class="ben-feat-text">Der Mirror läuft von alleine. Countdown, Animation, Druck – Ihre Gäste brauchen keine Erklärung. Sie stellen sich einfach davor.</p>
-        </div>
-        <div class="ben-feat-num">02</div>
-      </div>
-
-      <div class="ben-feat-row reveal-left d3">
-        <div class="ben-feat-icon">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M20 12v9H4v-9" stroke="var(--gold-dark)" stroke-width="1.7" stroke-linecap="round"/><path d="M22 7H2v5h20V7z" stroke="var(--gold-dark)" stroke-width="1.7" stroke-linecap="round"/><path d="M12 22V7" stroke="var(--gold-dark)" stroke-width="1.7" stroke-linecap="round"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z" stroke="var(--gold-dark)" stroke-width="1.7" stroke-linecap="round"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z" stroke="var(--gold-dark)" stroke-width="1.7" stroke-linecap="round"/></svg>
-        </div>
-        <div class="ben-feat-content">
-          <div class="ben-feat-label">03 — Gastgeschenk</div>
-          <h3 class="ben-feat-title">Jeder Gast nimmt Ihr Event mit nach Hause.</h3>
-          <p class="ben-feat-text">Ein echter Fotoabzug, kein digitaler Schnappschuss der im Handy verschwindet. Das hängt am Kühlschrank, steht im Regal – und erinnert an Ihren Abend.</p>
-        </div>
-        <div class="ben-feat-num">03</div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
 <!-- PRICING -->
 <section id="pricing" style="padding:var(--section-y) 0;background:linear-gradient(to bottom,#0a0806 0%,#0f0d08 100%);position:relative;overflow:hidden">
   <div style="position:absolute;inset:0;background:radial-gradient(ellipse 90% 55% at 50% 50%,rgba(221,170,68,.06),transparent 75%);pointer-events:none"></div>
@@ -401,7 +315,7 @@ import GalleryStack from '../components/GalleryStack.tsx';
       <h2 class="sec-title" style="margin:14px 0 12px;color:var(--white)">Alles drin. Liefern,<br/>aufbauen, abbauen – das machen wir.</h2>
       <p style="font-size:clamp(14px,1.6vw,16px);color:rgba(255,255,255,.6);line-height:1.7">Ein klarer Preis, keine versteckten Kosten, inkl. MwSt.</p>
     </div>
-    <div class="pr2-grid" style="justify-content:center">
+    <div class="pr2-grid" style="display:flex;justify-content:center">
 
       <!-- KLASSISCH -->
       <div class="pr2-card pr2-featured reveal-scale" style="max-width:480px;width:100%">
@@ -489,23 +403,57 @@ import GalleryStack from '../components/GalleryStack.tsx';
 </section>
 
 
-<!-- CTA -->
-<section style="padding:var(--section-y) 0;background:#0f0d08;position:relative;overflow:hidden">
-  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 90% 55% at 50% 50%,rgba(221,170,68,.07),transparent 75%);pointer-events:none"></div>
-  <div class="wrap">
-    <div class="cta-in reveal-scale" style="text-align:center;position:relative;z-index:1">
-      <span class="tag">Limitierte Termine</span>
-      <h2 style="font-size:clamp(26px,5vw,52px);font-weight:800;color:var(--white);margin:18px 0;line-height:1.15">Ihr Termin ist noch frei –<br/><span style="color:var(--gold)">aber nicht mehr lange.</span></h2>
-      <p style="font-size:clamp(15px,2vw,18px);color:rgba(255,255,255,.7);margin-bottom:36px;line-height:1.7">Füllen Sie das kurze Formular aus, wir melden uns innerhalb von 24 Stunden.<br/>Unverbindlich.</p>
-      <div class="cta-row" style="display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap">
-        <button class="btn-gold" style="font-size:clamp(15px,2vw,18px);padding:clamp(14px,2vw,18px) clamp(28px,4vw,48px)" onclick="goContact('')">Verfügbarkeit prüfen</button>
-        <a href="tel:+436604313993" class="btn-white"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 16.92V19.92C22 20.48 21.74 21 21.29 21.34C20.84 21.68 20.26 21.79 19.72 21.65C16.56 20.83 13.55 19.24 11.01 17.01C8.65 14.96 6.78 12.43 5.64 9.59C5.04 8.08 4.97 6.41 5.45 4.86C5.62 4.33 6.02 3.88 6.54 3.62L9.09 2.41C9.59 2.17 10.17 2.24 10.6 2.59L12.73 4.29C13.16 4.64 13.31 5.22 13.1 5.73L12.17 8.01C12 8.41 12.08 8.87 12.38 9.19L14.81 11.62C15.13 11.92 15.59 12 15.99 11.83L18.27 10.9C18.78 10.69 19.36 10.84 19.71 11.27L21.41 13.4C21.76 13.83 21.83 14.41 21.59 14.91L22 16.92Z" fill="var(--dark)"/></svg>0660 431 39 93</a>
+<div class="sec-div" style="background:linear-gradient(180deg,#1E1508,#FAF6EE)"><span class="sec-div-gem"><span class="sec-div-gem-inner"></span></span></div>
+<!-- BENEFITS -->
+<section id="why" style="padding:var(--section-y) 0;background:#FAF6EE;position:relative;overflow:hidden">
+  <div class="wrap" style="position:relative;z-index:1">
+
+    <div class="reveal-right" style="margin-bottom:clamp(48px,6vw,72px)">
+      <span class="tag">Mehr als eine Fotobox</span>
+      <h2 class="sec-title" style="margin:14px 0 0;color:var(--dark)">Deswegen wählen unsere<br/>Kunden den Magic Mirror</h2>
+    </div>
+
+    <div class="ben-feat-rows">
+
+      <div class="ben-feat-row reveal-left d1">
+        <div class="ben-feat-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z" stroke="var(--gold-dark)" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="ben-feat-content">
+          <div class="ben-feat-label">01 — Erinnerung</div>
+          <h3 class="ben-feat-title">Echte Fotos statt gestellter Gruppenbilder.</h3>
+          <p class="ben-feat-text">Ihre Gäste lachen, albern rum, sind sie selbst – der Sofortdruck ist ein Andenken, das sie tatsächlich behalten.</p>
+        </div>
+        <div class="ben-feat-num">01</div>
       </div>
-      <p style="font-size:12px;color:rgba(255,255,255,.4);margin-top:16px">wb@wittmann-eventbox.at · Persönliche Betreuung garantiert</p>
+
+      <div class="ben-feat-row reveal-right d2">
+        <div class="ben-feat-icon">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="var(--gold-dark)" stroke-width="1.7"/><path d="M8 14s1.5 2 4 2 4-2 4-2" stroke="var(--gold-dark)" stroke-width="1.7" stroke-linecap="round"/><circle cx="9" cy="10" r="1.2" fill="var(--gold-dark)"/><circle cx="15" cy="10" r="1.2" fill="var(--gold-dark)"/></svg>
+        </div>
+        <div class="ben-feat-content">
+          <div class="ben-feat-label">02 — Unterhaltung</div>
+          <h3 class="ben-feat-title">Der Programmpunkt, den Sie nicht planen müssen.</h3>
+          <p class="ben-feat-text">Der Mirror läuft von alleine. Countdown, Animation, Druck – Ihre Gäste brauchen keine Erklärung. Sie stellen sich einfach davor.</p>
+        </div>
+        <div class="ben-feat-num">02</div>
+      </div>
+
+      <div class="ben-feat-row reveal-left d3">
+        <div class="ben-feat-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M20 12v9H4v-9" stroke="var(--gold-dark)" stroke-width="1.7" stroke-linecap="round"/><path d="M22 7H2v5h20V7z" stroke="var(--gold-dark)" stroke-width="1.7" stroke-linecap="round"/><path d="M12 22V7" stroke="var(--gold-dark)" stroke-width="1.7" stroke-linecap="round"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z" stroke="var(--gold-dark)" stroke-width="1.7" stroke-linecap="round"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z" stroke="var(--gold-dark)" stroke-width="1.7" stroke-linecap="round"/></svg>
+        </div>
+        <div class="ben-feat-content">
+          <div class="ben-feat-label">03 — Gastgeschenk</div>
+          <h3 class="ben-feat-title">Jeder Gast nimmt Ihr Event mit nach Hause.</h3>
+          <p class="ben-feat-text">Ein echter Fotoabzug, kein digitaler Schnappschuss der im Handy verschwindet. Das hängt am Kühlschrank, steht im Regal – und erinnert an Ihren Abend.</p>
+        </div>
+        <div class="ben-feat-num">03</div>
+      </div>
+
     </div>
   </div>
 </section>
-
 
 <!-- FAQ -->
 <section id="faq" style="padding:var(--section-y) 0;background:#FAF6EE;position:relative;overflow:hidden">
@@ -522,6 +470,24 @@ import GalleryStack from '../components/GalleryStack.tsx';
       <div class="faq-item"><button class="faq-toggle" onclick="toggleFaq(this)">Was passiert mit den digitalen Fotos?<span class="faq-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 2L10 10M10 2L2 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></button><div class="faq-body"><p>Jede Aufnahme wird sofort ausgedruckt und kann per QR-Code auch digital abgerufen werden. Nach der Veranstaltung erhalten Sie auf Wunsch alle Fotos in einer digitalen Galerie – als schöne Erinnerung für Sie und Ihre Gäste.</p></div></div>
       <div class="faq-item"><button class="faq-toggle" onclick="toggleFaq(this)">Kann das Layout der Sofortdrucke personalisiert werden?<span class="faq-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 2L10 10M10 2L2 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></button><div class="faq-body"><p>Ja! Das Drucklayout kann mit Ihrem Namen, Datum, Logo oder einem individuellen Design versehen werden. So wird jeder Sofortdruck zu einem persönlichen Andenken an Ihr besonderes Event.</p></div></div>
       <div class="faq-item"><button class="faq-toggle" onclick="toggleFaq(this)">Wie weit fahren Sie für Events?<span class="faq-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 2L10 10M10 2L2 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></button><div class="faq-body"><p>Wir sind in Wien und der gesamten Umgebung für Sie da. Die Anfahrt ist in allen Paketen inklusive. Für Events außerhalb unseres regulären Einzugsgebiets sprechen Sie uns einfach an – wir finden eine Lösung.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="sec-div" style="background:linear-gradient(180deg,#FAF6EE,#1E1508)"><span class="sec-div-gem"><span class="sec-div-gem-inner"></span></span></div>
+<!-- CTA -->
+<section style="padding:var(--section-y) 0;background:#0f0d08;position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 90% 55% at 50% 50%,rgba(221,170,68,.07),transparent 75%);pointer-events:none"></div>
+  <div class="wrap">
+    <div class="cta-in reveal-scale" style="text-align:center;position:relative;z-index:1">
+      <span class="tag">Limitierte Termine</span>
+      <h2 style="font-size:clamp(26px,5vw,52px);font-weight:800;color:var(--white);margin:18px 0;line-height:1.15">Ihr Termin ist noch frei –<br/><span style="color:var(--gold)">aber nicht mehr lange.</span></h2>
+      <p style="font-size:clamp(15px,2vw,18px);color:rgba(255,255,255,.7);margin-bottom:36px;line-height:1.7">Füllen Sie das kurze Formular aus, wir melden uns innerhalb von 24 Stunden.<br/>Unverbindlich.</p>
+      <div class="cta-row" style="display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap">
+        <button class="btn-gold" style="font-size:clamp(15px,2vw,18px);padding:clamp(14px,2vw,18px) clamp(28px,4vw,48px)" onclick="goContact('')">Verfügbarkeit prüfen</button>
+        <a href="tel:+436604313993" class="btn-white"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 16.92V19.92C22 20.48 21.74 21 21.29 21.34C20.84 21.68 20.26 21.79 19.72 21.65C16.56 20.83 13.55 19.24 11.01 17.01C8.65 14.96 6.78 12.43 5.64 9.59C5.04 8.08 4.97 6.41 5.45 4.86C5.62 4.33 6.02 3.88 6.54 3.62L9.09 2.41C9.59 2.17 10.17 2.24 10.6 2.59L12.73 4.29C13.16 4.64 13.31 5.22 13.1 5.73L12.17 8.01C12 8.41 12.08 8.87 12.38 9.19L14.81 11.62C15.13 11.92 15.59 12 15.99 11.83L18.27 10.9C18.78 10.69 19.36 10.84 19.71 11.27L21.41 13.4C21.76 13.83 21.83 14.41 21.59 14.91L22 16.92Z" fill="var(--dark)"/></svg>0660 431 39 93</a>
+      </div>
+      <p style="font-size:12px;color:rgba(255,255,255,.4);margin-top:16px">wb@wittmann-eventbox.at · Persönliche Betreuung garantiert</p>
     </div>
   </div>
 </section>
