@@ -19,6 +19,16 @@ const { title, description, robots = 'index,follow', isHome = false } = Astro.pr
 <title>{title}</title>
 <meta name="description" content={description}/>
 <meta name="robots" content={robots}/>
+<meta property="og:title" content={title}/>
+<meta property="og:description" content={description}/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://www.wittmann-eventbox.at"/>
+<meta property="og:image" content="https://www.wittmann-eventbox.at/og-image.jpg"/>
+<meta property="og:locale" content="de_AT"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content={title}/>
+<meta name="twitter:description" content={description}/>
+<meta name="twitter:image" content="https://www.wittmann-eventbox.at/og-image.jpg"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"/>
@@ -30,13 +40,14 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js',new Date());
 gtag('config','AW-10978741779');
 </script>
-<script type="application/ld+json" is:inline>{JSON.stringify({
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "LocalBusiness",
       "name": "Wittmann Eventbox",
-      "description": "Golden Magic Mirror Fotobox mieten in Wien & Umgebung für Hochzeiten, Geburtstage & Firmenfeiern",
+      "description": "Golden Magic Mirror Fotobox mieten in Wien & Umgebung fuer Hochzeiten, Geburtstage und Firmenfeiern",
       "url": "https://www.wittmann-eventbox.at",
       "telephone": "+436604313993",
       "email": "wb@wittmann-eventbox.at",
@@ -47,18 +58,9 @@ gtag('config','AW-10978741779');
         "postalCode": "2000",
         "addressCountry": "AT"
       },
-      "priceRange": "ab €500",
+      "priceRange": "ab 500 EUR",
       "openingHours": "Mo-Su by appointment",
       "areaServed": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": 48.2082,
-          "longitude": 16.3738
-        },
-        "geoRadius": "50000"
-      },
-      "serviceArea": {
         "@type": "AdministrativeArea",
         "name": "Wien und Umgebung"
       }
@@ -71,7 +73,7 @@ gtag('config','AW-10978741779');
           "name": "Wie lange dauert der Aufbau des Magic Mirrors?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Der Aufbau dauert in der Regel 30–45 Minuten. Wir kommen rechtzeitig vor Ihrem Event, damit alles bereit ist wenn Ihre Gäste eintreffen. Abbau und Abholung übernehmen wir ebenfalls – Sie müssen sich um nichts kümmern."
+            "text": "Der Aufbau dauert in der Regel 30-45 Minuten. Wir kommen rechtzeitig vor Ihrem Event, damit alles bereit ist wenn Ihre Gaeste eintreffen. Abbau und Abholung uebernehmen wir ebenfalls."
           }
         },
         {
@@ -79,15 +81,15 @@ gtag('config','AW-10978741779');
           "name": "Ist die Buchung wirklich unverbindlich?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja, absolut. Wenn Sie das Formular absenden, bekommen Sie zunächst nur eine Rückmeldung von uns. Erst nach einem gemeinsamen Gespräch und Ihrer ausdrücklichen Bestätigung wird der Termin verbindlich reserviert."
+            "text": "Ja, absolut. Wenn Sie das Formular absenden, bekommen Sie zunaechst nur eine Rueckmeldung von uns. Erst nach einem gemeinsamen Gespraech und Ihrer ausdruecklichen Bestaetigung wird der Termin verbindlich reserviert."
           }
         },
         {
           "@type": "Question",
-          "name": "Wie viele Gäste können den Spiegel gleichzeitig nutzen?",
+          "name": "Wie viele Gaeste koennen den Spiegel gleichzeitig nutzen?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Vor dem Spiegel passen bequem 2–4 Personen gleichzeitig. Der Spiegel selbst ist großformatig, sodass auch Gruppenfotos wunderbar gelingen. Bei Gruppen über 4 Personen empfehlen wir zwei separate Aufnahmen für optimale Ergebnisse."
+            "text": "Vor dem Spiegel passen bequem 2-4 Personen gleichzeitig. Der Spiegel selbst ist grossformatig, sodass auch Gruppenfotos wunderbar gelingen."
           }
         },
         {
@@ -95,7 +97,7 @@ gtag('config','AW-10978741779');
           "name": "Was passiert mit den digitalen Fotos?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Jede Aufnahme wird sofort ausgedruckt und kann per QR-Code auch digital abgerufen werden. Nach der Veranstaltung erhalten Sie auf Wunsch alle Fotos in einer digitalen Galerie – als schöne Erinnerung für Sie und Ihre Gäste."
+            "text": "Jede Aufnahme wird sofort ausgedruckt und kann per QR-Code auch digital abgerufen werden. Nach der Veranstaltung erhalten Sie auf Wunsch alle Fotos in einer digitalen Galerie."
           }
         },
         {
@@ -103,21 +105,22 @@ gtag('config','AW-10978741779');
           "name": "Kann das Layout der Sofortdrucke personalisiert werden?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja! Das Drucklayout kann mit Ihrem Namen, Datum, Logo oder einem individuellen Design versehen werden. So wird jeder Sofortdruck zu einem persönlichen Andenken an Ihr besonderes Event."
+            "text": "Ja! Das Drucklayout kann mit Ihrem Namen, Datum, Logo oder einem individuellen Design versehen werden."
           }
         },
         {
           "@type": "Question",
-          "name": "Wie weit fahren Sie für Events?",
+          "name": "Wie weit fahren Sie fuer Events?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Wir sind in Wien und der gesamten Umgebung für Sie da. Die Anfahrt ist in allen Paketen inklusive. Für Events außerhalb unseres regulären Einzugsgebiets sprechen Sie uns einfach an – wir finden eine Lösung."
+            "text": "Wir sind in Wien und der gesamten Umgebung fuer Sie da. Die Anfahrt ist inklusive. Fuer Events ausserhalb sprechen Sie uns einfach an."
           }
         }
       ]
     }
   ]
-})}</script>
+}
+</script>
 </head>
 <body>
 
