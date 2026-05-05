@@ -33,7 +33,6 @@ const { title, description, robots = 'index,follow', isHome = false } = Astro.pr
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css"/>
-<script is:inline src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
 <script is:inline>
 (function(){
   function loadGA(){
@@ -62,36 +61,42 @@ const { title, description, robots = 'index,follow', isHome = false } = Astro.pr
     if(CookieConsent.acceptedCategory('analytics'))loadGA();
     if(CookieConsent.acceptedCategory('marketing')){loadGA();loadFbPixel();}
   }
-  CookieConsent.run({
-    guiOptions:{consentModal:{layout:'bar',position:'bottom center',equalWeightButtons:false,flipButtons:false}},
-    categories:{necessary:{enabled:true,readOnly:true},analytics:{},marketing:{}},
-    language:{
-      default:'de',
-      translations:{de:{
-        consentModal:{
-          title:'Diese Website verwendet Cookies',
-          description:'Wir verwenden Cookies fuer Analyse und Marketing. Sie koennen Ihre Einwilligung jederzeit widerrufen.',
-          acceptAllBtn:'Alle akzeptieren',
-          acceptNecessaryBtn:'Ablehnen',
-          showPreferencesBtn:'Auswahl',
-          footer:'<a href="/datenschutz">Datenschutz</a> &middot; <a href="/impressum">Impressum</a>'
-        },
-        preferencesModal:{
-          title:'Cookie Einstellungen',
-          acceptAllBtn:'Alle akzeptieren',
-          acceptNecessaryBtn:'Ablehnen',
-          savePreferencesBtn:'Auswahl speichern',
-          sections:[
-            {title:'Notwendige Cookies',description:'Fuer den Betrieb der Website erforderlich.',linkedCategory:'necessary'},
-            {title:'Statistiken',description:'Helfen uns zu verstehen wie Besucher die Website nutzen (Google Analytics).',linkedCategory:'analytics'},
-            {title:'Marketing',description:'Werden verwendet um relevante Werbung anzuzeigen (Google Ads, Facebook).',linkedCategory:'marketing'}
-          ]
-        }
-      }}
-    },
-    onConsent:handleConsent,
-    onChange:handleConsent
-  });
+  function initCC(){
+    CookieConsent.run({
+      guiOptions:{consentModal:{layout:'bar',position:'bottom center',equalWeightButtons:false,flipButtons:false}},
+      categories:{necessary:{enabled:true,readOnly:true},analytics:{},marketing:{}},
+      language:{
+        default:'de',
+        translations:{de:{
+          consentModal:{
+            title:'Diese Website verwendet Cookies',
+            description:'Wir verwenden Cookies fuer Analyse und Marketing. Sie koennen Ihre Einwilligung jederzeit widerrufen.',
+            acceptAllBtn:'Alle akzeptieren',
+            acceptNecessaryBtn:'Ablehnen',
+            showPreferencesBtn:'Auswahl',
+            footer:'<a href="/datenschutz">Datenschutz</a> &middot; <a href="/impressum">Impressum</a>'
+          },
+          preferencesModal:{
+            title:'Cookie Einstellungen',
+            acceptAllBtn:'Alle akzeptieren',
+            acceptNecessaryBtn:'Ablehnen',
+            savePreferencesBtn:'Auswahl speichern',
+            sections:[
+              {title:'Notwendige Cookies',description:'Fuer den Betrieb der Website erforderlich.',linkedCategory:'necessary'},
+              {title:'Statistiken',description:'Helfen uns zu verstehen wie Besucher die Website nutzen (Google Analytics).',linkedCategory:'analytics'},
+              {title:'Marketing',description:'Werden verwendet um relevante Werbung anzuzeigen (Google Ads, Facebook).',linkedCategory:'marketing'}
+            ]
+          }
+        }}
+      },
+      onConsent:handleConsent,
+      onChange:handleConsent
+    });
+  }
+  var s=document.createElement('script');
+  s.src='https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js';
+  s.onload=initCC;
+  document.head.appendChild(s);
 })();
 </script>
 <style is:global>
