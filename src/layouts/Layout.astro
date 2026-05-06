@@ -34,18 +34,35 @@ const { title, description, robots = 'index,follow', isHome = false } = Astro.pr
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"/>
+<!-- Google Consent Mode v2 – Default denied, vor dem Tag gesetzt -->
+<script is:inline>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{
+  'ad_storage':'denied',
+  'ad_user_data':'denied',
+  'ad_personalization':'denied',
+  'analytics_storage':'denied',
+  'wait_for_update':500
+});
+gtag('js',new Date());
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10978741779" is:inline></script>
+<script is:inline>gtag('config','AW-10978741779');</script>
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css"/>
 <script is:inline>
 (function(){
-  function loadGA(){
-    if(window._gaLoaded)return;window._gaLoaded=true;
-    var s=document.createElement('script');s.async=true;
-    s.src='https://www.googletagmanager.com/gtag/js?id=AW-10978741779';
-    document.head.appendChild(s);
-    window.dataLayer=window.dataLayer||[];
-    window.gtag=function(){dataLayer.push(arguments);};
-    window.gtag('js',new Date());
-    window.gtag('config','AW-10978741779');
+  function updateConsent(){
+    var analytics=CookieConsent.acceptedCategory('analytics');
+    var marketing=CookieConsent.acceptedCategory('marketing');
+    gtag('consent','update',{
+      'ad_storage':marketing?'granted':'denied',
+      'ad_user_data':marketing?'granted':'denied',
+      'ad_personalization':marketing?'granted':'denied',
+      'analytics_storage':analytics?'granted':'denied'
+    });
+    if(marketing)loadFbPixel();
   }
   function loadFbPixel(){
     if(window._fbLoaded)return;window._fbLoaded=true;
@@ -58,10 +75,6 @@ const { title, description, robots = 'index,follow', isHome = false } = Astro.pr
     document.head.appendChild(s);
     window.fbq('init','1746864376318084');
     window.fbq('track','PageView');
-  }
-  function handleConsent(){
-    if(CookieConsent.acceptedCategory('analytics'))loadGA();
-    if(CookieConsent.acceptedCategory('marketing')){loadGA();loadFbPixel();}
   }
   function initCC(){
     CookieConsent.run({
@@ -91,8 +104,8 @@ const { title, description, robots = 'index,follow', isHome = false } = Astro.pr
           }
         }}
       },
-      onConsent:handleConsent,
-      onChange:handleConsent
+      onConsent:updateConsent,
+      onChange:updateConsent
     });
   }
   var s=document.createElement('script');
