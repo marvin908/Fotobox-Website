@@ -444,3 +444,4 @@ footer{background:rgba(8,6,2,.88);backdrop-filter:blur(28px) saturate(1.6);-webk
   .ev-grid{grid-template-columns:1fr 1fr}
   .mirror-frame{width:clamp(240px,28vw,360px);height:clamp(340px,39vw,500px)}
 }
+section[id]{scroll-margin-top:80px}

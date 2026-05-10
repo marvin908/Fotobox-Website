@@ -606,6 +606,17 @@ function startDemoSign(){
   }
   requestAnimationFrame(update);
 })();
+// Direct anchor URL handling (z.B. von Google Ads kommend)
+window.addEventListener('load', () => {
+  if (window.location.hash) {
+    const target = document.querySelector(window.location.hash);
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 300);
+    }
+  }
+});
 </script>
 
 </Layout>
