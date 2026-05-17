@@ -54,30 +54,30 @@ import Layout from '../layouts/Layout.astro';
           <div class="field-row">
             <div class="field">
               <label>Vorname *</label>
-              <input type="text" name="vorname" placeholder="Max" required/>
+              <input type="text" name="vorname" placeholder="Max" required autocomplete="given-name" autocapitalize="words"/>
             </div>
             <div class="field">
               <label>Nachname *</label>
-              <input type="text" name="nachname" placeholder="Mustermann" required/>
+              <input type="text" name="nachname" placeholder="Mustermann" required autocomplete="family-name" autocapitalize="words"/>
             </div>
           </div>
           <div class="field">
             <label>E-Mail-Adresse *</label>
-            <input type="email" name="email" placeholder="max@beispiel.at" required/>
+            <input type="email" name="email" placeholder="max@beispiel.at" required autocomplete="email" autocapitalize="off" inputmode="email"/>
           </div>
           <div class="field">
             <label>Telefonnummer *</label>
-            <input type="tel" name="telefon" placeholder="+43 660 ..." required/>
+            <input type="tel" name="telefon" placeholder="+43 660 ..." required autocomplete="tel" inputmode="tel"/>
           </div>
           <div class="field-row">
             <div class="field">
               <label>Event-Datum <span style="font-weight:400;color:#aaa;font-size:12px">(optional)</span></label>
-              <input type="date" name="datum"/>
+              <input type="date" name="datum" autocomplete="off"/>
             </div>
           </div>
           <div class="field">
             <label>Veranstaltungsort / Adresse <span style="font-weight:400;color:#aaa;font-size:12px">(optional)</span></label>
-            <input type="text" name="ort" placeholder="z.B. Wien, 1010 oder Veranstaltungssaal XY"/>
+            <input type="text" name="ort" placeholder="z.B. Wien, 1010 oder Veranstaltungssaal XY" autocomplete="street-address"/>
           </div>
           <div class="field">
             <label>Ihre Nachricht <span style="font-weight:400;color:#aaa;font-size:12px">(optional)</span></label>
