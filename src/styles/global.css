@@ -1,8 +1,3 @@
-@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url('https://fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLCz7Z1JlEA.woff2') format('woff2')}
-@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url('https://fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLDD4Z1JlEA.woff2') format('woff2')}
-@font-face{font-family:'Mulish';font-style:normal;font-weight:400;font-display:swap;src:url('https://fonts.gstatic.com/s/mulish/v13/1Ptyg83HX_SGhgqO0yLcmjzUAuWexZNR.woff2') format('woff2')}
-@font-face{font-family:'Mulish';font-style:normal;font-weight:600;font-display:swap;src:url('https://fonts.gstatic.com/s/mulish/v13/1Ptyg83HX_SGhgqO0yLcmjzUAuWexZNR.woff2') format('woff2')}
-@font-face{font-family:'Mulish';font-style:normal;font-weight:700;font-display:swap;src:url('https://fonts.gstatic.com/s/mulish/v13/1Ptyg83HX_SGhgqO0yLcmjzUAuWexZNR.woff2') format('woff2')}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--gold:#DDA844;--gold-light:#E8D496;--gold-dark:#B07828;--dark:#111111;--light:#4A3010;--white:#fff;--gray:#888;--r-lg:20px;--r-md:12px;--section-y:clamp(70px,9vw,120px)}
 html{scroll-behavior:smooth;overflow-x:hidden}
@@ -445,3 +440,4 @@ footer{background:rgba(8,6,2,.88);backdrop-filter:blur(28px) saturate(1.6);-webk
   .mirror-frame{width:clamp(240px,28vw,360px);height:clamp(340px,39vw,500px)}
 }
 section[id]{scroll-margin-top:80px}
+@media(prefers-reduced-motion:reduce){.mg-star,.firefly,.bokeh-dot{animation:none!important;transition:none!important}.reveal,.reveal-left,.reveal-right,.reveal-scale{opacity:1!important;transform:none!important;transition:none!important}}

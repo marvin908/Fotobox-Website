@@ -223,7 +223,7 @@ import GalleryStack from '../components/GalleryStack.tsx';
 
         <!-- Screen 1: Personalisierung -->
         <div class="demo-screen ds-active" id="demoS0" onclick="demoGoto(1)" style="cursor:pointer">
-          <img src="/gallery/demo-hochzeit.jpg" alt="Personalisiertes Hochzeitslayout – Ivonne & Bernhard" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top"/>
+          <img src="/gallery/demo-hochzeit.webp" alt="Personalisiertes Hochzeitslayout – Ivonne & Bernhard" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top"/>
         </div>
 
         <!-- Screen 2: Countdown -->
@@ -519,11 +519,12 @@ const months=['Jänner','Februar','März','April','Mai','Juni','Juli','August','
 const d=new Date();d.setMonth(d.getMonth()+1);
 const nextMonthEl=document.getElementById('nextMonth');if(nextMonthEl)nextMonthEl.textContent=months[d.getMonth()];
 function makeStars(id,count){const el=document.getElementById(id);if(!el)return;for(let i=0;i<count;i++){const s=document.createElement('div');s.className='mg-star';const big=Math.random()>.72;const sz=big?5+Math.random()*10:1.5+Math.random()*3.5;const tx=(Math.random()-.5)*500;const ty=(Math.random()-.5)*400;const md=20+Math.random()*30;const mdl=-(Math.random()*22);s.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;width:${sz}px;height:${sz}px;--d:${big?6+Math.random()*8:3+Math.random()*5}s;--dl:${Math.random()*12}s;--tx:${tx}px;--ty:${ty}px;--md:${md}s;--mdl:${mdl}s${big?';filter:blur(2.5px)':''}`;el.appendChild(s);}}
-makeStars('heroStars',55);makeStars('evStars',55);
+const isMob=window.innerWidth<768;
+makeStars('heroStars',isMob?25:55);makeStars('evStars',isMob?20:55);
 function makeMirrorBokeh(id,count){const el=document.getElementById(id);if(!el)return;for(let i=0;i<count;i++){const b=document.createElement('div');b.className='mbk';const big=Math.random()>.72;const sz=big?3.5+Math.random()*5:1+Math.random()*2.5;const tx=(Math.random()-.5)*30;const ty=(Math.random()-.5)*30;b.style.cssText=`left:${8+Math.random()*84}%;top:${8+Math.random()*84}%;width:${sz}px;height:${sz}px;background:rgba(221,170,68,${big?.85:.7});box-shadow:0 0 ${sz*2.5}px ${sz*1.2}px rgba(221,170,68,.2);--d:${5+Math.random()*8}s;--dl:-${Math.random()*8}s;--p:${3+Math.random()*4}s;--pl:-${Math.random()*4}s;--tx:${tx}px;--ty:${ty}px;--oa:${.08+Math.random()*.12};--ob:${.28+Math.random()*.28}`;el.appendChild(b);}}
-makeMirrorBokeh('mirrorBokeh',9);
+makeMirrorBokeh('mirrorBokeh',isMob?5:9);
 function makeFireflies(id,count){const el=document.getElementById(id);if(!el)return;for(let i=0;i<count;i++){const f=document.createElement('div');f.className='firefly';const sz=2+Math.random()*4;const glow=5+Math.random()*10;const tx=(Math.random()-.5)*320;const ty=(Math.random()-.5)*320;const md=14+Math.random()*20;const mdl=-(Math.random()*20);f.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;width:${sz}px;height:${sz}px;background:rgba(221,170,68,.95);box-shadow:0 0 ${glow}px ${glow*.5}px rgba(221,170,68,.35);--d:${4+Math.random()*7}s;--dl:${Math.random()*12}s;--tx:${tx}px;--ty:${ty}px;--md:${md}s;--mdl:${mdl}s`;el.appendChild(f);}}
-makeFireflies('evFireflyBg',30);makeFireflies('fireflyBg',30);
+makeFireflies('evFireflyBg',isMob?12:30);makeFireflies('fireflyBg',isMob?12:30);
 window.toggleFaq=function(btn){const body=btn.nextElementSibling;const isOpen=body.classList.contains('open');document.querySelectorAll('.faq-body').forEach(b=>b.classList.remove('open'));document.querySelectorAll('.faq-toggle').forEach(b=>b.classList.remove('open'));if(!isOpen){body.classList.add('open');btn.classList.add('open');}}
 const obs=new IntersectionObserver((entries)=>{entries.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');x.target.classList.remove('exiting');}else if(x.boundingClientRect.top<0){x.target.classList.add('exiting');x.target.classList.remove('visible');}else{x.target.classList.remove('visible','exiting');}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale').forEach(el=>obs.observe(el));

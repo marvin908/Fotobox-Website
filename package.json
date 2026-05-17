@@ -19,5 +19,8 @@
     "react-dom": "^18.3.1",
     "tailwindcss": "^3.4.0",
     "vanilla-cookieconsent": "^3.1.0"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5"
   }
 }
