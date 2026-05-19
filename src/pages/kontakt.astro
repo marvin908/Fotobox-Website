@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const today = new Date().toISOString().split('T')[0];
 ---
 <Layout
   title="Kontakt – Wittmann Eventbox"
@@ -49,17 +50,11 @@ import Layout from '../layouts/Layout.astro';
       <!-- FORM -->
       <div class="form-card">
         <h2>Jetzt anfragen</h2>
-        <p class="sub">Alle Felder mit * sind Pflichtfelder. Die Anfrage ist völlig unverbindlich.</p>
+        <p class="sub">Antwort innerhalb von 24h. Persönlich, kein Autoresponder.</p>
         <form id="contactForm" action="https://formspree.io/f/xbdqvrgy" method="POST">
-          <div class="field-row">
-            <div class="field">
-              <label>Vorname *</label>
-              <input type="text" name="vorname" placeholder="Max" required autocomplete="given-name" autocapitalize="words"/>
-            </div>
-            <div class="field">
-              <label>Nachname *</label>
-              <input type="text" name="nachname" placeholder="Mustermann" required autocomplete="family-name" autocapitalize="words"/>
-            </div>
+          <div class="field">
+            <label>Ihr Name *</label>
+            <input type="text" name="vorname" placeholder="Max Mustermann" required autocomplete="name" autocapitalize="words"/>
           </div>
           <div class="field">
             <label>E-Mail-Adresse *</label>
@@ -69,21 +64,16 @@ import Layout from '../layouts/Layout.astro';
             <label>Telefonnummer *</label>
             <input type="tel" name="telefon" placeholder="+43 660 ..." required autocomplete="tel" inputmode="tel"/>
           </div>
-          <div class="field-row">
-            <div class="field">
-              <label>Event-Datum <span style="font-weight:400;color:#aaa;font-size:12px">(optional)</span></label>
-              <input type="date" name="datum" autocomplete="off"/>
-            </div>
-          </div>
           <div class="field">
-            <label>Veranstaltungsort / Adresse <span style="font-weight:400;color:#aaa;font-size:12px">(optional)</span></label>
-            <input type="text" name="ort" placeholder="z.B. Wien, 1010 oder Veranstaltungssaal XY" autocomplete="street-address"/>
+            <label>Event-Datum</label>
+            <input type="date" name="datum" autocomplete="off" min={today}/>
+            <small style="display:block;margin-top:6px;font-size:12px;color:#888">Schon ein Datum im Kopf? Hilft uns für die schnelle Verfügbarkeits-Antwort. Falls noch unsicher: einfach leer lassen.</small>
           </div>
           <div class="field">
             <label>Ihre Nachricht <span style="font-weight:400;color:#aaa;font-size:12px">(optional)</span></label>
             <textarea name="nachricht" placeholder="Weitere Wünsche, Fragen oder besondere Anforderungen ..."></textarea>
           </div>
-          <button type="submit" class="submit-btn">Unverbindlich anfragen →</button>
+          <button type="submit" class="submit-btn">Verfügbarkeit prüfen lassen →</button>
           <p class="privacy-note">Mit dem Absenden stimmen Sie unserer <a href="/datenschutz" style="color:var(--gold)">Datenschutzerklärung</a> zu.</p>
         </form>
         <div class="success-msg" id="successMsg">
