@@ -119,102 +119,6 @@ import GalleryStack from '../components/GalleryStack.tsx';
 </div>
 
 
-<!-- PRICING -->
-<section id="pricing" style="padding:var(--section-y) 0;background:linear-gradient(to bottom,#0a0806 0%,#0f0d08 100%);position:relative;overflow:hidden">
-  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 90% 55% at 50% 50%,rgba(221,170,68,.06),transparent 75%);pointer-events:none"></div>
-  <div class="wrap">
-    <div class="reveal" style="text-align:center;margin:0 auto clamp(40px,5vw,64px)">
-      <span class="tag">Transparente Preise</span>
-      <h2 class="sec-title" style="margin:14px 0 12px;color:var(--white)">Alles drin. Liefern,<br/>aufbauen, abbauen – das machen wir.</h2>
-      <p style="font-size:clamp(14px,1.6vw,16px);color:rgba(255,255,255,.6);line-height:1.7">Ein klarer Preis, keine versteckten Kosten, inkl. MwSt.</p>
-    </div>
-    <div class="pr2-grid" style="display:flex;justify-content:center">
-
-      <!-- KLASSISCH -->
-      <div class="pr2-card pr2-featured reveal-scale" style="max-width:480px;width:100%">
-        <div class="pr2-top">
-          <div>
-            <div class="pr2-tier" style="color:var(--gold)">Golden Magic Mirror</div>
-            <div class="pr2-desc" style="color:rgba(255,255,255,.6)">Alles was Ihr Event unvergesslich macht</div>
-          </div>
-          <div class="pr2-price-wrap">
-            <div class="pr2-price" style="color:var(--white)"><sup style="color:var(--gold-light)">€</sup>500</div>
-            <div class="pr2-vat" style="color:rgba(255,255,255,.45)">inkl. MwSt.</div>
-          </div>
-        </div>
-        <div class="pr2-divider" style="background:rgba(221,170,68,.2)"></div>
-        <div class="pr2-feat-label" style="color:rgba(255,255,255,.5)">Inklusive</div>
-        <ul class="pr2-feats">
-          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Anfahrt inklusive</span></li>
-          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">400 Sofortdrucke</span></li>
-          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Roter Teppich & goldene Stangen</span></li>
-          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Party-Equipment (Brillen, Hüte, Masken)</span></li>
-          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Profi LED-Ringlicht</span></li>
-          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Persönliche Betreuung vor Ort</span></li>
-          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Auf- & Abbau inklusive</span></li>
-        </ul>
-        <button class="pr2-btn pr2-btn-featured" onclick="goContact('')">Unverbindlich anfragen</button>
-      </div>
-
-    </div>
-
-    <!-- KAUTION -->
-    <div class="kaution-note" style="color:rgba(255,255,255,.7);background:rgba(221,170,68,.1)">
-      Für alle Pakete gilt eine <strong style="color:var(--white)">Kaution</strong> von <strong style="color:var(--white)">€150</strong> – wird nach der Veranstaltung vollständig zurückerstattet.
-    </div>
-
-    <!-- PREISE & LIEFERUNG -->
-    <div class="delivery-box reveal">
-      <div class="delivery-icon">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z" stroke="var(--gold)" stroke-width="1.8" stroke-linejoin="round"/><circle cx="5.5" cy="18.5" r="2" stroke="var(--gold)" stroke-width="1.8"/><circle cx="18.5" cy="18.5" r="2" stroke="var(--gold)" stroke-width="1.8"/></svg>
-      </div>
-      <div class="delivery-content">
-        <div class="delivery-top">
-          <h3 class="delivery-title">Preise & Lieferung</h3>
-          <p class="delivery-lead">Transparente Preise ohne versteckte Kosten.</p>
-        </div>
-        <div class="delivery-cols">
-          <div class="delivery-col">
-            <div class="delivery-col-icon">📍</div>
-            <div>
-              <div class="delivery-col-title">Wien & Umgebung</div>
-              <div class="delivery-col-text">Meine Standardpreise gelten für das gesamte Stadtgebiet Wien sowie im Umkreis von 50 km rund um Stockerau.</div>
-            </div>
-          </div>
-          <div class="delivery-divider"></div>
-          <div class="delivery-col">
-            <div class="delivery-col-icon">✓</div>
-            <div>
-              <div class="delivery-col-title">Alles inklusive</div>
-              <div class="delivery-col-text">In diesem Radius sind Lieferung, Aufbau und Abholung bereits im Preis enthalten – keine Überraschungen.</div>
-            </div>
-          </div>
-          <div class="delivery-divider"></div>
-          <div class="delivery-col">
-            <div class="delivery-col-icon">🗺️</div>
-            <div>
-              <div class="delivery-col-title">Weitere Entfernungen</div>
-              <div class="delivery-col-text">Ihr Event findet weiter weg statt? Kein Problem – ich erstelle Ihnen gerne ein individuelles Angebot.</div>
-              <button class="delivery-anfrage-btn" onclick="goContact('')">Preis anfragen</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- URGENCY -->
-    <div class="urgency-bar reveal" style="margin-top:clamp(32px,4vw,48px)">
-      <div class="urgency-dot"></div>
-      <div class="urgency-text">
-        <span class="urgency-label">Begrenzte Verfügbarkeit</span>
-        <span class="urgency-msg">Beliebte Termine – besonders Hochzeitssaison und Feiertage – sind oft Monate im Voraus vergeben.</span>
-      </div>
-      <button class="urgency-btn" onclick="goContact('')">Termin jetzt sichern</button>
-    </div>
-
-  </div>
-</section>
-
 <!-- GALLERY -->
 <section id="galerie" style="padding:var(--section-y) 0;background:linear-gradient(to bottom,#110D04 0%,#0f0d08 20%,#0f0d08 80%,#1E1508 100%);position:relative;overflow:hidden">
   <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 55%,rgba(221,170,68,.09),transparent 70%);pointer-events:none"></div>
@@ -233,7 +137,6 @@ import GalleryStack from '../components/GalleryStack.tsx';
     </a>
   </div>
 </section>
-
 <div class="sec-div" style="background:linear-gradient(180deg,#1E1508,#FAF6EE)"><span class="sec-div-gem"><span class="sec-div-gem-inner"></span></span></div>
 <!-- MAGIC (light bg) -->
 <section id="magic" style="padding:var(--section-y) 0;background:#FAF6EE;position:relative;overflow:hidden">
@@ -402,6 +305,104 @@ import GalleryStack from '../components/GalleryStack.tsx';
   </div>
 </section>
 
+<div class="sec-div" style="background:linear-gradient(180deg,#FAF6EE,#0a0806)"><span class="sec-div-gem"><span class="sec-div-gem-inner"></span></span></div>
+<!-- PRICING -->
+<section id="pricing" style="padding:var(--section-y) 0;background:linear-gradient(to bottom,#0a0806 0%,#0f0d08 100%);position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 90% 55% at 50% 50%,rgba(221,170,68,.06),transparent 75%);pointer-events:none"></div>
+  <div class="wrap">
+    <div class="reveal" style="text-align:center;margin:0 auto clamp(40px,5vw,64px)">
+      <span class="tag">Transparente Preise</span>
+      <h2 class="sec-title" style="margin:14px 0 12px;color:var(--white)">Alles drin. Liefern,<br/>aufbauen, abbauen – das machen wir.</h2>
+      <p style="font-size:clamp(14px,1.6vw,16px);color:rgba(255,255,255,.6);line-height:1.7">Ein klarer Preis, keine versteckten Kosten, inkl. MwSt.</p>
+    </div>
+    <div class="pr2-grid" style="display:flex;justify-content:center">
+
+      <!-- KLASSISCH -->
+      <div class="pr2-card pr2-featured reveal-scale" style="max-width:480px;width:100%">
+        <div class="pr2-top">
+          <div>
+            <div class="pr2-tier" style="color:var(--gold)">Golden Magic Mirror</div>
+            <div class="pr2-desc" style="color:rgba(255,255,255,.6)">Alles was Ihr Event unvergesslich macht</div>
+          </div>
+          <div class="pr2-price-wrap">
+            <div class="pr2-price" style="color:var(--white)"><sup style="color:var(--gold-light)">€</sup>500</div>
+            <div class="pr2-vat" style="color:rgba(255,255,255,.45)">inkl. MwSt.</div>
+          </div>
+        </div>
+        <div class="pr2-divider" style="background:rgba(221,170,68,.2)"></div>
+        <div class="pr2-feat-label" style="color:rgba(255,255,255,.5)">Inklusive</div>
+        <ul class="pr2-feats">
+          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Anfahrt inklusive</span></li>
+          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">400 Sofortdrucke</span></li>
+          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Roter Teppich & goldene Stangen</span></li>
+          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Party-Equipment (Brillen, Hüte, Masken)</span></li>
+          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Profi LED-Ringlicht</span></li>
+          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Persönliche Betreuung vor Ort</span></li>
+          <li><span class="pr2-ck">✓</span><span style="color:rgba(255,255,255,.85)">Auf- & Abbau inklusive</span></li>
+        </ul>
+        <button class="pr2-btn pr2-btn-featured" onclick="goContact('')">Unverbindlich anfragen</button>
+      </div>
+
+    </div>
+
+    <!-- KAUTION -->
+    <div class="kaution-note" style="color:rgba(255,255,255,.7);background:rgba(221,170,68,.1)">
+      Für alle Pakete gilt eine <strong style="color:var(--white)">Kaution</strong> von <strong style="color:var(--white)">€150</strong> – wird nach der Veranstaltung vollständig zurückerstattet.
+    </div>
+
+    <!-- PREISE & LIEFERUNG -->
+    <div class="delivery-box reveal">
+      <div class="delivery-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z" stroke="var(--gold)" stroke-width="1.8" stroke-linejoin="round"/><circle cx="5.5" cy="18.5" r="2" stroke="var(--gold)" stroke-width="1.8"/><circle cx="18.5" cy="18.5" r="2" stroke="var(--gold)" stroke-width="1.8"/></svg>
+      </div>
+      <div class="delivery-content">
+        <div class="delivery-top">
+          <h3 class="delivery-title">Preise & Lieferung</h3>
+          <p class="delivery-lead">Transparente Preise ohne versteckte Kosten.</p>
+        </div>
+        <div class="delivery-cols">
+          <div class="delivery-col">
+            <div class="delivery-col-icon">📍</div>
+            <div>
+              <div class="delivery-col-title">Wien & Umgebung</div>
+              <div class="delivery-col-text">Meine Standardpreise gelten für das gesamte Stadtgebiet Wien sowie im Umkreis von 50 km rund um Stockerau.</div>
+            </div>
+          </div>
+          <div class="delivery-divider"></div>
+          <div class="delivery-col">
+            <div class="delivery-col-icon">✓</div>
+            <div>
+              <div class="delivery-col-title">Alles inklusive</div>
+              <div class="delivery-col-text">In diesem Radius sind Lieferung, Aufbau und Abholung bereits im Preis enthalten – keine Überraschungen.</div>
+            </div>
+          </div>
+          <div class="delivery-divider"></div>
+          <div class="delivery-col">
+            <div class="delivery-col-icon">🗺️</div>
+            <div>
+              <div class="delivery-col-title">Weitere Entfernungen</div>
+              <div class="delivery-col-text">Ihr Event findet weiter weg statt? Kein Problem – ich erstelle Ihnen gerne ein individuelles Angebot.</div>
+              <button class="delivery-anfrage-btn" onclick="goContact('')">Preis anfragen</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- URGENCY -->
+    <div class="urgency-bar reveal" style="margin-top:clamp(32px,4vw,48px)">
+      <div class="urgency-dot"></div>
+      <div class="urgency-text">
+        <span class="urgency-label">Begrenzte Verfügbarkeit</span>
+        <span class="urgency-msg">Beliebte Termine – besonders Hochzeitssaison und Feiertage – sind oft Monate im Voraus vergeben.</span>
+      </div>
+      <button class="urgency-btn" onclick="goContact('')">Termin jetzt sichern</button>
+    </div>
+
+  </div>
+</section>
+
+<div class="sec-div" style="background:linear-gradient(180deg,#0f0d08,#FAF6EE)"><span class="sec-div-gem"><span class="sec-div-gem-inner"></span></span></div>
 <!-- BENEFITS -->
 <section id="why" style="padding:var(--section-y) 0;background:#FAF6EE;position:relative;overflow:hidden">
   <div class="wrap" style="position:relative;z-index:1">
@@ -452,7 +453,6 @@ import GalleryStack from '../components/GalleryStack.tsx';
     </div>
   </div>
 </section>
-
 <!-- FAQ -->
 <section id="faq" style="padding:var(--section-y) 0;background:#FAF6EE;position:relative;overflow:hidden">
   <div class="wrap">
