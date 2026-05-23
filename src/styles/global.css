@@ -88,9 +88,9 @@ a{text-decoration:none;color:inherit}
 .hero-cta-row{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
 .btn-hero-secondary{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:'Mulish',sans-serif;font-weight:700;font-size:clamp(16px,2vw,19px);padding:clamp(16px,2vw,20px) clamp(32px,4vw,52px);border-radius:14px;cursor:pointer;letter-spacing:.4px;position:relative;overflow:hidden;color:rgba(255,255,255,.75);background:rgba(255,255,255,.05);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);border:1.5px solid rgba(255,255,255,.18);box-shadow:0 4px 16px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.08);transition:transform .2s,box-shadow .2s,background .2s;text-decoration:none}
 .btn-hero-secondary:hover{transform:translateY(-2px);background:rgba(255,255,255,.09);box-shadow:0 8px 24px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.12);border-color:rgba(255,255,255,.3)}
-.hero-trust-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:16px}
-.hero-trust-item{display:flex;align-items:center;gap:6px;font-family:'Mulish',sans-serif;font-size:clamp(12px,1.4vw,14px);font-weight:700;color:rgba(255,255,255,0.7)}
-.hero-trust-sep{color:rgba(255,255,255,0.2);font-size:12px}
+.hero-trust-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:20px}
+.hero-trust-item{display:flex;align-items:center;gap:6px;font-family:'Mulish',sans-serif;font-size:clamp(14px,1.6vw,16px);font-weight:700;color:rgba(255,255,255,0.92)}
+.hero-trust-sep{color:rgba(221,170,68,0.5);font-size:14px}
 .hero-badges{display:flex;gap:10px;margin-top:28px;flex-wrap:wrap}
 .hero-badge{border-radius:10px;padding:10px 15px;display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:rgba(255,255,255,.8)}
 .hero-badge svg{width:14px;height:14px;flex-shrink:0}
@@ -398,8 +398,9 @@ footer{background:rgba(8,6,2,.88);backdrop-filter:blur(28px) saturate(1.6);-webk
   .hero-sub{margin:0 auto 24px;font-size:15px;max-width:100%}
   .hero-cta-row{justify-content:center;flex-direction:column;align-items:center;gap:12px}
   .hero-cta-row .btn-gold{width:100%;max-width:100%}
-  .hero-trust-row{justify-content:center;flex-direction:column;align-items:center;gap:6px}
+  .hero-trust-row{flex-direction:row;flex-wrap:wrap;justify-content:flex-start;gap:12px}
   .hero-trust-sep{display:none}
+  .hero-trust-item{font-size:14px}
   .hero-badges{justify-content:center;gap:8px;margin-top:20px}
   .hero-visual{order:-1;width:100%;display:flex;justify-content:center;padding:20px 0 32px}
   .mirror-frame{width:clamp(180px,52vw,260px);height:clamp(250px,72vw,360px)}
