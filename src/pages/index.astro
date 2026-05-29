@@ -417,6 +417,84 @@ import GalleryStack from '../components/GalleryStack.tsx';
   </div>
 </section>
 
+<div class="sec-div" style="background:linear-gradient(180deg,#0f0d08,#1a1206)"><span class="sec-div-gem"><span class="sec-div-gem-inner"></span></span></div>
+
+<!-- UNTERSCHEIDUNG -->
+<section id="unterscheidung" style="padding:var(--section-y) 0;background:linear-gradient(160deg,#1a1206 0%,#2a1c06 50%,#1e1508 100%);position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 40%,rgba(221,170,68,0.08),transparent 70%);pointer-events:none"></div>
+  <div class="wrap" style="position:relative;z-index:1">
+    <div class="reveal" style="text-align:center;margin-bottom:clamp(40px,5vw,64px);max-width:760px;margin-left:auto;margin-right:auto">
+      <span class="tag">Direktvergleich</span>
+      <h2 class="sec-title" style="margin:14px 0 16px;color:var(--white)">Das unterscheidet uns von anderen Anbietern.</h2>
+      <p style="font-size:clamp(15px,1.8vw,17px);color:rgba(255,255,255,0.7);line-height:1.7;margin:0 auto">Keine Stoppuhr. Kein Aufschlag nach 4 Stunden. Stressfrei und ohne Mehrkosten das Event genießen. <span style="color:var(--gold);font-weight:600">Den ganzen Tag.</span></p>
+    </div>
+    <div class="vergleich-grid reveal-scale">
+      <!-- ANDERE ANBIETER -->
+      <div class="vergleich-card vergleich-card-others">
+        <div class="vergleich-header">
+          <span class="vergleich-label">Andere Anbieter</span>
+        </div>
+        <div class="vergleich-price">
+          <span class="vergleich-price-num"><span class="price-counter" data-target="599" data-duration="3200">599</span><span class="vergleich-price-cur">€</span></span>
+          <span class="vergleich-price-sub">Grundpaket 4 Stunden</span>
+        </div>
+        <div class="vergleich-divider"></div>
+        <ul class="vergleich-list">
+          <li class="vergleich-x">Stoppuhr läuft mit</li>
+          <li class="vergleich-x">+ 80-150€ pro weitere Stunde</li>
+          <li class="vergleich-x">Stress beim Verlängern</li>
+          <li class="vergleich-x">Versteckte Aufschläge</li>
+        </ul>
+        <div class="vergleich-result vergleich-result-others">
+          <span class="vergleich-result-label">Bei 8 Stunden Event:</span>
+          <span class="vergleich-result-num">919 – 1.199 €</span>
+        </div>
+      </div>
+      <!-- WIR -->
+      <div class="vergleich-card vergleich-card-us">
+        <div class="vergleich-badge">Unser Modell</div>
+        <div class="vergleich-header">
+          <span class="vergleich-label vergleich-label-us">Wittmann Eventbox</span>
+        </div>
+        <div class="vergleich-price">
+          <span class="vergleich-price-num vergleich-price-num-us"><span class="price-counter" data-target="500">500</span><span class="vergleich-price-cur">€</span></span>
+          <span class="vergleich-price-sub vergleich-price-sub-us">Festpreis – den ganzen Tag</span>
+        </div>
+        <div class="vergleich-divider vergleich-divider-us"></div>
+        <ul class="vergleich-list">
+          <li class="vergleich-check">Keine Stoppuhr</li>
+          <li class="vergleich-check">Keine Aufschläge</li>
+          <li class="vergleich-check">So lange Ihr Event dauert</li>
+          <li class="vergleich-check">Ein Preis, alles inklusive</li>
+        </ul>
+        <div class="vergleich-result vergleich-result-us">
+          <span class="vergleich-result-label">Bei 8 Stunden Event:</span>
+          <span class="vergleich-result-num">500 €</span>
+        </div>
+      </div>
+    </div>
+    <!-- ERSPARNIS-BADGE -->
+    <div class="vergleich-ersparnis reveal">
+      <div class="vergleich-ersparnis-arrow">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 5V19M12 19L18 13M12 19L6 13" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="vergleich-ersparnis-content">
+        <span class="vergleich-ersparnis-label">Ihre Ersparnis</span>
+        <span class="vergleich-ersparnis-num">419 – 699 €</span>
+        <span class="vergleich-ersparnis-sub">je nach Eventdauer und Anbieter</span>
+      </div>
+    </div>
+    <!-- CTA -->
+    <div class="reveal" style="text-align:center;margin-top:clamp(32px,4vw,48px)">
+      <button class="btn-gold" onclick="goContact('')" style="font-size:clamp(15px,2vw,17px);padding:clamp(14px,2vw,18px) clamp(28px,4vw,42px)">
+        Festpreis sichern
+      </button>
+    </div>
+  </div>
+</section>
+
 <div class="sec-div" style="background:linear-gradient(180deg,#0f0d08,#FAF6EE)"><span class="sec-div-gem"><span class="sec-div-gem-inner"></span></span></div>
 
 <!-- AUSSTATTUNG -->
@@ -678,6 +756,35 @@ function startDemoSign(){
     requestAnimationFrame(update);
   }
   requestAnimationFrame(update);
+})();
+// Price counter animation
+(()=>{
+  const reduced=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if(reduced)return;
+  const counters=document.querySelectorAll('.price-counter');
+  if(!counters.length)return;
+  let fired=false;
+  const priceObs=new IntersectionObserver((entries)=>{
+    if(fired)return;
+    if(!entries.some(e=>e.isIntersecting))return;
+    fired=true;
+    priceObs.disconnect();
+    counters.forEach(el=>{
+      const target=parseInt(el.getAttribute('data-target')||'0',10);
+      const duration=parseInt(el.getAttribute('data-duration')||'1200',10);
+      const start=performance.now();
+      function tick(now:number){
+        const p=Math.min((now-start)/duration,1);
+        const ease=1-Math.pow(1-p,3);
+        el.textContent=String(Math.round(ease*target));
+        if(p<1)requestAnimationFrame(tick);
+        else el.textContent=String(target);
+      }
+      requestAnimationFrame(tick);
+    });
+  },{threshold:0.5});
+  const section=document.getElementById('unterscheidung');
+  if(section)priceObs.observe(section);
 })();
 // Direct anchor URL handling (z.B. von Google Ads kommend)
 window.addEventListener('load', () => {
