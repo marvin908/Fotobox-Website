@@ -165,7 +165,10 @@ import GalleryStack from '../components/GalleryStack.tsx';
 
     <style is:global>
     .demo-outer{display:flex;align-items:center;justify-content:center;gap:clamp(12px,3vw,32px);margin-top:clamp(32px,4vw,48px)}
-    .demo-device{position:relative;width:clamp(250px,34vw,300px);aspect-ratio:9/16;background:#0a0806;border-radius:28px;border:2px solid rgba(221,170,68,.5);box-shadow:0 0 0 5px rgba(221,170,68,.07),0 24px 80px rgba(0,0,0,.35);overflow:hidden;flex-shrink:0}
+    .demo-frame{position:relative;padding:18px;background:linear-gradient(145deg,#F4DC7A 0%,#E8C050 12%,#C07828 32%,#9A5A18 48%,#C07828 62%,#E8C050 80%,#F4DC7A 100%);border-radius:20px;box-shadow:inset 0 3px 10px rgba(255,255,255,0.45),inset 3px 0 6px rgba(255,255,255,0.18),inset 0 -3px 10px rgba(0,0,0,0.55),inset -3px 0 6px rgba(0,0,0,0.28),0 0 0 2px #7A4A10,0 0 0 4px rgba(221,170,68,0.18),0 28px 80px rgba(0,0,0,0.4);flex-shrink:0;align-self:center;width:clamp(250px,34vw,300px)}
+    .demo-frame::before{content:'';position:absolute;inset:8px;border:1.5px solid rgba(0,0,0,0.28);border-radius:13px;pointer-events:none;z-index:10}
+    .demo-frame::after{content:'';position:absolute;inset:6px;border:1px solid rgba(255,255,255,0.32);border-radius:15px;pointer-events:none;z-index:10}
+    .demo-device{position:relative;width:100%;aspect-ratio:9/16;background:#0a0806;border-radius:6px;overflow:hidden}
     .demo-screen{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .38s,transform .38s;transform:scale(.96)}
     .demo-screen.ds-active{opacity:1;pointer-events:auto;transform:scale(1)}
     .demo-ph-bg{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:24px}
@@ -218,7 +221,7 @@ import GalleryStack from '../components/GalleryStack.tsx';
     .demo-on-light .demo-nav-btn{background:rgba(150,100,30,.1);border-color:rgba(150,100,30,.3);color:rgba(130,80,20,.8)}
     .demo-on-light .demo-nav-btn:hover{background:rgba(150,100,30,.2)}
     @keyframes demoPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
-    @media(max-width:600px){.demo-outer{gap:16px 20px;flex-wrap:wrap;justify-content:center}.demo-device{order:1;flex:0 0 min(85vw,300px)}.demo-nav-btn{order:2;display:flex!important}}
+    @media(max-width:600px){.demo-outer{gap:16px 20px;flex-wrap:wrap;justify-content:center}.demo-frame{order:1;flex:0 0 min(82vw,300px)}.demo-nav-btn{order:2;display:flex!important}}
     </style>
 
     <div class="demo-outer demo-on-light reveal-scale">
@@ -226,6 +229,7 @@ import GalleryStack from '../components/GalleryStack.tsx';
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
 
+      <div class="demo-frame">
       <div class="demo-device">
         <div class="demo-progress">
           <span class="demo-dot active" onclick="demoGoto(0)"></span>
@@ -302,6 +306,7 @@ import GalleryStack from '../components/GalleryStack.tsx';
         </div>
 
       </div>
+      </div><!-- /demo-frame -->
 
       <button class="demo-nav-btn" onclick="demoNext()" aria-label="Weiter">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -343,6 +348,10 @@ import GalleryStack from '../components/GalleryStack.tsx';
             <div class="pr2-price" style="color:var(--white)"><sup style="color:var(--gold-light)">€</sup>500</div>
             <div class="pr2-vat" style="color:rgba(255,255,255,.45)">inkl. MwSt.</div>
           </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:12px;padding:10px 14px;background:rgba(221,170,68,0.08);border:1px solid rgba(221,170,68,0.25);border-radius:10px">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="var(--gold)" stroke-width="1.8"/><path d="M12 7v5l3 3" stroke="var(--gold)" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <span style="font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.3px">Festpreis · kein Stundenpreis · ganzer Tag</span>
         </div>
         <div class="pr2-divider" style="background:rgba(221,170,68,.2)"></div>
         <div class="pr2-feat-label" style="color:rgba(255,255,255,.5)">Inklusive</div>
