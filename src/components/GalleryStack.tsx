@@ -8,6 +8,7 @@ interface GalleryItem {
 const items: GalleryItem[] = [
   { src: "/gallery/foto-6.webp", alt: "Golden Magic Mirror Fotobox vor Kirchturm – Elegantes Event Österreich" },
   { src: "/gallery/foto-5.jpg", alt: "Brautpaar vor Golden Magic Mirror Fotobox – Hochzeit Niederösterreich" },
+  { src: "/gallery/foto-7.jpg", alt: "Golden Magic Mirror Fotobox – Event Wien Niederösterreich" },
   { src: "/gallery/foto-4.webp", alt: "Zwei Damen im Abendkleid vor Magic Mirror Fotobox – Hochzeitsfeier Wien" },
   { src: "/gallery/foto-3.webp", alt: "Golden Magic Mirror Fotobox im Garten – Outdoor Event Niederösterreich" },
   { src: "/gallery/foto-2.webp", alt: "Hand tippt auf LED-Spiegel Touchscreen – Magic Mirror Fotobox Bedienung" },
