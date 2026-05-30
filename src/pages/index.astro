@@ -34,7 +34,7 @@ import GalleryStack from '../components/GalleryStack.tsx';
         <div class="hero-trust-sep">·</div>
         <div class="hero-trust-item">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span>Antwort in 24h</span>
+          <span>Antwort in max. 24h</span>
         </div>
         <div class="hero-trust-sep">·</div>
         <div class="hero-trust-item">
@@ -218,7 +218,7 @@ import GalleryStack from '../components/GalleryStack.tsx';
     .demo-on-light .demo-nav-btn{background:rgba(150,100,30,.1);border-color:rgba(150,100,30,.3);color:rgba(130,80,20,.8)}
     .demo-on-light .demo-nav-btn:hover{background:rgba(150,100,30,.2)}
     @keyframes demoPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
-    @media(max-width:600px){.demo-nav-btn{display:none!important}.demo-outer{gap:0}}
+    @media(max-width:600px){.demo-outer{gap:16px 20px;flex-wrap:wrap;justify-content:center}.demo-device{order:1;flex:0 0 min(85vw,300px)}.demo-nav-btn{order:2;display:flex!important}}
     </style>
 
     <div class="demo-outer demo-on-light reveal-scale">
@@ -441,8 +441,8 @@ import GalleryStack from '../components/GalleryStack.tsx';
         <div class="vergleich-divider"></div>
         <ul class="vergleich-list">
           <li class="vergleich-x">Stoppuhr läuft mit</li>
-          <li class="vergleich-x">+ 80-150€ pro weitere Stunde</li>
-          <li class="vergleich-x">Stress beim Verlängern</li>
+          <li class="vergleich-x">4–6h Vermietung</li>
+          <li class="vergleich-x">Dann: 80 – 150 € / Std.</li>
           <li class="vergleich-x">Versteckte Aufschläge</li>
         </ul>
         <div class="vergleich-result vergleich-result-others">

@@ -85,7 +85,7 @@ export default function GalleryStack() {
                 background:
                   activeIndex === i
                     ? "linear-gradient(to top, rgba(0,0,0,.72) 0%, transparent 55%)"
-                    : "rgba(0,0,0,.45)",
+                    : "transparent",
                 transition: "background 0.55s",
                 pointerEvents: "none",
               }}
@@ -183,7 +183,7 @@ export default function GalleryStack() {
               background:
                 activeIndex === i
                   ? "linear-gradient(to top, rgba(0,0,0,.72) 0%, transparent 55%)"
-                  : "rgba(0,0,0,.38)",
+                  : "transparent",
               transition: "all 0.65s",
               pointerEvents: "none",
             }}
