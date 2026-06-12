@@ -357,6 +357,24 @@ gtag('js',new Date());
 
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1746864376318084&ev=PageView&noscript=1"/></noscript>
 
+<!-- VORHER: kein Focus-Handling — NACHHER: WhatsApp-Button auf Mobile ausblenden wenn Tastatur offen ist -->
+<script is:inline>
+(function(){
+  var wa=document.querySelector('.wa-float');
+  if(!wa)return;
+  document.addEventListener('focusin',function(e){
+    if(window.innerWidth<=768&&(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA'||e.target.tagName==='SELECT')){
+      wa.style.display='none';
+    }
+  });
+  document.addEventListener('focusout',function(e){
+    if(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA'||e.target.tagName==='SELECT'){
+      wa.style.display='';
+    }
+  });
+})();
+</script>
+
 <a
   href="https://wa.me/436604313993"
   target="_blank"

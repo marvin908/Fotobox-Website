@@ -476,7 +476,8 @@ section[id]{scroll-margin-top:80px}
 .wa-float:hover{transform:scale(1.08);box-shadow:0 6px 20px rgba(37,211,102,0.5),0 4px 12px rgba(0,0,0,0.2)}
 .wa-float:active{transform:scale(0.95)}
 @keyframes wa-pulse{0%,100%{box-shadow:0 4px 16px rgba(37,211,102,0.35),0 2px 8px rgba(0,0,0,0.15),0 0 0 0 rgba(37,211,102,0.4)}50%{box-shadow:0 4px 16px rgba(37,211,102,0.35),0 2px 8px rgba(0,0,0,0.15),0 0 0 12px rgba(37,211,102,0)}}
-@media(max-width:768px){.wa-float{bottom:20px;right:20px;width:56px;height:56px}.wa-float svg{width:30px;height:30px}}
+/* VORHER: bottom:20px — NACHHER: bottom:90px damit der Button nicht über Formularfeldern liegt */
+@media(max-width:768px){.wa-float{bottom:90px;right:20px;width:56px;height:56px}.wa-float svg{width:30px;height:30px}}
 
 /* Vergleich Section */
 .vergleich-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.5vw,28px);max-width:920px;margin:0 auto}
