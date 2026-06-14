@@ -80,7 +80,7 @@ a{text-decoration:none;color:inherit}
 #hero{min-height:clamp(580px,100svh,100vh);background:#0f0d08;display:flex;align-items:center;position:relative;overflow:hidden;padding:clamp(32px,4vw,56px) 0 clamp(60px,8vw,120px);width:100%}
 #hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 65% 90% at 72% 50%,rgba(176,120,40,.10) 0%,rgba(139,90,20,.05) 40%,transparent 65%);pointer-events:none}
 .hero-inner{width:100%;max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,48px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(48px,7vw,80px);align-items:center}
-.hero-text .tag{margin-bottom:24px;background:rgba(221,170,68,.15);color:var(--gold);border:1px solid rgba(221,170,68,.4)}
+.hero-text .tag{margin-bottom:24px;background:none;color:var(--gold);border:none;border-radius:0;padding:0}
 .hero-text h1{font-size:clamp(24px,3.8vw,52px);font-weight:800;line-height:1.08;color:#fff;margin-bottom:18px}
 .hero-text h1 span{color:var(--gold)}
 .hero-text h1 span em{font-style:italic;font-weight:700;letter-spacing:-.5px}
@@ -417,9 +417,9 @@ footer{background:rgba(8,6,2,.88);backdrop-filter:blur(28px) saturate(1.6);-webk
   .hero-sub{margin:0 auto 24px;font-size:clamp(13px,3.5vw,15px);max-width:100%;text-align:center}
   .hero-cta-row{justify-content:center;flex-direction:column;align-items:center;gap:12px}
   .hero-cta-row .btn-gold{width:100%;max-width:100%}
-  .hero-trust-row{flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center}
+  .hero-trust-row{flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 12px;margin-top:14px}
   .hero-trust-sep{display:none}
-  .hero-trust-item{font-size:14px;justify-content:center}
+  .hero-trust-item{font-size:12px;font-weight:600;color:rgba(255,255,255,.65)}
   .bento-grid{grid-template-columns:1fr;grid-template-rows:auto;gap:12px}
   .bento-item-1,.bento-item-2,.bento-item-3,.bento-item-4,.bento-item-5{grid-column:1/2;grid-row:auto;min-height:280px}
   .bento-item-1{min-height:320px}
@@ -451,7 +451,7 @@ footer{background:rgba(8,6,2,.88);backdrop-filter:blur(28px) saturate(1.6);-webk
   .pr2-featured{margin:0}
   .pr2-top{flex-direction:row}
   .pr2-desc{max-width:100%}
-  .hfi-3{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .hfi-3{display:block;-webkit-line-clamp:unset;overflow:visible}
   .faq-wrap{padding:0}
   .faq-toggle{font-size:15px;padding:18px 0}
   .cta-row{flex-direction:column;align-items:center}
