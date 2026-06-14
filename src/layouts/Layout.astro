@@ -5,9 +5,10 @@ interface Props {
   title: string;
   description: string;
   robots?: string;
+  isHome?: boolean;
 }
 
-const { title, description, robots = 'index,follow' } = Astro.props;
+const { title, description, robots = 'index,follow', isHome = false } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -119,87 +120,84 @@ gtag('js',new Date());
 #cc-main .cm__desc{color:rgba(255,255,255,.65);font-size:14px;line-height:1.6}
 #cc-main .cm{border:1px solid rgba(221,170,68,.2);box-shadow:0 8px 40px rgba(0,0,0,.6)}
 </style>
-<script type="application/ld+json">
+<script type="application/ld+json" is:inline>
 {
   "@context": "https://schema.org",
-  "@graph": [
+  "@type": "LocalBusiness",
+  "name": "Wittmann Eventbox",
+  "image": "https://wittmann-eventbox.at/gallery/Fotobox-Event-5.jpg",
+  "@id": "https://wittmann-eventbox.at",
+  "url": "https://wittmann-eventbox.at",
+  "telephone": "+436604313993",
+  "email": "wb@wittmann-eventbox.at",
+  "priceRange": "€€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Gustav-Mahler-Promenade 4/2/1",
+    "addressLocality": "Stockerau",
+    "postalCode": "2000",
+    "addressCountry": "AT"
+  },
+  "areaServed": ["Wien", "Niederösterreich"],
+  "description": "Golden Magic Mirror Spiegelfotobox-Vermietung für Hochzeiten, Geburtstage und Firmenfeiern in Wien und Niederösterreich. 500€ Festpreis, alles inklusive."
+}
+</script>
+{isHome && <script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@type": "LocalBusiness",
-      "name": "Wittmann Eventbox",
-      "description": "Golden Magic Mirror Fotobox mieten in Wien & Umgebung fuer Hochzeiten, Geburtstage und Firmenfeiern",
-      "url": "https://www.wittmann-eventbox.at",
-      "telephone": "+436604313993",
-      "email": "wb@wittmann-eventbox.at",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Gustav-Mahler-Promenade 4/2/1",
-        "addressLocality": "Stockerau",
-        "postalCode": "2000",
-        "addressCountry": "AT"
-      },
-      "priceRange": "ab 500 EUR",
-      "openingHours": "Mo-Su by appointment",
-      "areaServed": {
-        "@type": "AdministrativeArea",
-        "name": "Wien und Umgebung"
+      "@type": "Question",
+      "name": "Wie lange dauert der Aufbau des Magic Mirrors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Der Aufbau dauert in der Regel 30–45 Minuten. Wir kommen rechtzeitig vor Ihrem Event, damit alles bereit ist wenn Ihre Gäste eintreffen. Abbau und Abholung übernehmen wir ebenfalls – Sie müssen sich um nichts kümmern."
       }
     },
     {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Wie lange dauert der Aufbau des Magic Mirrors?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Der Aufbau dauert in der Regel 30-45 Minuten. Wir kommen rechtzeitig vor Ihrem Event, damit alles bereit ist wenn Ihre Gaeste eintreffen. Abbau und Abholung uebernehmen wir ebenfalls."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Ist die Buchung wirklich unverbindlich?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Ja, absolut. Wenn Sie das Formular absenden, bekommen Sie zunaechst nur eine Rueckmeldung von uns. Erst nach einem gemeinsamen Gespraech und Ihrer ausdruecklichen Bestaetigung wird der Termin verbindlich reserviert."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Wie viele Gaeste koennen den Spiegel gleichzeitig nutzen?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Vor dem Spiegel passen bequem 2-4 Personen gleichzeitig. Der Spiegel selbst ist grossformatig, sodass auch Gruppenfotos wunderbar gelingen."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Was passiert mit den digitalen Fotos?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Jede Aufnahme wird sofort ausgedruckt und kann per QR-Code auch digital abgerufen werden. Nach der Veranstaltung erhalten Sie auf Wunsch alle Fotos in einer digitalen Galerie."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Kann das Layout der Sofortdrucke personalisiert werden?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Ja! Das Drucklayout kann mit Ihrem Namen, Datum, Logo oder einem individuellen Design versehen werden."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Wie weit fahren Sie fuer Events?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Wir sind in Wien und der gesamten Umgebung fuer Sie da. Die Anfahrt ist inklusive. Fuer Events ausserhalb sprechen Sie uns einfach an."
-          }
-        }
-      ]
+      "@type": "Question",
+      "name": "Ist die Buchung wirklich unverbindlich?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, absolut. Wenn Sie das Formular absenden, bekommen Sie zunächst nur eine Rückmeldung von uns. Erst nach einem gemeinsamen Gespräch und Ihrer ausdrücklichen Bestätigung wird der Termin verbindlich reserviert."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie viele Gäste können den Spiegel gleichzeitig nutzen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vor dem Spiegel passen bequem 2–4 Personen gleichzeitig. Der Spiegel selbst ist großformatig, sodass auch Gruppenfotos wunderbar gelingen. Bei Gruppen über 4 Personen empfehlen wir zwei separate Aufnahmen für optimale Ergebnisse."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was passiert mit den digitalen Fotos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jede Aufnahme wird sofort ausgedruckt und kann per QR-Code auch digital abgerufen werden. Nach der Veranstaltung erhalten Sie auf Wunsch alle Fotos in einer digitalen Galerie – als schöne Erinnerung für Sie und Ihre Gäste."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann das Layout der Sofortdrucke personalisiert werden?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja! Das Drucklayout kann mit Ihrem Namen, Datum, Logo oder einem individuellen Design versehen werden. So wird jeder Sofortdruck zu einem persönlichen Andenken an Ihr besonderes Event."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie weit fahren Sie für Events?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wir sind in Wien und der gesamten Umgebung für Sie da. Die Anfahrt ist in allen Paketen inklusive. Für Events außerhalb unseres regulären Einzugsgebiets sprechen Sie uns einfach an – wir finden eine Lösung."
+      }
     }
   ]
 }
-</script>
+</script>}
 </head>
 <body>
 
