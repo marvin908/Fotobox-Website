@@ -8,6 +8,7 @@ interface GalleryItem {
 const items: GalleryItem[] = [
   { src: "/gallery/Hochzeit%20Fotobox-4.jpg", alt: "Golden Magic Mirror Spiegelfotobox bei Hochzeit – Wittmann Eventbox Wien" },
   { src: "/gallery/spiegelfotobox-1.jpg", alt: "Golden Magic Mirror Spiegelfotobox – Wittmann Eventbox Wien & Umgebung" },
+  { src: "/gallery/Geburtstagsfeier.jpg", alt: "Golden Magic Mirror Fotobox Geburtstagsfeier Wien – Wittmann Eventbox" },
   { src: "/gallery/Fotospiegel-7.jpg", alt: "Fotospiegel Fotobox mieten Wien – Elegantes Event" },
   { src: "/gallery/Golden-Magic-Mirror-Spiegelfotobox-6.jpg", alt: "Golden Magic Mirror Spiegelfotobox bei Feier – Wien Niederösterreich" },
   { src: "/gallery/Fotobox-Sofortdruck-11.jpg", alt: "Sofortdruck Fotobox – Foto mitnehmen Golden Magic Mirror" },
