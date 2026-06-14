@@ -3,6 +3,6 @@ import tailwind from '@astrojs/tailwind';
 import react from '@astrojs/react';
 
 export default defineConfig({
-  site: 'https://www.wittmann-eventbox.at',
+  site: 'https://wittmann-eventbox.at',
   integrations: [tailwind(), react()],
 });

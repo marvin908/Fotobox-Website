@@ -19,16 +19,17 @@ const { title, description, robots = 'index,follow', isHome = false } = Astro.pr
 <title>{title}</title>
 <meta name="description" content={description}/>
 <meta name="robots" content={robots}/>
+<meta property="og:type" content="website"/>
 <meta property="og:title" content={title}/>
 <meta property="og:description" content={description}/>
-<meta property="og:type" content="website"/>
-<meta property="og:url" content="https://www.wittmann-eventbox.at"/>
-<meta property="og:image" content="https://www.wittmann-eventbox.at/og-image.jpg"/>
+<meta property="og:url" content="https://wittmann-eventbox.at"/>
+<meta property="og:image" content="https://wittmann-eventbox.at/gallery/Fotobox-Event-5.jpg"/>
 <meta property="og:locale" content="de_AT"/>
+<meta property="og:site_name" content="Wittmann Eventbox"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content={title}/>
 <meta name="twitter:description" content={description}/>
-<meta name="twitter:image" content="https://www.wittmann-eventbox.at/og-image.jpg"/>
+<meta name="twitter:image" content="https://wittmann-eventbox.at/gallery/Fotobox-Event-5.jpg"/>
 <link rel="icon" type="image/png" href="/favicon.png"/>
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
