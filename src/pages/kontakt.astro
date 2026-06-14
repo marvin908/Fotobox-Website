@@ -53,6 +53,19 @@ const today = new Date().toISOString().split('T')[0];
         <p class="sub">Antwort innerhalb von 24h. Persönlich, kein Autoresponder.</p>
         <form id="contactForm" action="https://formspree.io/f/xbdqvrgy" method="POST">
           <div class="field">
+            <label>Gewünschtes Paket *</label>
+            <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px">
+              <label style="display:flex;align-items:center;gap:12px;padding:14px 16px;border:1.5px solid #e8e8e8;border-radius:10px;cursor:pointer;transition:border-color .2s" id="optMirror">
+                <input type="radio" name="paket" value="Golden Magic Mirror (500€)" checked style="width:auto;margin:0"/>
+                <span style="font-size:14px;color:var(--dark)"><strong>Golden Magic Mirror</strong> – 500€</span>
+              </label>
+              <label style="display:flex;align-items:center;gap:12px;padding:14px 16px;border:1.5px solid #e8e8e8;border-radius:10px;cursor:pointer;transition:border-color .2s" id="optSeifenblasen">
+                <input type="radio" name="paket" value="Golden Magic Mirror + Seifenblasenmaschine (620€)" style="width:auto;margin:0"/>
+                <span style="font-size:14px;color:var(--dark)"><strong>Mirror + Seifenblasenmaschine</strong> – 620€</span>
+              </label>
+            </div>
+          </div>
+          <div class="field">
             <label>Ihr Name *</label>
             <input type="text" name="vorname" placeholder="Max Mustermann" required autocomplete="name" autocapitalize="words"/>
           </div>
@@ -115,6 +128,17 @@ const today = new Date().toISOString().split('T')[0];
                 </ul>
               </div>
 
+              <div class="pac-pkg" style="border:1.5px solid rgba(229,186,88,.35)">
+                <div class="pac-pkg-header">
+                  <span class="pac-pkg-name">+ Seifenblasenmaschine</span>
+                  <span class="pac-pkg-price">+120€</span>
+                </div>
+                <ul class="pac-pkg-list">
+                  <li>RGB-LED, bis zu 10 Meter hoch</li>
+                  <li>Intensität einstellbar</li>
+                </ul>
+              </div>
+
               <p class="pac-kaution-note">Kaution: <strong>€150</strong> – wird nach dem Event vollständig zurückerstattet.</p>
             </div>
           </div>
@@ -173,6 +197,13 @@ const today = new Date().toISOString().split('T')[0];
 </section>
 
 <script>
+// Paket aus sessionStorage vorauswählen
+const paket = sessionStorage.getItem('selectedPaket');
+if(paket === 'seifenblasen'){
+  const r = document.querySelector('input[name="paket"][value*="Seifenblasen"]');
+  if(r) r.checked = true;
+}
+
 // Preismodelle aufklappen
 window.togglePac=function(){
   const body=document.getElementById('pacBody');
