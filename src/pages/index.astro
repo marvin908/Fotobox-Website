@@ -399,12 +399,13 @@ import GalleryStack from '../components/GalleryStack.tsx';
     </div>
 
     <!-- UPSELL: Seifenblasenmaschine (Split-Layout) -->
-<div class="reveal upsell-split" style="margin-top:clamp(32px,4vw,48px);max-width:920px;margin-left:auto;margin-right:auto;border-radius:20px;overflow:hidden;border:1.5px solid rgba(229,186,88,.35);background:linear-gradient(160deg,#1a1208,#0f0c06);display:grid;grid-template-columns:340px 1fr">
+<div class="reveal upsell-split" style="margin-top:clamp(32px,4vw,48px);max-width:920px;margin-left:auto;margin-right:auto;border-radius:20px;overflow:hidden;border:1.5px solid rgba(229,186,88,.55);background:linear-gradient(160deg,#1a1208,#0f0c06);display:grid;grid-template-columns:340px 1fr;align-items:stretch;box-shadow:0 0 0 1px rgba(229,186,88,.12),0 20px 60px rgba(0,0,0,.4)">
 
   <!-- Video (left) -->
-  <div style="position:relative;background:#0a0806">
+  <div style="position:relative;background:#0a0806;height:100%">
     <video
       src="/gallery/Seifenblasenmaschine-Event.mp4"
+      poster="/gallery/seifenblasen-poster.jpg"
       autoplay muted loop playsinline
       style="display:block;width:100%;height:100%;object-fit:cover"
     ></video>
@@ -417,7 +418,7 @@ import GalleryStack from '../components/GalleryStack.tsx';
       <span style="font-family:'Mulish',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#E5BA58">Add-on</span>
     </div>
 
-    <h3 style="font-family:'Poppins',sans-serif;font-size:clamp(20px,2.4vw,28px);font-weight:800;line-height:1.25;color:#fff">Seifenblasenmaschine – damit der erste Tanz zur <span style="color:#E5BA58">Szene wird, die alle im Kopf behalten.</span></h3>
+    <h3 style="font-family:'Poppins',sans-serif;font-size:clamp(20px,2.4vw,28px);font-weight:800;line-height:1.25;color:#fff">Seifenblasenmaschine – <span style="color:#E5BA58">für den Moment, den alle filmen.</span></h3>
 
     <div style="display:flex;flex-direction:column;gap:10px">
       <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.8);font-size:clamp(14px,1.5vw,15px)">
@@ -425,7 +426,7 @@ import GalleryStack from '../components/GalleryStack.tsx';
         Bis zu 10 Meter in die Luft
       </div>
       <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.8);font-size:clamp(14px,1.5vw,15px)">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="flex-shrink:0"><circle cx="12" cy="12" r="9" stroke="#E5BA58" stroke-width="2"/><path d="M12 3a9 9 0 000 18" stroke="#E5BA58" stroke-width="2"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="flex-shrink:0"><circle cx="8" cy="8" r="3" fill="#E5BA58"/><circle cx="16" cy="8" r="3" fill="#C77DFF" opacity="0.9"/><circle cx="12" cy="15" r="3" fill="#4ADE80" opacity="0.9"/></svg>
         RGB-LED – jede Blase leuchtet in Farbe
       </div>
       <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.8);font-size:clamp(14px,1.5vw,15px)">
@@ -450,7 +451,8 @@ import GalleryStack from '../components/GalleryStack.tsx';
 <style>
 @media(max-width:768px){
   .upsell-split{grid-template-columns:1fr!important}
-  .upsell-split > div:first-child{aspect-ratio:4/5;max-height:420px}
+  .upsell-split > div:first-child{aspect-ratio:1/1;max-height:360px}
+  .upsell-split > div:first-child video{object-position:center 60%}
 }
 </style>
 
