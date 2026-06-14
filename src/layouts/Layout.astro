@@ -5,10 +5,9 @@ interface Props {
   title: string;
   description: string;
   robots?: string;
-  isHome?: boolean;
 }
 
-const { title, description, robots = 'index,follow', isHome = false } = Astro.props;
+const { title, description, robots = 'index,follow' } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -204,93 +203,26 @@ gtag('js',new Date());
 </head>
 <body>
 
-{isHome ? (
-  <>
-    <div class="hero-top">
-    <!-- URGENCY BAR -->
-    <div class="urgency-bar">
-      <div class="urgency-inner">
-        <div class="urgency-dot"></div>
-        <span>Nur noch <span class="urgency-gold">8</span> freie Termine im <span class="urgency-gold" id="nextMonth"></span> verfügbar</span>
-      </div>
+<header id="site-header" style="position:sticky;top:0;z-index:100;background:rgba(10,8,2,.85);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(232,212,150,.1);padding:14px 0">
+  <div class="wrap hd-in">
+    <div class="hd-logo">
+      <svg width="200" height="50" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+        <text x="2" y="48" font-family="Georgia,serif" font-size="58" font-weight="700" fill="rgba(255,255,255,0.08)" letter-spacing="-2">WB</text>
+        <text x="2" y="38" font-family="Georgia,serif" font-size="36" font-weight="700" fill="#DDA844">W</text>
+        <text x="38" y="38" font-family="Georgia,serif" font-size="36" font-weight="700" fill="#ffffff">B</text>
+        <line x1="74" y1="8" x2="74" y2="44" stroke="rgba(221,170,68,0.4)" stroke-width="1"/>
+        <text x="84" y="22" font-family="'Poppins',sans-serif" font-size="11" font-weight="800" fill="#DDA844" letter-spacing="1.8">WITTMANN</text>
+        <text x="84" y="37" font-family="'Mulish',sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.7)" letter-spacing="0.5">Eventbox</text>
+        <text x="186" y="37" font-family="sans-serif" font-size="10" fill="rgba(221,170,68,0.6)">◆</text>
+      </svg>
+      <div style="font-family:'Mulish',sans-serif;font-size:10px;font-weight:400;color:rgba(255,255,255,0.4);letter-spacing:0.5px;margin-top:2px;text-align:left">Wittmann Bernhard</div>
     </div>
-
-    <!-- HEADER (Home) -->
-    <header id="site-header">
-      <div class="wrap hd-in">
-        <div class="hd-logo">
-          <svg width="200" height="50" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
-            <text x="2" y="48" font-family="Georgia,serif" font-size="58" font-weight="700" fill="rgba(255,255,255,0.08)" letter-spacing="-2">WB</text>
-            <text x="2" y="38" font-family="Georgia,serif" font-size="36" font-weight="700" fill="#DDA844">W</text>
-            <text x="38" y="38" font-family="Georgia,serif" font-size="36" font-weight="700" fill="#ffffff">B</text>
-            <line x1="74" y1="8" x2="74" y2="44" stroke="rgba(221,170,68,0.4)" stroke-width="1"/>
-            <text x="84" y="22" font-family="'Poppins',sans-serif" font-size="11" font-weight="800" fill="#DDA844" letter-spacing="1.8">WITTMANN</text>
-            <text x="84" y="37" font-family="'Mulish',sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.7)" letter-spacing="0.5">Eventbox</text>
-            <text x="186" y="37" font-family="sans-serif" font-size="10" fill="rgba(221,170,68,0.6)">◆</text>
-          </svg>
-          <div style="font-family:'Mulish',sans-serif;font-size:10px;font-weight:400;color:rgba(255,255,255,0.4);letter-spacing:0.5px;margin-top:2px;text-align:left">Wittmann Bernhard</div>
-        </div>
-        <nav class="hd-nav">
-          <a href="#galerie">Galerie</a>
-          <a href="#magic">Ablauf</a>
-          <a href="#pricing">Preise</a>
-          <a href="#ausstattung">Ausstattung</a>
-          <a href="#why">Vorteile</a>
-          <a href="#faq">FAQ</a>
-          <a href="/kontakt">Kontakt</a>
-        </nav>
-        <button class="btn-gold hd-cta-btn" style="font-size:14px;padding:10px 22px" onclick="goContact('')">Unverbindlich anfragen</button>
-        <button class="hd-hamburger" id="hdHamburger" aria-label="Menü öffnen">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </header>
-    </div>
-  </>
-) : (
-  <!-- HEADER (Inner pages) -->
-  <header id="site-header">
-    <div class="wrap hd-in">
-      <a href="/" style="font-family:'Poppins',sans-serif;font-weight:700;font-size:16px;color:var(--gold)">GOLDEN MAGIC MIRROR</a>
-      <nav class="hd-nav">
-        <a href="/#galerie">Galerie</a>
-        <a href="/#magic">Ablauf</a>
-        <a href="/#pricing">Preise</a>
-        <a href="/#ausstattung">Ausstattung</a>
-        <a href="/#why">Vorteile</a>
-        <a href="/#faq">FAQ</a>
-        <a href="/kontakt" style="color:var(--gold)">Kontakt</a>
-      </nav>
-      <a href="tel:+436604313993" class="btn-gold hd-cta-btn" style="font-size:14px;padding:10px 22px">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M22 16.92V19.92C22 20.48 21.74 21 21.29 21.34C20.84 21.68 20.26 21.79 19.72 21.65C16.56 20.83 13.55 19.24 11.01 17.01C8.65 14.96 6.78 12.43 5.64 9.59C5.04 8.08 4.97 6.41 5.45 4.86C5.62 4.33 6.02 3.88 6.54 3.62L9.09 2.41C9.59 2.17 10.17 2.24 10.6 2.59L12.73 4.29C13.16 4.64 13.31 5.22 13.1 5.73L12.17 8.01C12 8.41 12.08 8.87 12.38 9.19L14.81 11.62C15.13 11.92 15.59 12 15.99 11.83L18.27 10.9C18.78 10.69 19.36 10.84 19.71 11.27L21.41 13.4C21.76 13.83 21.83 14.41 21.59 14.91L22 16.92Z" fill="white"/></svg>
-        Anrufen
-      </a>
-      <button class="hd-hamburger" id="hdHamburger" aria-label="Menü öffnen">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
-)}
-
-<!-- MOBILE OVERLAY -->
-<div class="mob-overlay" id="mobOverlay">
-  <button class="mob-close" id="mobClose" aria-label="Menü schließen">×</button>
-  <nav class="mob-nav">
-    <a href="#galerie" class="mob-link">Galerie</a>
-    <div class="mob-divider"></div>
-    <a href="#magic" class="mob-link">Ablauf</a>
-    <div class="mob-divider"></div>
-    <a href="#pricing" class="mob-link">Preise</a>
-    <div class="mob-divider"></div>
-    <a href="#ausstattung" class="mob-link">Ausstattung</a>
-    <div class="mob-divider"></div>
-    <a href="#why" class="mob-link">Vorteile</a>
-    <div class="mob-divider"></div>
-    <a href="#faq" class="mob-link">FAQ</a>
-    <div class="mob-divider"></div>
-    <a href="/kontakt" class="mob-link">Kontakt</a>
-  </nav>
-</div>
+    <a href="tel:+436604313993" class="btn-gold" style="font-size:14px;padding:10px 22px">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M22 16.92V19.92C22 20.48 21.74 21 21.29 21.34C20.84 21.68 20.26 21.79 19.72 21.65C16.56 20.83 13.55 19.24 11.01 17.01C8.65 14.96 6.78 12.43 5.64 9.59C5.04 8.08 4.97 6.41 5.45 4.86C5.62 4.33 6.02 3.88 6.54 3.62L9.09 2.41C9.59 2.17 10.17 2.24 10.6 2.59L12.73 4.29C13.16 4.64 13.31 5.22 13.1 5.73L12.17 8.01C12 8.41 12.08 8.87 12.38 9.19L14.81 11.62C15.13 11.92 15.59 12 15.99 11.83L18.27 10.9C18.78 10.69 19.36 10.84 19.71 11.27L21.41 13.4C21.76 13.83 21.83 14.41 21.59 14.91L22 16.92Z" fill="white"/></svg>
+      0660 431 39 93
+    </a>
+  </div>
+</header>
 
 <style is:global>
 .hd-hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:40px;height:40px;background:none;border:none;cursor:pointer;padding:0;flex-shrink:0}
@@ -319,27 +251,6 @@ gtag('js',new Date());
   function upd(){hdr.classList.toggle('scrolled',window.scrollY>10);}
   upd();
   window.addEventListener('scroll',upd,{passive:true});
-})();
-(function(){
-  var btn=document.getElementById('hdHamburger');
-  var overlay=document.getElementById('mobOverlay');
-  var closeBtn=document.getElementById('mobClose');
-  if(!btn||!overlay)return;
-  function open(){overlay.classList.add('open');document.body.style.overflow='hidden';}
-  function close(){overlay.classList.remove('open');document.body.style.overflow='';}
-  btn.addEventListener('click',open);
-  if(closeBtn)closeBtn.addEventListener('click',close);
-  overlay.querySelectorAll('.mob-link').forEach(function(a){
-    a.addEventListener('click',function(){
-      close();
-      var href=a.getAttribute('href');
-      if(href&&href.startsWith('#')){
-        var target=document.querySelector(href);
-        if(target){setTimeout(function(){target.scrollIntoView({behavior:'smooth'});},10);}
-      }
-    });
-  });
-  overlay.addEventListener('click',function(e){if(e.target===overlay)close();});
 })();
 </script>
 
