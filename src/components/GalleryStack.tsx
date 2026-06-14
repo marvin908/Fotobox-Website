@@ -6,13 +6,13 @@ interface GalleryItem {
 }
 
 const items: GalleryItem[] = [
-  { src: "/gallery/foto-6.webp", alt: "Golden Magic Mirror Fotobox vor Kirchturm – Elegantes Event Österreich" },
-  { src: "/gallery/foto-5.jpg", alt: "Brautpaar vor Golden Magic Mirror Fotobox – Hochzeit Niederösterreich" },
-  { src: "/gallery/foto-7.jpg", alt: "Golden Magic Mirror Fotobox – Event Wien Niederösterreich" },
-  { src: "/gallery/foto-4.webp", alt: "Zwei Damen im Abendkleid vor Magic Mirror Fotobox – Hochzeitsfeier Wien" },
-  { src: "/gallery/foto-3.webp", alt: "Golden Magic Mirror Fotobox im Garten – Outdoor Event Niederösterreich" },
-  { src: "/gallery/foto-2.webp", alt: "Hand tippt auf LED-Spiegel Touchscreen – Magic Mirror Fotobox Bedienung" },
-  { src: "/gallery/foto-1.webp", alt: "Golden Magic Mirror Fotobox mit Banner vor Schloss – Wittmann Eventbox Wien" },
+  { src: "/gallery/Hochzeit%20Fotobox-4.jpg", alt: "Golden Magic Mirror Spiegelfotobox bei Hochzeit – Wittmann Eventbox Wien" },
+  { src: "/gallery/spiegelfotobox-1.jpg", alt: "Golden Magic Mirror Spiegelfotobox – Wittmann Eventbox Wien & Umgebung" },
+  { src: "/gallery/Fotospiegel-7.jpg", alt: "Fotospiegel Fotobox mieten Wien – Elegantes Event" },
+  { src: "/gallery/Golden-Magic-Mirror-Spiegelfotobox-6.jpg", alt: "Golden Magic Mirror Spiegelfotobox bei Feier – Wien Niederösterreich" },
+  { src: "/gallery/Fotobox-Sofortdruck-11.jpg", alt: "Sofortdruck Fotobox – Foto mitnehmen Golden Magic Mirror" },
+  { src: "/gallery/goldenmagicmirror-2.jpg", alt: "Golden Magic Mirror Fotobox mieten – Event Wien" },
+  { src: "/gallery/Backdrop-8.jpg", alt: "Glitzernder Backdrop Golden Magic Mirror Fotobox – Wittmann Eventbox" },
 ];
 
 const INTERVAL = 3200;
