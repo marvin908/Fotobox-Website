@@ -53,16 +53,30 @@ const today = new Date().toISOString().split('T')[0];
         <p class="sub">Antwort innerhalb von 24h. Persönlich, kein Autoresponder.</p>
         <form id="contactForm" action="https://formspree.io/f/xbdqvrgy" method="POST">
           <div class="field">
-            <label>Gewünschtes Paket *</label>
+            <label>Gewünschte Produkte * <span style="font-weight:400;font-size:12px;color:#aaa">(Mehrfachauswahl möglich)</span></label>
             <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px">
               <label style="display:flex;align-items:center;gap:12px;padding:14px 16px;border:1.5px solid #e8e8e8;border-radius:10px;cursor:pointer;transition:border-color .2s" id="optMirror">
-                <input type="radio" name="paket" value="Golden Magic Mirror (500€)" checked style="width:auto;margin:0"/>
+                <input type="checkbox" name="produkte" value="Golden Magic Mirror (500€)" checked style="width:auto;margin:0"/>
                 <span style="font-size:14px;color:var(--dark)"><strong>Golden Magic Mirror</strong> – 500€</span>
               </label>
               <label style="display:flex;align-items:center;gap:12px;padding:14px 16px;border:1.5px solid #e8e8e8;border-radius:10px;cursor:pointer;transition:border-color .2s" id="optSeifenblasen">
-                <input type="radio" name="paket" value="Golden Magic Mirror + Seifenblasenmaschine (620€)" style="width:auto;margin:0"/>
-                <span style="font-size:14px;color:var(--dark)"><strong>Mirror + Seifenblasenmaschine</strong> – 620€</span>
+                <input type="checkbox" name="produkte" value="Seifenblasenmaschine (+120€)" style="width:auto;margin:0"/>
+                <span style="font-size:14px;color:var(--dark)"><strong>+ Seifenblasenmaschine</strong> – 120€</span>
               </label>
+              <label style="display:flex;align-items:center;gap:12px;padding:14px 16px;border:1.5px solid #e8e8e8;border-radius:10px;cursor:pointer;transition:border-color .2s" id="optLove">
+                <input type="checkbox" name="produkte" value="LOVE-Schild" id="checkLove" style="width:auto;margin:0"/>
+                <span style="font-size:14px;color:var(--dark)"><strong>+ LOVE-Schild</strong> – ab 300€</span>
+              </label>
+              <div id="loveOptions" style="display:none;flex-direction:column;gap:8px;margin-left:16px;padding:12px 14px;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px">
+                <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:14px;color:var(--dark)">
+                  <input type="radio" name="love_option" value="Lieferung &amp; Aufbau (+380€)" checked style="width:auto;margin:0"/>
+                  Lieferung &amp; Aufbau (+380€)
+                </label>
+                <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:14px;color:var(--dark)">
+                  <input type="radio" name="love_option" value="Selbstabholung (300€)" style="width:auto;margin:0"/>
+                  Selbstabholung (300€)
+                </label>
+              </div>
             </div>
           </div>
           <div class="field">
@@ -139,6 +153,35 @@ const today = new Date().toISOString().split('T')[0];
                 </ul>
               </div>
 
+              <div class="pac-pkg" style="border:1.5px solid rgba(229,186,88,.35)">
+                <div class="pac-pkg-header">
+                  <span class="pac-pkg-name">+ LOVE-Schild</span>
+                  <span class="pac-pkg-price">380€</span>
+                </div>
+                <ul class="pac-pkg-list">
+                  <li>5 Buchstaben, je 1,20 m hoch</li>
+                  <li>inkl. Lieferung &amp; Aufbau (Wien + 45 km)</li>
+                  <li>oder 300€ Selbstabholung</li>
+                </ul>
+              </div>
+
+              <div class="pac-pkg pac-pkg-featured" style="border:1.5px solid rgba(229,186,88,.6)">
+                <div class="pac-pkg-badge">Premium Komplett · Spar-Paket</div>
+                <div class="pac-pkg-header">
+                  <span class="pac-pkg-name" style="color:var(--gold)">Premium Komplett-Paket</span>
+                  <span class="pac-pkg-price">850€</span>
+                </div>
+                <p style="font-size:11px;color:rgba(255,255,255,.45);margin:0 0 8px;display:flex;align-items:center;gap:6px">
+                  <span style="text-decoration:line-through;color:rgba(255,255,255,.3)">statt 1.000€</span>
+                  <span style="color:#4ade80;font-weight:700">Sie sparen 150€</span>
+                </p>
+                <ul class="pac-pkg-list">
+                  <li>Magic Mirror</li>
+                  <li>Seifenblasenmaschine</li>
+                  <li>LOVE-Schild inkl. Lieferung &amp; Aufbau</li>
+                </ul>
+              </div>
+
               <p class="pac-kaution-note">Kaution: <strong>€150</strong> – wird nach dem Event vollständig zurückerstattet.</p>
             </div>
           </div>
@@ -197,11 +240,23 @@ const today = new Date().toISOString().split('T')[0];
 </section>
 
 <script>
-// Paket aus sessionStorage vorauswählen
-const paket = sessionStorage.getItem('selectedPaket');
-if(paket === 'seifenblasen'){
-  const r = document.querySelector('input[name="paket"][value*="Seifenblasen"]');
-  if(r) r.checked = true;
+// Produkte aus sessionStorage vorauswählen
+function showLoveOptions(show){
+  const el=document.getElementById('loveOptions');
+  if(el) el.style.display=show?'flex':'none';
+}
+document.getElementById('checkLove')?.addEventListener('change',function(){showLoveOptions(this.checked);});
+
+const paket=sessionStorage.getItem('selectedPaket');
+if(paket==='seifenblasen'){
+  const cb=document.querySelector('input[name="produkte"][value*="Seifenblasen"]');
+  if(cb) cb.checked=true;
+}else if(paket==='love'){
+  const cb=document.getElementById('checkLove');
+  if(cb){cb.checked=true;showLoveOptions(true);}
+}else if(paket==='komplett'){
+  document.querySelectorAll('input[name="produkte"]').forEach(cb=>cb.checked=true);
+  showLoveOptions(true);
 }
 
 // Preismodelle aufklappen

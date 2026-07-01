@@ -294,6 +294,32 @@ a{text-decoration:none;color:inherit}
 .pr2-btn-featured{background:linear-gradient(160deg,#ECCA6A 0%,#DDA844 45%,#C89020 100%);box-shadow:0 4px 24px rgba(221,170,68,.4)}
 .pr2-btn-deluxe{background:linear-gradient(160deg,#E8D496,#DDA844 45%,#C89020);box-shadow:0 4px 16px rgba(221,170,68,.4)}
 
+/* Pricing add-on stack */
+.pr-eyebrow{display:flex;align-items:center;gap:14px;justify-content:center;font-family:'Poppins',sans-serif;font-size:clamp(12px,1.3vw,13px);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin:clamp(30px,4vw,42px) 0 clamp(16px,2vw,22px)}
+.pr-eyebrow::before,.pr-eyebrow::after{content:'';height:1px;width:40px;background:rgba(255,255,255,.18)}
+.addon-stack{display:flex;flex-direction:column;gap:clamp(18px,2.5vw,26px)}
+.addon-block{border:.5px solid rgba(255,255,255,.13);border-radius:18px;background:rgba(255,255,255,.03);padding:clamp(24px,3.2vw,38px);display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;transition:border-color .25s,background .25s}
+.addon-block:hover{border-color:rgba(229,186,88,.32);background:rgba(229,186,88,.04)}
+.addon-media{width:100%;margin:0 auto;border-radius:14px;overflow:hidden;background:#0a0806;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 40px rgba(0,0,0,.4)}
+.addon-media.portrait{max-width:320px;aspect-ratio:9/16}
+.addon-media.landscape{max-width:600px;aspect-ratio:16/9}
+.addon-media video,.addon-media img{width:100%;height:100%;object-fit:cover;display:block}
+.addon-badge{font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:rgba(255,255,255,.42)}
+.addon-title{font-family:'Poppins',sans-serif;font-size:clamp(21px,2.8vw,30px);font-weight:800;color:#fff;line-height:1.2}
+.addon-title span{color:#E5BA58}
+.addon-points{display:flex;justify-content:center;gap:clamp(16px,2.5vw,30px);flex-wrap:wrap;margin:2px 0}
+.addon-point{display:flex;align-items:center;gap:9px;font-size:clamp(13px,1.5vw,14.5px);color:rgba(255,255,255,.78)}
+.addon-point svg{width:19px;height:19px;flex-shrink:0}
+.addon-priceline{display:flex;align-items:baseline;gap:10px;justify-content:center;flex-wrap:wrap}
+.addon-price{font-family:'Poppins',sans-serif;font-size:clamp(26px,3vw,32px);font-weight:800;color:#E5BA58}
+.addon-price small{font-size:13px;font-weight:600;color:rgba(255,255,255,.5)}
+.addon-subnote{font-size:12.5px;color:rgba(255,255,255,.5);margin-top:-6px}
+.addon-cta{display:inline-block;border:1.5px solid rgba(229,186,88,.5);border-radius:12px;padding:12px 30px;color:#E5BA58;font-family:'Mulish',sans-serif;font-weight:700;font-size:14px;cursor:pointer;background:none;transition:background .2s,border-color .2s}
+.addon-cta:hover{background:rgba(229,186,88,.1);border-color:rgba(229,186,88,.8)}
+.bundle-save{display:inline-flex;align-items:center;gap:8px;background:rgba(34,197,94,.14);border:1px solid rgba(34,197,94,.4);color:#4ade80;font-weight:700;font-size:14px;padding:8px 14px;border-radius:30px}
+.bundle-save s{color:rgba(255,255,255,.45);font-weight:600}
+@media(max-width:600px){.addon-media.portrait{max-width:260px}.addon-points{flex-direction:column;gap:10px;align-items:center}}
+
 /* FAQ */
 .faq-wrap{max-width:720px;margin:0 auto}
 .faq-item{border-bottom:1px solid rgba(221,170,68,.28)}
