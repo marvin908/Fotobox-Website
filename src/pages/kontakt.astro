@@ -276,9 +276,20 @@ document.getElementById('contactForm').addEventListener('submit', async function
   btn.textContent = 'Wird gesendet...';
   btn.disabled = true;
   try {
+    // Merge multiple "produkte" checkboxes into one field for Formspree
+    const raw = new FormData(this);
+    const fd = new FormData();
+    const produkte = [];
+    const loveChecked = document.getElementById('checkLove')?.checked;
+    for(const [key, val] of raw.entries()){
+      if(key === 'produkte'){ produkte.push(val); }
+      else if(key === 'love_option'){ if(loveChecked) fd.append(key, val); }
+      else { fd.append(key, val); }
+    }
+    if(produkte.length) fd.append('produkte', produkte.join(', '));
     const res = await fetch(this.action, {
       method: 'POST',
-      body: new FormData(this),
+      body: fd,
       headers: { 'Accept': 'application/json' }
     });
     if(res.ok){
