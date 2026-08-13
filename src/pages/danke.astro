@@ -52,23 +52,15 @@ import Layout from '../layouts/Layout.astro';
 </div>
 
 <script is:inline>
-// GA conversion
-if(typeof gtag!=='undefined'){
-  gtag('event','conversion',{'send_to':'AW-10978741779/nIlECMfuypkcEJOcifMo'});
-}
-// FB Lead – warte bis Pixel geladen ist (wird async nach Cookie-Consent geladen)
-(function(){
-  var attempts=0;
-  var timer=setInterval(function(){
-    attempts++;
-    if(typeof fbq!=='undefined'){
-      clearInterval(timer);
-      fbq('track','Lead');
-    } else if(attempts>=40){
-      clearInterval(timer);
+  window.addEventListener('load', function(){
+    if (typeof gtag === 'function') {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-10978741779/nIlECMfuypkcEJOcifMo',
+        'value': 160.0,
+        'currency': 'EUR'
+      });
     }
-  },250);
-})();
+  });
 </script>
 
 </Layout>
