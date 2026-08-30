@@ -8,6 +8,8 @@ const today = new Date().toISOString().split('T')[0];
 >
 
 <style>
+/* Checkbox visual feedback */
+#contactForm label:has(input[type="checkbox"]:checked){border-color:rgba(221,170,68,.7)!important;background:rgba(221,170,68,.06)}
 /* Pricing sidebar accordion – dark panel on white page */
 .pac-wrap{margin-bottom:20px;border-radius:16px;border:1.5px solid rgba(221,170,68,.35);overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,.13),0 0 0 1px rgba(221,170,68,.08)}
 .pac-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;background:linear-gradient(135deg,#1e1508,#2e1f06);border:none;border-radius:0;padding:16px 20px;cursor:pointer;color:#fff;text-align:left;transition:background .2s}
@@ -58,6 +60,10 @@ const today = new Date().toISOString().split('T')[0];
               <label style="display:flex;align-items:center;gap:12px;padding:14px 16px;border:1.5px solid #e8e8e8;border-radius:10px;cursor:pointer;transition:border-color .2s" id="optMirror">
                 <input type="checkbox" name="produkte" value="Golden Magic Mirror (500€)" checked style="width:auto;margin:0"/>
                 <span style="font-size:14px;color:var(--dark)"><strong>Golden Magic Mirror</strong> – 500€</span>
+              </label>
+              <label style="display:flex;align-items:center;gap:12px;padding:14px 16px;border:1.5px solid #e8e8e8;border-radius:10px;cursor:pointer;transition:border-color .2s,background .2s" id="optFotowand">
+                <input type="checkbox" name="produkte" value="Fotowand (+60€)" style="width:auto;margin:0"/>
+                <span style="font-size:14px;color:var(--dark)"><strong>+ Fotowand</strong> – 60€</span>
               </label>
               <label style="display:flex;align-items:center;gap:12px;padding:14px 16px;border:1.5px solid #e8e8e8;border-radius:10px;cursor:pointer;transition:border-color .2s" id="optSeifenblasen">
                 <input type="checkbox" name="produkte" value="Seifenblasenmaschine (+120€)" style="width:auto;margin:0"/>
@@ -139,6 +145,17 @@ const today = new Date().toISOString().split('T')[0];
                   <li>Profi LED-Ringlicht</li>
                   <li>Persönliche Betreuung vor Ort</li>
                   <li>Auf- & Abbau inklusive</li>
+                </ul>
+              </div>
+
+              <div class="pac-pkg" style="border:1.5px solid rgba(229,186,88,.35)">
+                <div class="pac-pkg-header">
+                  <span class="pac-pkg-name">+ Fotowand</span>
+                  <span class="pac-pkg-price">+60€</span>
+                </div>
+                <ul class="pac-pkg-list">
+                  <li>Professioneller Foto-Hintergrund</li>
+                  <li>Lieferung, Aufbau & Abbau inkl.</li>
                 </ul>
               </div>
 
@@ -248,7 +265,10 @@ function showLoveOptions(show){
 document.getElementById('checkLove')?.addEventListener('change',function(){showLoveOptions(this.checked);});
 
 const paket=sessionStorage.getItem('selectedPaket');
-if(paket==='seifenblasen'){
+if(paket==='fotowand'){
+  const cb=document.querySelector('input[name="produkte"][value*="Fotowand"]');
+  if(cb) cb.checked=true;
+}else if(paket==='seifenblasen'){
   const cb=document.querySelector('input[name="produkte"][value*="Seifenblasen"]');
   if(cb) cb.checked=true;
 }else if(paket==='love'){
